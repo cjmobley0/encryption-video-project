@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Narration booth</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+<header>
+  <h1>Narration booth</h1>
+  <label class="picker">
+    Video
+    <select id="project"></select>
+  </label>
+  <div class="counts" id="counts"></div>
+  <label class="device">
+    Microphone
+    <select id="device"></select>
+  </label>
+  <div class="meter" title="input level"><div class="meter-fill" id="meter"></div></div>
+</header>
+
+<div class="banner" id="banner" hidden></div>
+
+<main>
+  <section class="booth">
+    <div class="stage">
+      <video id="clip" muted playsinline preload="auto"></video>
+      <div class="countdown" id="countdown" hidden></div>
+      <div class="recdot" id="recdot" hidden>REC</div>
+    </div>
+
+    <p class="context" id="prevline"></p>
+    <p class="line" id="line">Pick a line to record.</p>
+    <p class="context" id="nextline"></p>
+
+    <div class="band" id="band">
+      <div class="band-green" id="bandgreen"></div>
+      <div class="band-mark" id="bandmark"></div>
+      <div class="band-ticks" id="bandticks"></div>
+    </div>
+    <p class="bandnote" id="bandnote"></p>
+
+    <div class="controls">
+      <button id="record" class="primary">Record <kbd>space</kbd></button>
+      <button id="playclip">Watch <kbd>w</kbd></button>
+      <button id="hear" disabled>Hear it <kbd>p</kbd></button>
+      <button id="keep" class="good" disabled>Keep <kbd>enter</kbd></button>
+      <button id="redo" disabled>Redo <kbd>r</kbd></button>
+      <button id="undo">Previous take <kbd>u</kbd></button>
+    </div>
+    <p class="status" id="status"></p>
+  </section>
+
+  <aside class="list" id="list"></aside>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

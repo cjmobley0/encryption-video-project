@@ -1,0 +1,48 @@
+# What is tracked here is the source of the two videos: the plans, the scenes,
+# the narration pipeline, the render scripts and the recording booth. Everything
+# a render or a recording session produces is left out — it is reproducible from
+# that source, and it is hundreds of megabytes.
+
+# The Manim checkout both cuts install from. Upstream, unmodified, and cloned
+# per machine rather than vendored here:
+#   git clone https://github.com/ManimCommunity/manim.git SimplifiedVersion/manim
+#   git -C SimplifiedVersion/manim checkout v0.22.0
+# The ProfessionalVersion/manim symlink that points at it *is* tracked, so the
+# professional cut installs through it as soon as the clone above exists.
+manim/
+
+# Virtualenvs — rebuilt per machine, see each version's README.
+.venv/
+
+# Manim's own output, caches and beat-timing logs.
+media/
+
+# The stitched cuts and the per-scene mixes behind them.
+renders/
+
+# Narration is tracked, not ignored: whoever records a line pushes it, and
+# whoever renders pulls it. So `audio/*.mp3` and friends stay in the repo, and
+# so does `audio/.scratch.json` — it is the list of lines that are still a
+# machine `say` placeholder rather than a real read, and `narrate.py scratch
+# --refresh` speaks over anything on it. It has to arrive with the recordings
+# or a real take can be overwritten as if it were a placeholder.
+#
+# What is left out is only what each machine makes for itself:
+
+# The raw per-take history behind the booth's undo key, and its index. Local to
+# whoever did the recording — a render only ever reads audio/<line>.mp3 — and it
+# grows with every retake.
+**/audio/takes/
+**/audio/.takes.json
+
+# Measurement cache, keyed on each file's mtime and size. Git does not preserve
+# mtime, so every entry would be a miss on arrival anyway; it is rebuilt on the
+# first retime or mix.
+**/audio/.measured.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store

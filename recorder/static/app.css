@@ -1,0 +1,264 @@
+/* The booth borrows the video's own palette, so the page and the clip beside
+   it do not read as two different things. Values come from style.py. */
+:root {
+  --bg: #14213D;
+  --fg: #F1FAEE;
+  --plain: #3DDC97;
+  --cipher: #FF6B4A;
+  --private: #FFC93C;
+  --public: #5BC0EB;
+  --snoop: #8D99AE;
+  --surface: #1B2F52;
+  --surface-hi: #24406E;
+  --sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--surface-hi);
+  flex-wrap: wrap;
+}
+
+h1 { font-size: 18px; margin: 0; font-weight: 600; letter-spacing: 0.02em; }
+
+/* Which cut is being recorded. It sits beside the title because it changes
+   every number on the page, and a reader who misses it records the right line
+   against the wrong video. */
+.picker { font-size: 13px; color: var(--snoop); display: flex; gap: 8px; align-items: center; }
+.picker select {
+  background: var(--surface-hi);
+  color: var(--fg);
+  border: 1px solid var(--public);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.counts { color: var(--snoop); font-size: 14px; margin-right: auto; }
+.counts b { color: var(--plain); font-weight: 600; }
+
+.device { font-size: 13px; color: var(--snoop); display: flex; gap: 8px; align-items: center; }
+.device select {
+  background: var(--surface-hi);
+  color: var(--fg);
+  border: 1px solid var(--surface-hi);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-family: inherit;
+  max-width: 230px;
+}
+
+.meter {
+  width: 110px; height: 8px;
+  background: var(--surface-hi);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.meter-fill {
+  height: 100%; width: 0%;
+  background: var(--plain);
+  transition: width 60ms linear;
+}
+.meter-fill.hot { background: var(--cipher); }
+
+.banner {
+  padding: 10px 20px;
+  background: rgba(255, 201, 60, 0.14);
+  border-bottom: 1px solid var(--private);
+  color: var(--private);
+  font-size: 14px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+  padding: 24px 20px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* --- the booth itself --------------------------------------------------- */
+
+.stage {
+  position: relative;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+.stage video { width: 100%; height: 100%; display: block; }
+
+.countdown {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-size: 110px; font-weight: 700;
+  color: var(--private);
+  background: rgba(20, 33, 61, 0.72);
+}
+
+.recdot {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--cipher);
+  color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+  padding: 4px 9px; border-radius: 4px;
+  animation: pulse 1.1s ease-in-out infinite;
+}
+@keyframes pulse { 50% { opacity: 0.35; } }
+
+.line {
+  font-size: 27px;
+  line-height: 1.35;
+  margin: 18px 0 10px;
+  min-height: 1.35em;
+}
+.context {
+  color: var(--snoop);
+  font-size: 15px;
+  margin: 2px 0;
+  min-height: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- the timing band ---------------------------------------------------- */
+
+.band {
+  position: relative;
+  height: 30px;
+  background: var(--surface);
+  border-radius: 6px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+.band-green {
+  position: absolute; top: 0; bottom: 0;
+  background: rgba(61, 220, 151, 0.26);
+  border-left: 2px solid var(--plain);
+  border-right: 2px solid var(--plain);
+}
+.band-mark {
+  position: absolute; top: 0; bottom: 0; width: 2px;
+  background: var(--fg);
+  left: 0;
+}
+.band-mark.over { background: var(--private); }
+.band-ticks {
+  position: absolute; inset: 0;
+  font-size: 11px; color: var(--snoop);
+}
+.band-ticks span {
+  position: absolute; top: 8px;
+  transform: translateX(-50%);
+}
+.bandnote { font-size: 13px; color: var(--snoop); margin: 7px 0 0; min-height: 1.2em; }
+.bandnote .good { color: var(--plain); }
+.bandnote .warn { color: var(--private); }
+
+/* --- controls ----------------------------------------------------------- */
+
+.controls { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+
+button {
+  background: var(--surface-hi);
+  color: var(--fg);
+  border: none;
+  border-radius: 7px;
+  padding: 10px 15px;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+button:hover:not(:disabled) { background: #2d4e87; }
+button:disabled { opacity: 0.35; cursor: default; }
+button.primary { background: var(--cipher); color: #1a0d08; font-weight: 600; }
+button.primary:hover:not(:disabled) { background: #ff8366; }
+button.primary.recording { background: var(--private); color: #2b2206; }
+button.good { background: var(--plain); color: #06281a; font-weight: 600; }
+button.good:hover:not(:disabled) { background: #5ae8ad; }
+
+kbd {
+  font: inherit; font-size: 11px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 2px 5px;
+  opacity: 0.75;
+}
+
+.status { font-size: 14px; color: var(--snoop); margin-top: 12px; min-height: 1.3em; }
+.status.err { color: var(--cipher); }
+.status.ok { color: var(--plain); }
+
+/* --- the list ----------------------------------------------------------- */
+
+.list {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 8px;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+}
+.list h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--snoop);
+  margin: 14px 8px 6px;
+}
+.list h2:first-child { margin-top: 6px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 9px;
+  align-items: center;
+  padding: 7px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.row:hover { background: var(--surface-hi); }
+.row.current { background: var(--surface-hi); outline: 1px solid var(--public); }
+.row.silent { opacity: 0.4; cursor: default; }
+.row.silent:hover { background: none; }
+
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--snoop); }
+.dot.recorded { background: var(--plain); }
+.dot.scratch { background: var(--private); }
+.dot.missing { background: transparent; border: 1.5px solid var(--snoop); }
+
+.row-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.row-dur { font-size: 11px; color: var(--snoop); font-variant-numeric: tabular-nums; }
+.row-dur.warn { color: var(--private); }
+
+@media (max-width: 980px) {
+  main { grid-template-columns: minmax(0, 1fr); }
+  .list { position: static; max-height: none; }
+}
