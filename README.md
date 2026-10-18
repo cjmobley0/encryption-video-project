@@ -105,6 +105,12 @@ will see rather than to a stopwatch. Keeping a take writes
 `<Version>/audio/<line>.mp3` under the right name by itself — nothing to name,
 rename or drag anywhere.
 
+![The narration booth, on the professional cut](RecorderUI.png)
+
+The line to read is the large one, with the lines either side of it greyed out
+above and below; the list on the right is every line in the cut, each marked
+with whether it is recorded yet or still a scratch take.
+
 The picker in the top left switches between the two cuts without restarting
 anything, and the version is part of every request the page makes, so a take
 can only land in the audio folder of the cut it was read against.
