@@ -75,8 +75,8 @@ Once:
 
 ```bash
 brew install ffmpeg
-git clone <the repo URL>
-cd EncryptionVideos
+git clone https://github.com/cjmobley0/encryption-video-project.git
+cd encryption-video-project
 ```
 
 And Chrome, if you do not have it: browsers refuse microphone access over
