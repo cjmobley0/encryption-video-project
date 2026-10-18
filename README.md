@@ -65,6 +65,64 @@ what each beat looks like and how long its animation costs. You read each line
 to that picture. Re-timing stretches each beat's window to the line you
 actually read. The second render is the cut, with the audio laid under it.
 
+## If you are only recording voice-over
+
+Reading the narration needs none of the render toolchain — no virtualenv, no
+Manim, no LaTeX. The booth is standard-library Python plus `ffmpeg`, so
+everything from [Setup](#setup) onward is for whoever renders the cut.
+
+Once:
+
+```bash
+brew install ffmpeg
+git clone <the repo URL>
+cd EncryptionVideos
+```
+
+And Chrome, if you do not have it: browsers refuse microphone access over
+plain `http` to anything but localhost, and Safari's recorder is less
+predictable.
+
+Then, each time you sit down to read:
+
+```bash
+git pull                              # start from everyone else's takes
+./record.sh                           # Professional, the default
+./record.sh --project simplified      # the simplified cut
+```
+
+Pick your microphone in the top right and watch the level meter before the
+first take — the list includes virtual devices, and choosing one of those is
+the easy way to record a folder of silent files. The keys are in
+[Recording the narration](#recording-the-narration) below.
+
+When you are done, push what you read:
+
+```bash
+git add ProfessionalVersion/audio     # or SimplifiedVersion/audio
+git commit -m "Record scenes 3 and 4"
+git push
+```
+
+Add the whole `audio/` folder rather than the mp3 files alone, so that
+`audio/.scratch.json` goes with them. It is the list of lines that are still a
+machine `say` placeholder; the booth takes a line off it the moment you keep a
+real take, and a recording that arrives without the updated list can be spoken
+over later as though it were still a placeholder.
+
+An `.mp3` is a binary and Git cannot merge two of them, so pull before you
+start, and split the work by scene rather than by line.
+
+**One thing you will not have is the animation.** Renders are far too big for
+the repo, so the booth opens with a banner saying there is no current render
+and takes each line without the picture beside it. The line itself, the file
+it is recorded as, and the time the plan allowed for it all come from
+`scenes.py` and are there either way; what is missing is the clip and the
+left edge of the band, the one that says what the animation costs. If you
+want to read against the picture, you need the full toolchain below and one
+`./render.sh` per version — or a copy of the `media/` folder from whoever has
+already rendered.
+
 ## Setup
 
 The Manim checkout the two cuts share is not in the repo. Clone it once, at
