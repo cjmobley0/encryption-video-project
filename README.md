@@ -65,60 +65,6 @@ what each beat looks like and how long its animation costs. You read each line
 to that picture. Re-timing stretches each beat's window to the line you
 actually read. The second render is the cut, with the audio laid under it.
 
-## If you are only recording voice-over
-
-Reading the narration needs none of the render toolchain — no virtualenv, no
-Manim, no LaTeX. The booth is standard-library Python plus `ffmpeg`, so
-everything from [Setup](#setup) onward is for whoever renders the cut.
-
-Once:
-
-```bash
-brew install ffmpeg
-git clone https://github.com/cjmobley0/encryption-video-project.git
-cd encryption-video-project
-```
-
-And Chrome, if you do not have it: browsers refuse microphone access over
-plain `http` to anything but localhost, and Safari's recorder is less
-predictable.
-
-Then, each time you sit down to read:
-
-```bash
-git pull                              # start from everyone else's takes
-./record.sh                           # Professional, the default
-./record.sh --project simplified      # the simplified cut
-```
-
-Pick your microphone in the top right and watch the level meter before the
-first take — the list includes virtual devices, and choosing one of those is
-the easy way to record a folder of silent files. The keys are in
-[Recording the narration](#recording-the-narration) below.
-
-When you are done, push what you read:
-
-```bash
-git add ProfessionalVersion/audio     # or SimplifiedVersion/audio
-git commit -m "Record scenes 3 and 4"
-git push
-```
-
-Add the whole `audio/` folder rather than the mp3 files alone, so that
-`audio/.scratch.json` goes with them. It is the list of lines that are still a
-machine `say` placeholder; the booth takes a line off it the moment you keep a
-real take, and a recording that arrives without the updated list can be spoken
-over later as though it were still a placeholder.
-
-An `.mp3` is a binary and Git cannot merge two of them, so pull before you
-start, and split the work by scene rather than by line.
-
-The animation comes with the repo: the booth plays the 1080p60 render of each
-scene, and those are tracked, so the picture is there on a fresh clone with
-nothing to build. That makes the clone a fairly heavy one — most of it is
-video. It is a snapshot of the last render somebody pushed, so if a scene has
-been reworked since, `git pull` is what gets you the current one.
-
 ## Setup
 
 The Manim checkout the two cuts share is not in the repo. Clone it once, at
@@ -148,14 +94,42 @@ it runs on the system `python3` whether or not a venv exists.
 
 ## Recording the narration
 
+The booth takes one line at a time, with the animation that line belongs to
+playing beside it. It needs none of the render toolchain — no virtualenv, no
+Manim, no LaTeX — so if reading the narration is all you are here to do, this
+section is the whole of it, and the [Setup](#setup) above is for whoever
+renders the cut.
+
+### Getting set up
+
 ```bash
-./record.sh                       # Professional, the default
+brew install ffmpeg
+git clone https://github.com/cjmobley0/encryption-video-project.git
+cd encryption-video-project
 ```
 
-That opens the booth at <http://localhost:8765>. It takes one line at a time
-with the animation that line belongs to playing beside it: the countdown ends,
-and the picture and the recorder start together, so you read to what the viewer
-will see rather than to a stopwatch. Keeping a take writes
+And Chrome, if you do not have it. The booth is localhost only: browsers refuse
+microphone access over plain `http` to anything else, so recording from a phone
+on the same wifi does not work without https, and Safari's recorder is less
+predictable.
+
+The animation comes with the repo. The booth plays the 1080p60 render of each
+scene, and those are tracked, so the picture is there on a fresh clone with
+nothing to build — which does make the clone a heavy one, most of it video. It
+is a snapshot of the last render somebody pushed, so if a scene has been
+reworked since, `git pull` is what gets you the current one.
+
+### Reading the lines
+
+```bash
+git pull                              # start from everyone else's takes
+./record.sh                           # Professional, the default
+./record.sh --project simplified      # the simplified cut
+```
+
+That opens the booth at <http://localhost:8765>. The countdown ends, and the
+picture and the recorder start together, so you read to what the viewer will
+see rather than to a stopwatch. Keeping a take writes
 `<Version>/audio/<line>.mp3` under the right name by itself — nothing to name,
 rename or drag anywhere.
 
@@ -184,24 +158,36 @@ the left edge is what that beat's animation costs (reading faster buys nothing
 — the time comes back as a pause), and the right edge is what the plan allowed
 for the line. Land between them and the cut stays on the plan's clock.
 
-Three things to know before the first take:
-
-- **Pick your microphone in the top right** and watch the level meter. The list
-  includes virtual devices, and choosing one of those is the easy way to record
-  a folder of silent files.
-- **The booth shows you the animation, so it needs a render to exist.** Run
-  that version's `./render.sh` first; the booth says so if a scene is missing.
-- **It is localhost only, in Chrome.** Browsers refuse microphone access over
-  plain `http` to anything else, so recording from a phone on the same wifi
-  does not work without https. Safari's recorder is less predictable.
+**Pick your microphone in the top right before the first take**, and watch the
+level meter. The list includes virtual devices, and choosing one of those is
+the easy way to record a folder of silent files.
 
 Every take is kept under `<Version>/audio/takes/`, so <kbd>u</kbd> can always
 go back, and the microphone each line was recorded with is stored alongside it.
 
-Other ways in, if you want them: `--port 8800`, `--no-open` to skip opening a
-browser, or `.venv/bin/python narrate.py serve` from inside a version, which is
-the same booth opened on that version. Recording by hand into `audio/` works
-too — `narrate.py list` writes the filenames to use.
+### Pushing your takes
+
+```bash
+git add ProfessionalVersion/audio     # or SimplifiedVersion/audio
+git commit -m "Record scenes 3 and 4"
+git push
+```
+
+Add the whole `audio/` folder rather than the mp3 files alone, so that
+`audio/.scratch.json` goes with them. It is the list of lines that are still a
+machine `say` placeholder; the booth takes a line off it the moment you keep a
+real take, and a recording that arrives without the updated list can be spoken
+over later as though it were still a placeholder.
+
+An `.mp3` is a binary and Git cannot merge two of them, so pull before you
+start, and split the work by scene rather than by line.
+
+### Other ways in
+
+`--port 8800`, `--no-open` to skip opening a browser, or `.venv/bin/python
+narrate.py serve` from inside a version, which is the same booth opened on that
+version. Recording by hand into `audio/` works too — `narrate.py list` writes
+the filenames to use.
 
 ## Rendering either video
 
