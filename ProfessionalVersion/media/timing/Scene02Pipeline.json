@@ -1,0 +1,48 @@
+{
+  "scene": "Scene02Pipeline",
+  "target": 31.36,
+  "duration": 31.35,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "At its most basic level, encryption is the process of transforming readable information into an unreadable format so that unauthorized people cannot understand it.",
+      "window": 9.17,
+      "animation": 6.4,
+      "start": 0.0,
+      "end": 9.1667
+    },
+    {
+      "index": 2,
+      "note": "The original readable information is called plaintext.",
+      "window": 3.37,
+      "animation": 1.9,
+      "start": 9.1667,
+      "end": 12.5333
+    },
+    {
+      "index": 3,
+      "note": "Encryption uses a mathematical algorithm and a key to transform the plaintext into ciphertext.",
+      "window": 6.0,
+      "animation": 5.3,
+      "start": 12.5333,
+      "end": 18.5167
+    },
+    {
+      "index": 4,
+      "note": "Ciphertext may look like a random sequence of letters, numbers, or symbols.",
+      "window": 5.04,
+      "animation": 2.4,
+      "start": 18.5167,
+      "end": 23.55
+    },
+    {
+      "index": 5,
+      "note": "Although the ciphertext still contains the original information, it is designed to be meaningless to anyone who does not have the correct key.",
+      "window": 7.77,
+      "animation": 5.1,
+      "start": 23.55,
+      "end": 31.3167
+    }
+  ]
+}

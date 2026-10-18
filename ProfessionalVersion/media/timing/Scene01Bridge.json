@@ -1,0 +1,32 @@
+{
+  "scene": "Scene01Bridge",
+  "target": 12.96,
+  "duration": 12.95,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Now that we have looked at the history and evolution of encryption,",
+      "window": 4.8,
+      "animation": 4.8,
+      "start": 0.0,
+      "end": 4.8
+    },
+    {
+      "index": 2,
+      "note": "we can examine how encryption works, the major types of encryption, and how encryption is used in modern technology.",
+      "window": 7.16,
+      "animation": 5.7,
+      "start": 4.8,
+      "end": 11.95
+    },
+    {
+      "index": 3,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 11.95,
+      "end": 12.95
+    }
+  ]
+}

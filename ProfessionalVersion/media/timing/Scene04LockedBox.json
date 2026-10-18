@@ -1,0 +1,56 @@
+{
+  "scene": "Scene04LockedBox",
+  "target": 21.2,
+  "duration": 21.1833,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "A simple analogy is a locked box.",
+      "window": 2.44,
+      "animation": 1.4,
+      "start": 0.0,
+      "end": 2.4333
+    },
+    {
+      "index": 2,
+      "note": "The plaintext is the message placed inside the box.",
+      "window": 3.19,
+      "animation": 2.5,
+      "start": 2.4333,
+      "end": 5.6167
+    },
+    {
+      "index": 3,
+      "note": "The encryption algorithm is the locking mechanism,",
+      "window": 3.02,
+      "animation": 2.3,
+      "start": 5.6167,
+      "end": 8.6333
+    },
+    {
+      "index": 4,
+      "note": "and the key is what allows the box to be opened.",
+      "window": 2.65,
+      "animation": 2.6,
+      "start": 8.6333,
+      "end": 11.2667
+    },
+    {
+      "index": 5,
+      "note": "Anyone might be able to see the locked box, but only someone with the correct key should be able to access the message.",
+      "window": 8.9,
+      "animation": 8.9,
+      "start": 11.2667,
+      "end": 20.1667
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 20.1667,
+      "end": 21.1667
+    }
+  ]
+}

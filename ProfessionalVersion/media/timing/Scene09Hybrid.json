@@ -1,0 +1,56 @@
+{
+  "scene": "Scene09Hybrid",
+  "target": 30.06,
+  "duration": 30.05,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "In practice, many modern systems use a hybrid approach that combines both types.",
+      "window": 5.22,
+      "animation": 3.3,
+      "start": 0.0,
+      "end": 5.2167
+    },
+    {
+      "index": 2,
+      "note": "For example, when a user visits a website using HTTPS,",
+      "window": 4.67,
+      "animation": 2.6,
+      "start": 5.2167,
+      "end": 9.8833
+    },
+    {
+      "index": 3,
+      "note": "asymmetric cryptography can help the browser and the server authenticate each other and establish a shared session key.",
+      "window": 6.9,
+      "animation": 6.9,
+      "start": 9.8833,
+      "end": 16.7833
+    },
+    {
+      "index": 4,
+      "note": "After that, symmetric encryption is usually used to protect the actual data exchanged during the session because it is faster.",
+      "window": 7.42,
+      "animation": 4.5,
+      "start": 16.7833,
+      "end": 24.2
+    },
+    {
+      "index": 5,
+      "note": "This combination provides both secure key exchange and efficient communication.",
+      "window": 4.85,
+      "animation": 2.1,
+      "start": 24.2,
+      "end": 29.05
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 29.05,
+      "end": 30.05
+    }
+  ]
+}

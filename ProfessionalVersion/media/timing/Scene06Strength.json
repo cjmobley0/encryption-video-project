@@ -1,0 +1,80 @@
+{
+  "scene": "Scene06Strength",
+  "target": 34.77,
+  "duration": 34.7667,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "The strength of encryption depends on several factors.",
+      "window": 3.28,
+      "animation": 2.3,
+      "start": 0.0,
+      "end": 3.2667
+    },
+    {
+      "index": 2,
+      "note": "These include the quality of the algorithm,",
+      "window": 2.52,
+      "animation": 1.7,
+      "start": 3.2667,
+      "end": 5.7833
+    },
+    {
+      "index": 3,
+      "note": "the length and randomness of the key,",
+      "window": 2.06,
+      "animation": 2.0,
+      "start": 5.7833,
+      "end": 7.8333
+    },
+    {
+      "index": 4,
+      "note": "and how securely the key is stored.",
+      "window": 2.23,
+      "animation": 1.6,
+      "start": 7.8333,
+      "end": 10.05
+    },
+    {
+      "index": 5,
+      "note": "Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed.",
+      "window": 6.24,
+      "animation": 5.55,
+      "start": 10.05,
+      "end": 16.2833
+    },
+    {
+      "index": 6,
+      "note": "For example, if an attacker obtains a password used to protect an encrypted file, the encryption itself may not be broken.",
+      "window": 7.79,
+      "animation": 4.1,
+      "start": 16.2833,
+      "end": 24.0667
+    },
+    {
+      "index": 7,
+      "note": "Instead, the attacker has obtained the key needed to unlock the information.",
+      "window": 4.45,
+      "animation": 3.7,
+      "start": 24.0667,
+      "end": 28.5167
+    },
+    {
+      "index": 8,
+      "note": "This is why key management is one of the most important parts of cybersecurity.",
+      "window": 5.2,
+      "animation": 5.2,
+      "start": 28.5167,
+      "end": 33.7167
+    },
+    {
+      "index": 9,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 33.7167,
+      "end": 34.7167
+    }
+  ]
+}

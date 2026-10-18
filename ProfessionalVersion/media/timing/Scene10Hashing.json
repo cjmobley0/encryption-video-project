@@ -1,0 +1,72 @@
+{
+  "scene": "Scene10Hashing",
+  "target": 33.47,
+  "duration": 33.4667,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "It is also important to distinguish encryption from hashing.",
+      "window": 3.61,
+      "animation": 2.3,
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "index": 2,
+      "note": "Hashing transforms data into a fixed-length value, called a hash, but it is not designed to be reversed.",
+      "window": 6.39,
+      "animation": 5.2,
+      "start": 3.6,
+      "end": 9.9833
+    },
+    {
+      "index": 3,
+      "note": "Hashing is commonly used to store passwords securely",
+      "window": 3.36,
+      "animation": 3.1,
+      "start": 9.9833,
+      "end": 13.3333
+    },
+    {
+      "index": 4,
+      "note": "and to verify whether data has been changed.",
+      "window": 3.3,
+      "animation": 3.3,
+      "start": 13.3333,
+      "end": 16.6333
+    },
+    {
+      "index": 5,
+      "note": "Digital signatures are related to public-key cryptography as well, but they serve a different purpose.",
+      "window": 5.7,
+      "animation": 3.2,
+      "start": 16.6333,
+      "end": 22.3333
+    },
+    {
+      "index": 6,
+      "note": "Encryption is mainly used to protect confidentiality,",
+      "window": 3.59,
+      "animation": 1.6,
+      "start": 22.3333,
+      "end": 25.9167
+    },
+    {
+      "index": 7,
+      "note": "while digital signatures help verify the identity of the sender and confirm that the message has not been modified.",
+      "window": 6.52,
+      "animation": 6.3,
+      "start": 25.9167,
+      "end": 32.4333
+    },
+    {
+      "index": 8,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 32.4333,
+      "end": 33.4333
+    }
+  ]
+}

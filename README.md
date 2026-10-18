@@ -36,7 +36,7 @@ Inside a version:
 | `render.sh` | Renders every scene in order and stitches them. |
 | `audio/` | One file per line of narration, plus `music.mp3` if there is one. |
 | `renders/` | The stitched video. |
-| `media/` | Manim's own output, caches and beat-timing logs. |
+| `media/` | Manim's own output. The 1080p60 scene renders and the beat-timing logs are tracked, so the booth has a picture to play; the rest is cache. |
 
 [`SimplifiedVersion/README.md`](SimplifiedVersion/README.md) is the long
 version of everything below — the timing model, the mixdown, the conventions.
@@ -113,15 +113,11 @@ over later as though it were still a placeholder.
 An `.mp3` is a binary and Git cannot merge two of them, so pull before you
 start, and split the work by scene rather than by line.
 
-**One thing you will not have is the animation.** Renders are far too big for
-the repo, so the booth opens with a banner saying there is no current render
-and takes each line without the picture beside it. The line itself, the file
-it is recorded as, and the time the plan allowed for it all come from
-`scenes.py` and are there either way; what is missing is the clip and the
-left edge of the band, the one that says what the animation costs. If you
-want to read against the picture, you need the full toolchain below and one
-`./render.sh` per version — or a copy of the `media/` folder from whoever has
-already rendered.
+The animation comes with the repo: the booth plays the 1080p60 render of each
+scene, and those are tracked, so the picture is there on a fresh clone with
+nothing to build. That makes the clone a fairly heavy one — most of it is
+video. It is a snapshot of the last render somebody pushed, so if a scene has
+been reworked since, `git pull` is what gets you the current one.
 
 ## Setup
 
@@ -252,4 +248,25 @@ it has settled.
 ```bash
 .venv/bin/python narrate.py status     # what is recorded, and how long it runs
 ```
+
+### The booth's copy of the animation
+
+The booth plays the 1080p60 render of each scene, and those — together with
+`media/timing/`, which says where each line sits inside them — are in the repo
+so that whoever is recording has the picture without building anything.
+
+`./render.sh -qh` writes both of them, so they stay current as a side effect of
+the render you already do for the cut. All that is left is to commit them with
+whatever changed in the scene:
+
+```bash
+./render.sh -qh
+git add media && git commit && git push
+```
+
+They have to come from the same render: the timing logs carry the frame rate
+they were measured at, and a beat lands in a different place at 15fps than at
+60fps — by up to half a second by the end of a scene. Rendering at `-ql` and
+pushing that `media/timing/` beside the 1080p60 videos would leave whoever is
+recording seeking to the wrong moment of the clip.
 

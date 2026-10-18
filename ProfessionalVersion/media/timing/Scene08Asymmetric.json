@@ -1,0 +1,96 @@
+{
+  "scene": "Scene08Asymmetric",
+  "target": 61.77,
+  "duration": 61.7667,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Asymmetric encryption, also called public-key encryption, uses a pair of mathematically related keys: a public key and a private key.",
+      "window": 8.69,
+      "animation": 4.2,
+      "start": 0.0,
+      "end": 8.6833
+    },
+    {
+      "index": 2,
+      "note": "The public key can be shared openly.",
+      "window": 2.29,
+      "animation": 2.2,
+      "start": 8.6833,
+      "end": 10.9667
+    },
+    {
+      "index": 3,
+      "note": "The private key must be kept secret.",
+      "window": 2.29,
+      "animation": 2.1,
+      "start": 10.9667,
+      "end": 13.25
+    },
+    {
+      "index": 4,
+      "note": "Information encrypted with the public key can generally be decrypted only with the corresponding private key.",
+      "window": 6.1,
+      "animation": 6.1,
+      "start": 13.25,
+      "end": 19.35
+    },
+    {
+      "index": 5,
+      "note": "For example, if someone wants to send a secure message to a recipient, they can encrypt the message using the recipient\u2019s public key.",
+      "window": 7.9,
+      "animation": 6.8,
+      "start": 19.35,
+      "end": 27.25
+    },
+    {
+      "index": 6,
+      "note": "Only the recipient\u2019s private key should be able to decrypt it.",
+      "window": 4.5,
+      "animation": 4.5,
+      "start": 27.25,
+      "end": 31.75
+    },
+    {
+      "index": 7,
+      "note": "Asymmetric encryption solves much of the key-distribution problem because the public key does not need to be kept secret.",
+      "window": 6.79,
+      "animation": 5.9,
+      "start": 31.75,
+      "end": 38.5333
+    },
+    {
+      "index": 8,
+      "note": "However, it is typically slower and more computationally expensive than symmetric encryption.",
+      "window": 5.57,
+      "animation": 3.7,
+      "start": 38.5333,
+      "end": 44.1
+    },
+    {
+      "index": 9,
+      "note": "Examples of public-key algorithms include RSA and elliptic-curve cryptography, often called ECC.",
+      "window": 6.59,
+      "animation": 4.4,
+      "start": 44.1,
+      "end": 50.6833
+    },
+    {
+      "index": 10,
+      "note": "ECC can provide strong security with shorter key sizes, which makes it useful in mobile devices, web browsers, and other systems with limited resources.",
+      "window": 10.05,
+      "animation": 7.9,
+      "start": 50.6833,
+      "end": 60.7333
+    },
+    {
+      "index": 11,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 60.7333,
+      "end": 61.7333
+    }
+  ]
+}

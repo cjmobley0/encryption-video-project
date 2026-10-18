@@ -1,0 +1,72 @@
+{
+  "scene": "Scene13Conclusion",
+  "target": 51.54,
+  "duration": 51.5333,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "However, encryption does not solve every security problem.",
+      "window": 3.93,
+      "animation": 2.6,
+      "start": 0.0,
+      "end": 3.9167
+    },
+    {
+      "index": 2,
+      "note": "It cannot protect data from a person who already has authorized access,",
+      "window": 4.28,
+      "animation": 3.6,
+      "start": 3.9167,
+      "end": 8.1833
+    },
+    {
+      "index": 3,
+      "note": "and it cannot prevent every type of malware, phishing attack, or social-engineering attack.",
+      "window": 5.78,
+      "animation": 5.6,
+      "start": 8.1833,
+      "end": 13.95
+    },
+    {
+      "index": 4,
+      "note": "Encryption protects information, but the surrounding systems and users must also be secure.",
+      "window": 5.59,
+      "animation": 4.4,
+      "start": 13.95,
+      "end": 19.5333
+    },
+    {
+      "index": 5,
+      "note": "Overall, encryption supports three major security goals: confidentiality, integrity, and authentication.",
+      "window": 7.62,
+      "animation": 4.05,
+      "start": 19.5333,
+      "end": 27.15
+    },
+    {
+      "index": 6,
+      "note": "It helps keep information private, helps detect unauthorized changes, and can help verify the identity of the people or systems involved.",
+      "window": 8.54,
+      "animation": 6.9,
+      "start": 27.15,
+      "end": 35.6833
+    },
+    {
+      "index": 7,
+      "note": "As more communication, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity.",
+      "window": 9.8,
+      "animation": 6.8,
+      "start": 35.6833,
+      "end": 45.4833
+    },
+    {
+      "index": 8,
+      "note": "(music only)",
+      "window": 6.0,
+      "animation": 5.8,
+      "start": 45.4833,
+      "end": 51.4833
+    }
+  ]
+}

@@ -49,8 +49,10 @@ the simplified cut's README covers
 line in here is still a `say` placeholder, listed in `audio/.scratch.json`;
 the booth clears a line off that list as soon as a real take replaces it.
 
-`renders/`, `media/` and `.venv/` are not in the repo, and neither is the
-shared Manim checkout at [`../manim`](..) — `Setup` below rebuilds them.
+`renders/` and `.venv/` are not in the repo, and neither is the shared Manim
+checkout at [`../manim`](..) — `Setup` below rebuilds them. Most of `media/`
+is cache and left out too, but the 1080p60 scene renders and `media/timing/`
+are tracked, so the booth has an animation to play on a fresh clone.
 
 `assets.py` is kept identical to the simplified cut's on purpose: a key drawn
 in that video is the same key here. Anything this cut needs that the other one

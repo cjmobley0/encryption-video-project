@@ -1,0 +1,56 @@
+{
+  "scene": "Scene03LockedBox",
+  "target": 15.1,
+  "duration": 15.1,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Imagine putting a note inside a locked box.",
+      "window": 3.0,
+      "animation": 3.0,
+      "start": 0.0,
+      "end": 3.0
+    },
+    {
+      "index": 2,
+      "note": "The note is the message,",
+      "window": 1.5,
+      "animation": 1.5,
+      "start": 3.0,
+      "end": 4.5
+    },
+    {
+      "index": 3,
+      "note": "the lock is the encryption,",
+      "window": 1.5,
+      "animation": 1.5,
+      "start": 4.5,
+      "end": 6.0
+    },
+    {
+      "index": 4,
+      "note": "and the key is what opens the box.",
+      "window": 2.7,
+      "animation": 2.7,
+      "start": 6.0,
+      "end": 8.7
+    },
+    {
+      "index": 5,
+      "note": "The person receiving the message needs the right key to unlock it and read it.",
+      "window": 5.4,
+      "animation": 5.4,
+      "start": 8.7,
+      "end": 14.1
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 14.1,
+      "end": 15.1
+    }
+  ]
+}

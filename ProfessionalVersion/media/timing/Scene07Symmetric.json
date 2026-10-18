@@ -1,0 +1,80 @@
+{
+  "scene": "Scene07Symmetric",
+  "target": 46.51,
+  "duration": 46.5,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "(music only)",
+      "window": 2.0,
+      "animation": 1.7,
+      "start": 0.0,
+      "end": 2.0
+    },
+    {
+      "index": 2,
+      "note": "There are two major categories of encryption: symmetric encryption and asymmetric encryption.",
+      "window": 5.7,
+      "animation": 2.6,
+      "start": 2.0,
+      "end": 7.7
+    },
+    {
+      "index": 3,
+      "note": "Symmetric encryption uses the same key for both encryption and decryption.",
+      "window": 4.39,
+      "animation": 2.5,
+      "start": 7.7,
+      "end": 12.0833
+    },
+    {
+      "index": 4,
+      "note": "The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it.",
+      "window": 5.9,
+      "animation": 5.9,
+      "start": 12.0833,
+      "end": 17.9833
+    },
+    {
+      "index": 5,
+      "note": "Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data.",
+      "window": 6.6,
+      "animation": 5.7,
+      "start": 17.9833,
+      "end": 24.5833
+    },
+    {
+      "index": 6,
+      "note": "Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES, and ChaCha20.",
+      "window": 7.01,
+      "animation": 3.5,
+      "start": 24.5833,
+      "end": 31.5833
+    },
+    {
+      "index": 7,
+      "note": "However, symmetric encryption creates an important challenge: both parties need to obtain the same secret key securely.",
+      "window": 7.35,
+      "animation": 5.1,
+      "start": 31.5833,
+      "end": 38.9333
+    },
+    {
+      "index": 8,
+      "note": "If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication.",
+      "window": 6.56,
+      "animation": 5.9,
+      "start": 38.9333,
+      "end": 45.4833
+    },
+    {
+      "index": 9,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 45.4833,
+      "end": 46.4833
+    }
+  ]
+}

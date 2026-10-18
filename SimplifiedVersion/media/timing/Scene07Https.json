@@ -1,0 +1,56 @@
+{
+  "scene": "Scene07Https",
+  "target": 20.79,
+  "duration": 20.7667,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Many real systems use both types together.",
+      "window": 2.74,
+      "animation": 2.5,
+      "start": 0.0,
+      "end": 2.7333
+    },
+    {
+      "index": 2,
+      "note": "When you visit a secure website, public-key encryption helps your device and the website agree on a secret key.",
+      "window": 6.5,
+      "animation": 6.5,
+      "start": 2.7333,
+      "end": 9.2333
+    },
+    {
+      "index": 3,
+      "note": "Then fast symmetric encryption protects the rest of the conversation.",
+      "window": 3.54,
+      "animation": 3.3,
+      "start": 9.2333,
+      "end": 12.7667
+    },
+    {
+      "index": 4,
+      "note": "That's what the padlock symbol in your browser means.",
+      "window": 3.1,
+      "animation": 3.1,
+      "start": 12.7667,
+      "end": 15.8667
+    },
+    {
+      "index": 5,
+      "note": "HTTPS is encrypting the connection and protecting your passwords, shopping information, and personal details.",
+      "window": 3.91,
+      "animation": 3.5,
+      "start": 15.8667,
+      "end": 19.7667
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 19.7667,
+      "end": 20.7667
+    }
+  ]
+}

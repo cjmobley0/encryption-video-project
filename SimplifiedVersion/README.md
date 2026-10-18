@@ -19,13 +19,15 @@ The final cut lands at `renders/encryption-full.mp4`.
 | `render.sh` | Renders all ten scenes in order and stitches the cut. |
 | `audio/` | One file per line of narration (`scene01_beat02.mp3` …), plus `music.mp3`. |
 | `renders/` | The stitched video. |
-| `media/` | Manim's own output and caches. |
+| `media/` | Manim's own output. The 1080p60 renders and `timing/` are tracked for the booth; the rest is cache. |
 
 `audio/` is tracked — the narration travels with the source, so whoever
 records a line and whoever renders the cut need not be the same person; see
-[Pushing your takes](#pushing-your-takes). `renders/` and `media/` are not:
-they are what a render produces. Nor is `.venv/`, which `Setup` below builds
-per machine, from the shared Manim checkout at [`../manim`](..).
+[Pushing your takes](#pushing-your-takes). Most of `media/` is not, but the
+1080p60 scene renders and `media/timing/` are, so the booth has an animation to
+play on a fresh clone. `renders/` is not: that is the finished cut. Nor is
+`.venv/`, which `Setup` below builds per machine from the shared Manim
+checkout at [`../manim`](..).
 
 ## The cut
 

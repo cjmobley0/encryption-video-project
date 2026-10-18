@@ -13,8 +13,26 @@
 # Virtualenvs — rebuilt per machine, see each version's README.
 .venv/
 
-# Manim's own output, caches and beat-timing logs.
-media/
+# Manim's own output. Two things in here are tracked, so that someone who has
+# only cloned the repo can still see the animation while they record: the
+# 1080p60 scene renders the booth plays, and the beat-timing logs that say
+# where each line sits in them. They are a matched pair — the logs carry the
+# frame rate they were measured at, and a beat lands in a different place at
+# 15fps than at 60fps — so both come from the same render. `./render.sh -qh`
+# writes both together, which is the one you already run for the final cut.
+# Everything else here is a cache.
+#
+# Git cannot re-include a path inside an excluded directory, so each level is
+# opened in turn rather than excluding media/ outright.
+**/media/*
+!**/media/timing/
+!**/media/videos/
+**/media/videos/*
+!**/media/videos/scenes/
+**/media/videos/scenes/*
+!**/media/videos/scenes/1080p60/
+# ...but not the per-animation fragments Manim stitches each scene from.
+**/media/videos/scenes/1080p60/partial_movie_files/
 
 # The stitched cuts and the per-scene mixes behind them.
 renders/

@@ -1,0 +1,32 @@
+{
+  "scene": "Scene03Decryption",
+  "target": 10.02,
+  "duration": 10.0167,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "The intended recipient can then use a key and a decryption algorithm to convert the ciphertext back into plaintext.",
+      "window": 6.77,
+      "animation": 6.4,
+      "start": 0.0,
+      "end": 6.7667
+    },
+    {
+      "index": 2,
+      "note": "This process is called decryption.",
+      "window": 2.25,
+      "animation": 1.1,
+      "start": 6.7667,
+      "end": 9.0167
+    },
+    {
+      "index": 3,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 9.0167,
+      "end": 10.0167
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "scene": "Scene01Intro",
+  "target": 16.25,
+  "duration": 16.25,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "(music only)",
+      "window": 2.0,
+      "animation": 1.95,
+      "start": 0.0,
+      "end": 2.0
+    },
+    {
+      "index": 2,
+      "note": "Every day, we send private information online:",
+      "window": 2.9,
+      "animation": 2.9,
+      "start": 2.0,
+      "end": 4.9
+    },
+    {
+      "index": 3,
+      "note": "messages, passwords, and payment details.",
+      "window": 2.65,
+      "animation": 2.65,
+      "start": 4.9,
+      "end": 7.55
+    },
+    {
+      "index": 4,
+      "note": "Encryption is what keeps it safe.",
+      "window": 2.4,
+      "animation": 2.4,
+      "start": 7.55,
+      "end": 9.95
+    },
+    {
+      "index": 5,
+      "note": "So, how does encryption actually work, and why do we use it so often?",
+      "window": 5.3,
+      "animation": 5.3,
+      "start": 9.95,
+      "end": 15.25
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 15.25,
+      "end": 16.25
+    }
+  ]
+}

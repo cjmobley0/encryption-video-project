@@ -1,0 +1,32 @@
+{
+  "scene": "Scene10Outro",
+  "target": 15.05,
+  "duration": 15.0333,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "In short, encryption is like a digital lock.",
+      "window": 2.95,
+      "animation": 2.95,
+      "start": 0.0,
+      "end": 2.95
+    },
+    {
+      "index": 2,
+      "note": "It keeps private information private while it's being sent, stored, or shared.",
+      "window": 5.1,
+      "animation": 5.1,
+      "start": 2.95,
+      "end": 8.05
+    },
+    {
+      "index": 3,
+      "note": "(music only)",
+      "window": 7.0,
+      "animation": 4.4,
+      "start": 8.05,
+      "end": 15.0333
+    }
+  ]
+}

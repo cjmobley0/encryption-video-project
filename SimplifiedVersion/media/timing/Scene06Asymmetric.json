@@ -1,0 +1,80 @@
+{
+  "scene": "Scene06Asymmetric",
+  "target": 23.72,
+  "duration": 23.7,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "The second is asymmetric encryption,",
+      "window": 2.7,
+      "animation": 2.7,
+      "start": 0.0,
+      "end": 2.7
+    },
+    {
+      "index": 2,
+      "note": "also called public-key encryption.",
+      "window": 2.01,
+      "animation": 0.9,
+      "start": 2.7,
+      "end": 4.7
+    },
+    {
+      "index": 3,
+      "note": "It uses two keys: a public key and a private key.",
+      "window": 3.1,
+      "animation": 3.1,
+      "start": 4.7,
+      "end": 7.8
+    },
+    {
+      "index": 4,
+      "note": "The public key can be shared with everyone.",
+      "window": 2.4,
+      "animation": 2.4,
+      "start": 7.8,
+      "end": 10.2
+    },
+    {
+      "index": 5,
+      "note": "The private key must be kept secret.",
+      "window": 2.3,
+      "animation": 2.3,
+      "start": 10.2,
+      "end": 12.5
+    },
+    {
+      "index": 6,
+      "note": "Think of a mailbox.",
+      "window": 1.8,
+      "animation": 1.8,
+      "start": 12.5,
+      "end": 14.3
+    },
+    {
+      "index": 7,
+      "note": "Anyone can drop a letter in, like using your public key.",
+      "window": 3.5,
+      "animation": 3.5,
+      "start": 14.3,
+      "end": 17.8
+    },
+    {
+      "index": 8,
+      "note": "But only you, with your private key, can open the mailbox and read the letters.",
+      "window": 4.91,
+      "animation": 4.9,
+      "start": 17.8,
+      "end": 22.7
+    },
+    {
+      "index": 9,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 22.7,
+      "end": 23.7
+    }
+  ]
+}

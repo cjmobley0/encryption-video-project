@@ -1,0 +1,104 @@
+{
+  "scene": "Scene11Applications",
+  "target": 58.54,
+  "duration": 58.5333,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "(music only)",
+      "window": 2.0,
+      "animation": 1.7,
+      "start": 0.0,
+      "end": 2.0
+    },
+    {
+      "index": 2,
+      "note": "Encryption is used throughout everyday computing.",
+      "window": 2.77,
+      "animation": 2.1,
+      "start": 2.0,
+      "end": 4.7667
+    },
+    {
+      "index": 3,
+      "note": "One of the most familiar examples is HTTPS, which protects communication between a web browser and a website.",
+      "window": 7.45,
+      "animation": 6.2,
+      "start": 4.7667,
+      "end": 12.2
+    },
+    {
+      "index": 4,
+      "note": "When a website uses HTTPS, information such as login credentials, personal details, and payment information is encrypted while traveling across the internet.",
+      "window": 10.66,
+      "animation": 9.35,
+      "start": 12.2,
+      "end": 22.85
+    },
+    {
+      "index": 5,
+      "note": "Encryption is also used in messaging applications.",
+      "window": 3.33,
+      "animation": 1.5,
+      "start": 22.85,
+      "end": 26.1667
+    },
+    {
+      "index": 6,
+      "note": "End-to-end encryption is designed so that a message is encrypted on the sender\u2019s device and decrypted only on the recipient\u2019s device.",
+      "window": 7.24,
+      "animation": 6.6,
+      "start": 26.1667,
+      "end": 33.4
+    },
+    {
+      "index": 7,
+      "note": "Ideally, even the messaging provider cannot read the contents of the message while it is in transit.",
+      "window": 5.5,
+      "animation": 4.3,
+      "start": 33.4,
+      "end": 38.9
+    },
+    {
+      "index": 8,
+      "note": "Another major application is data storage.",
+      "window": 2.88,
+      "animation": 1.5,
+      "start": 38.9,
+      "end": 41.7667
+    },
+    {
+      "index": 9,
+      "note": "Computers, smartphones, USB drives, and cloud services can encrypt stored files.",
+      "window": 6.31,
+      "animation": 4.2,
+      "start": 41.7667,
+      "end": 48.0667
+    },
+    {
+      "index": 10,
+      "note": "This is called encryption at rest.",
+      "window": 2.16,
+      "animation": 1.6,
+      "start": 48.0667,
+      "end": 50.2167
+    },
+    {
+      "index": 11,
+      "note": "If a device is lost or stolen, encryption can make it much more difficult for someone to access the information stored on it.",
+      "window": 7.24,
+      "animation": 5.7,
+      "start": 50.2167,
+      "end": 57.45
+    },
+    {
+      "index": 12,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 57.45,
+      "end": 58.45
+    }
+  ]
+}
