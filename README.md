@@ -11,14 +11,16 @@ and the same script:
 | [`SimplifiedVersion/`](SimplifiedVersion) | **done** — the cut is in `SimplifiedVersion/renders/` | the proof of concept: 10 scenes, 46 narrated beats, ~3:28 |
 
 Each version is self-contained: its own scenes, its own narration, its own
-renders, its own virtualenv. The one thing they share is the recording booth at
-[`recorder/`](recorder), which serves both and knows which audio folder a take
-belongs in.
+renders, its own virtualenv. What they share sits at the root: the recording
+booth at [`recorder/`](recorder), which serves both and knows which audio
+folder a take belongs in, and the one Manim checkout at `manim/` that both
+venvs install from.
 
 ```
 EncryptionVideos/
 ├── record.sh              the narration booth, for either version
 ├── recorder/              the booth itself — see recorder/server.py
+├── manim/                 the Manim checkout both venvs install from
 ├── ProfessionalVersion/   scenes.py, narrate.py, render.sh, audio/, renders/
 └── SimplifiedVersion/     the same shape, finished
 ```
@@ -44,9 +46,8 @@ in and how the real AES and SHA-256 values on screen are produced.
 
 The two cuts share `assets.py` byte for byte, so an object drawn in one is the
 identical object in the other; anything only the full cut needs lives in
-`ProfessionalVersion/tech_assets.py`. They also share one Manim checkout —
-`ProfessionalVersion/manim` is a symlink to `SimplifiedVersion/manim` — so
-both render against the same version.
+`ProfessionalVersion/tech_assets.py`. They also install from one Manim
+checkout, `manim/` at the root, so both render against the same version.
 
 ## How it fits together
 
@@ -66,13 +67,12 @@ actually read. The second render is the cut, with the audio laid under it.
 
 ## Setup
 
-The Manim checkout the two cuts share is not in the repo. Clone it once, into
-the simplified cut — `ProfessionalVersion/manim` is the symlink to it, so both
-versions install from this one directory:
+The Manim checkout the two cuts share is not in the repo. Clone it once, at
+the root, and both versions install from that one directory:
 
 ```bash
-git clone https://github.com/ManimCommunity/manim.git SimplifiedVersion/manim
-git -C SimplifiedVersion/manim checkout v0.22.0
+git clone https://github.com/ManimCommunity/manim.git
+git -C manim checkout v0.22.0
 ```
 
 Then, per version, once:
@@ -81,7 +81,7 @@ Then, per version, once:
 brew install pkgconf ffmpeg
 cd SimplifiedVersion          # or ProfessionalVersion
 python3 -m venv .venv
-.venv/bin/python -m pip install -e ./manim
+.venv/bin/python -m pip install -e ../manim
 ```
 
 - `pkgconf` — needed to build `pycairo`

@@ -49,8 +49,8 @@ the simplified cut's README covers
 line in here is still a `say` placeholder, listed in `audio/.scratch.json`;
 the booth clears a line off that list as soon as a real take replaces it.
 
-`renders/`, `media/` and `.venv/` are not in the repo, and neither is the Manim
-checkout `manim` points at — `Setup` below rebuilds them.
+`renders/`, `media/` and `.venv/` are not in the repo, and neither is the
+shared Manim checkout at [`../manim`](..) — `Setup` below rebuilds them.
 
 `assets.py` is kept identical to the simplified cut's on purpose: a key drawn
 in that video is the same key here. Anything this cut needs that the other one
@@ -175,28 +175,28 @@ dead air.
 
 ## Setup
 
-`manim` here is a symlink to the simplified cut's checkout, which is not in
-the repo either. From a fresh clone, fill in the symlink's target first — all
-of this runs from this directory:
+Both cuts install from one Manim checkout, at the root of the repo rather than
+in either version, and it is not tracked. Clone it first if the simplified cut
+has not already:
 
 ```bash
-git clone https://github.com/ManimCommunity/manim.git ../SimplifiedVersion/manim
-git -C manim checkout v0.22.0
+git -C .. clone https://github.com/ManimCommunity/manim.git
+git -C ../manim checkout v0.22.0
 ```
 
-Then the environment:
+Then the environment, from here:
 
 ```bash
 brew install pkgconf ffmpeg
 python3 -m venv .venv
-.venv/bin/python -m pip install -e ./manim
+.venv/bin/python -m pip install -e ../manim
 .venv/bin/python -m pip install cryptography
 ```
 
-Installing through the symlink is the point: both videos render against exactly
-the same Manim (Community 0.22.0). `cryptography` is only needed by `values.py`
-for the AES line; without it the baked literal is used, and it is the same
-string.
+Installing from the one checkout is the point: both videos render against
+exactly the same Manim (Community 0.22.0). `cryptography` is only needed by
+`values.py` for the AES line; without it the baked literal is used, and it is
+the same string.
 
 No LaTeX: every label is `Text`, never `Tex`, as the plan requires. Exponents
 are Unicode (2¹²⁸), hex and hashes are `font=MONO`, and `DecimalNumber` is

@@ -3,13 +3,12 @@
 # a render or a recording session produces is left out — it is reproducible from
 # that source, and it is hundreds of megabytes.
 
-# The Manim checkout both cuts install from. Upstream, unmodified, and cloned
-# per machine rather than vendored here:
-#   git clone https://github.com/ManimCommunity/manim.git SimplifiedVersion/manim
-#   git -C SimplifiedVersion/manim checkout v0.22.0
-# The ProfessionalVersion/manim symlink that points at it *is* tracked, so the
-# professional cut installs through it as soon as the clone above exists.
-manim/
+# The Manim checkout both cuts install from — one copy at the root, which each
+# version's venv installs from with `pip install -e ../manim`. Upstream and
+# unmodified, so it is cloned per machine rather than vendored here:
+#   git clone https://github.com/ManimCommunity/manim.git
+#   git -C manim checkout v0.22.0
+/manim/
 
 # Virtualenvs — rebuilt per machine, see each version's README.
 .venv/

@@ -20,13 +20,12 @@ The final cut lands at `renders/encryption-full.mp4`.
 | `audio/` | One file per line of narration (`scene01_beat02.mp3` …), plus `music.mp3`. |
 | `renders/` | The stitched video. |
 | `media/` | Manim's own output and caches. |
-| `manim/` | The upstream Manim checkout this project installs from. |
 
 `audio/` is tracked — the narration travels with the source, so whoever
 records a line and whoever renders the cut need not be the same person; see
 [Pushing your takes](#pushing-your-takes). `renders/` and `media/` are not:
-they are what a render produces. Neither are `manim/` and `.venv/`, which
-`Setup` below builds per machine.
+they are what a render produces. Nor is `.venv/`, which `Setup` below builds
+per machine, from the shared Manim checkout at [`../manim`](..).
 
 ## The cut
 
@@ -319,15 +318,14 @@ both.
 
 ## Setup
 
-From a fresh clone, there is no `.venv` and no `manim/` — neither is tracked.
-Both cuts install from one Manim checkout, so clone it here and the
-professional cut's symlink picks it up:
+From a fresh clone there is no `.venv`, and no Manim checkout to install from.
+Both cuts share one, at the root of the repo rather than in either version:
 
 ```bash
-git clone https://github.com/ManimCommunity/manim.git
-git -C manim checkout v0.22.0
+git -C .. clone https://github.com/ManimCommunity/manim.git
+git -C ../manim checkout v0.22.0
 python3 -m venv .venv
-.venv/bin/python -m pip install -e ./manim
+.venv/bin/python -m pip install -e ../manim
 ```
 
 System dependencies, via Homebrew:
