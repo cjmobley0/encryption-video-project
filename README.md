@@ -11,18 +11,16 @@ Two cuts, from the same plan, palette and script:
 
 ## Watch
 
-Both cuts are in the repo, at full quality and in a smaller web copy:
+**Professional** — 8:13
 
-| | Full quality | Web copy |
-| --- | --- | --- |
-| **Professional** — 8:13 | [`professional-encryption-video.mp4`](ProfessionalVersion/renders/professional-encryption-video.mp4) · 1080p60 · 29 MB | [720p30 · 9 MB](ProfessionalVersion/renders/professional-encryption-video-web.mp4) |
-| **Simplified** — 3:42 | [`encryption-full.mp4`](SimplifiedVersion/renders/encryption-full.mp4) · 1080p60 · 15 MB | [720p30 · 9 MB](SimplifiedVersion/renders/encryption-full-web.mp4) |
+https://github.com/user-attachments/assets/29f6db6e-f010-4bbd-bb8a-7dea1b7cfc78
 
-GitHub will not play a video that is committed to a repository — the file page
-offers it for download and nothing else, whatever its size. It plays video only
-when the file is *uploaded* to an issue, a comment or the README editor, which
-is capped at 10 MB on a free plan. That is what the web copies are for: drop one
-into the README editor on github.com and it becomes a player in the page.
+**Simplified** — 3:42
+
+https://github.com/user-attachments/assets/fffe39bc-a9f9-458f-bc17-d48709df5a1f
+
+Full quality: [professional, 1080p60, 29 MB](ProfessionalVersion/renders/professional-encryption-video.mp4) ·
+[simplified, 1080p60, 15 MB](SimplifiedVersion/renders/encryption-full.mp4)
 
 Each version is self-contained. What they share sits at the root:
 
