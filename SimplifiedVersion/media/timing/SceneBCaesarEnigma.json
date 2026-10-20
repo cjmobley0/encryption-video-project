@@ -1,0 +1,56 @@
+{
+  "scene": "SceneBCaesarEnigma",
+  "target": 19.82,
+  "duration": 19.8167,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Protecting messages isn't a new challenge.",
+      "window": 2.11,
+      "animation": 0.9,
+      "start": 0.0,
+      "end": 2.1
+    },
+    {
+      "index": 2,
+      "note": "Julius Caesar used a cipher that shifted letters along the alphabet.",
+      "window": 3.34,
+      "animation": 2.95,
+      "start": 2.1,
+      "end": 5.4333
+    },
+    {
+      "index": 3,
+      "note": "It could hide a message from a casual reader, but it's easy to break now.",
+      "window": 3.41,
+      "animation": 2.2,
+      "start": 5.4333,
+      "end": 8.8333
+    },
+    {
+      "index": 4,
+      "note": "During World War Two, German forces used Enigma machines that changed how letters were scrambled with every keystroke.",
+      "window": 5.63,
+      "animation": 5.2333,
+      "start": 8.8333,
+      "end": 14.45
+    },
+    {
+      "index": 5,
+      "note": "Polish mathematicians made early breakthroughs, and Allied codebreakers built on that work.",
+      "window": 4.33,
+      "animation": 3.35,
+      "start": 14.45,
+      "end": 18.7667
+    },
+    {
+      "index": 6,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 0.8,
+      "start": 18.7667,
+      "end": 19.7667
+    }
+  ]
+}

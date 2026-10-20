@@ -1,46 +1,54 @@
 # Professional encryption video (Manim)
 
-The full cut: thirteen scenes, 91 beats, **8:00** of animation, built from
+The full cut: Part 1 (Scenes A–F) and thirteen numbered scenes, 114 beats,
+**8:13** narrated, built from
 [`professional-encryption-video-plan.md`](professional-encryption-video-plan.md).
 Same palette, same objects and same pipeline as the simplified cut, pitched at
 a technical audience — real AES-256-GCM output, real SHA-256 digests, a drawn
 elliptic curve, accurate key sizes and an accurate HTTPS handshake.
 
-The machinery (beat timing, the recording booth, re-timing, the mixdown) is
-the same in both cuts and is documented once, in
+Both parts are **animated and narrated**: the group's two reads were cut into
+one clip per beat with [`align.py`](align.py) and the cut re-timed to them.
+
+The machinery (beat timing, cutting a read into clips, re-timing, the mixdown)
+is the same in both cuts and is documented once, in
 [`../SimplifiedVersion/README.md`](../SimplifiedVersion/README.md). This file
 covers what is specific to this one.
 
-## The intro is not here yet
+## Part 1
 
-The plan budgets **0:30–2:00** before Scene 1 for the history of encryption,
-and that script is still being written. So:
+Scenes A–F are the history: Kerckhoffs's principle, the Caesar cipher's key
+space, Enigma, the key-exchange problem, DES to AES, and what evaluating
+encryption means today. They are lettered rather than numbered so that adding
+them in front left Scenes 1–13 — and the audio already named after them —
+untouched. `narrate.py`'s `scene_slug` handles the letters, so Part 1's clips
+are `sceneA_beat02.mp3` and so on.
 
-- there is no `Scene00Intro` class, and nothing in the pipeline expects one
-- `Scene01Bridge` opens with the history timeline (Caesar → Enigma → DES →
-  AES) **already on screen**, then compresses it and slides it off — which is
-  exactly the handover the plan describes
-- every timecode in the plan starts at 0:00 for this portion
+Scene F ends on the finished `HistoryTimeline`, which is the frame
+`Scene01Bridge` opens on, so the join between the two parts has no visible
+seam. The timeline itself gained a 1976 stop for Diffie–Hellman and an
+optional marker that Part 1 walks along; Scene 1 asks for no marker and gets
+none.
 
-When the intro script lands: write `Scene00Intro` ending on
-`HistoryTimeline()`, add it to the top of the `SCENES` list in
-[`render.sh`](render.sh), and add its beat table to the plan. Nothing else
-changes — the beat order of scenes 1–13 is unaffected, and every timecode
-shifts by the intro's length.
+The key-exchange beat reuses `SessionKeyMerge` rather than the paint-mixing
+analogy the plan originally described: the halves stay inside the palette, and
+it makes Scene 9's HTTPS handshake a callback rather than the first sighting.
 
 ## Layout
 
 | Path | What it holds |
 | --- | --- |
 | `professional-encryption-video-plan.md` | The plan. The source of truth. |
-| `scenes.py` | The thirteen scenes, one `self.beat(...)` per plan row. |
+| `scenes.py` | `SceneAKerckhoffs` … `SceneFBeyond`, then the thirteen numbered scenes. |
 | `style.py` | The palette. The simplified cut's, plus `ALGO`. |
 | `assets.py` | The shared objects — **byte-identical to the simplified cut's**. |
 | `tech_assets.py` | What this cut adds: pipeline, curve, certificate, hash box… |
 | `values.py` | The real AES and SHA-256 strings shown on screen. |
 | `narrate.py` | The narration pipeline. |
+| `align.py` | Cuts one straight-through recording into the per-beat files. |
 | `render.sh` | Renders every scene in order and stitches the cut. |
 | `audio/` | One file per line of narration, plus `music.mp3` if there is one. |
+| `audio/raw/` | The two straight-through reads those files were cut from. |
 | `renders/` | `professional-encryption-video.mp4`. |
 
 `audio/` is tracked, so a line recorded on one machine renders on another —

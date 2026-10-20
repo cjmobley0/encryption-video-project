@@ -1,40 +1,40 @@
 {
   "scene": "Scene04Math",
-  "target": 10.58,
-  "duration": 10.5833,
+  "target": 10.15,
+  "duration": 10.1833,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
-      "note": "Computers do this with math.",
-      "window": 2.9,
-      "animation": 2.9,
+      "note": "Computers do this using complicated mathematics.",
+      "window": 2.74,
+      "animation": 2.5,
       "start": 0.0,
-      "end": 2.9
+      "end": 2.75
     },
     {
       "index": 2,
       "note": "An encryption algorithm changes the message using a secret key.",
-      "window": 3.8,
-      "animation": 3.8,
-      "start": 2.9,
-      "end": 6.7
+      "window": 3.32,
+      "animation": 3.2,
+      "start": 2.75,
+      "end": 6.0833
     },
     {
       "index": 3,
       "note": "The receiver then uses the correct key to change it back.",
-      "window": 2.88,
+      "window": 3.09,
       "animation": 2.5,
-      "start": 6.7,
-      "end": 9.5833
+      "start": 6.0833,
+      "end": 9.1833
     },
     {
       "index": 4,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 9.5833,
-      "end": 10.5833
+      "start": 9.1833,
+      "end": 10.1833
     }
   ]
 }

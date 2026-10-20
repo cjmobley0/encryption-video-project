@@ -43,7 +43,12 @@ SILENT_NOTES = ("(music only)", "(transition)")
 EXTENSIONS = (".mp3", ".wav", ".m4a", ".aiff", ".aif", ".flac", ".aac")
 
 # Breathing room after each line, so one sentence does not run into the next.
-DEFAULT_PAD = 0.35
+#
+# 0.65s, which is this reader's own median pause between sentences — measured
+# off the two recordings rather than picked. The simplified cut's 0.35s was
+# tighter than they actually read, and laid end to end over 94 lines that is
+# most of half a minute of pacing taken out of an eight-minute video.
+DEFAULT_PAD = 0.65
 
 # Bumped whenever _speech_span or CLEANUP changes, to throw away stale
 # measurements.
@@ -111,8 +116,13 @@ class SceneBeats:
 
 
 def scene_slug(name: str) -> str:
-    """Scene01Intro -> scene01, so a filename says nothing but its slot."""
-    m = re.match(r"Scene(\d+)", name)
+    """Scene01Intro -> scene01, so a filename says nothing but its slot.
+
+    Part 1's scenes are lettered rather than numbered, so that adding them in
+    front of the cut left the existing scene numbers — and the recordings
+    already named after them — alone. SceneBCaesar -> sceneB.
+    """
+    m = re.match(r"Scene(\d+|[A-Z](?=[A-Z][a-z]))", name)
     return f"scene{m.group(1)}" if m else name.lower()
 
 
@@ -630,6 +640,81 @@ def cmd_retime(args: argparse.Namespace) -> int:
     return 0
 
 
+# --- replan ----------------------------------------------------------------
+
+
+def _clock(t: float) -> str:
+    return f"{int(t) // 60}:{int(t) % 60:02d}"
+
+
+BEAT_ROW = re.compile(r"^\| (\d+:\d\d)[\u2013-](\d+:\d\d) \| ", re.M)
+SCENE_HEAD = re.compile(r"^(### [^(\n]*)\((\d+:\d\d)[\u2013-](\d+:\d\d)\)", re.M)
+BANNER = re.compile(r"^(\*\*[^(\n]*)\((\d+:\d\d)[\u2013-](\d+:\d\d)\)(\*\*)", re.M)
+
+
+def cmd_replan(args: argparse.Namespace) -> int:
+    """Rewrite the plan's timecodes from the lengths in scenes.py.
+
+    A re-time moves every beat, and the plan's tables are then quietly wrong —
+    which matters, because the plan is what a reader trusts and what the
+    recorder shows as the budget for a line. The wording and the ``On screen``
+    column are untouched; only the clock is.
+    """
+    plan = Path(args.plan) if args.plan else PLAN
+    if not plan.exists():
+        print(f"{plan}: not found", file=sys.stderr)
+        return 1
+    scenes = read_scenes()
+    beats = [b for s in scenes for b in s.beats]
+    text = plan.read_text()
+
+    rows = list(BEAT_ROW.finditer(text))
+    if len(rows) != len(beats):
+        print(f"{plan.name} has {len(rows)} beat rows but scenes.py has "
+              f"{len(beats)} beats — nothing rewritten", file=sys.stderr)
+        return 1
+    heads = list(SCENE_HEAD.finditer(text))
+    if len(heads) != len(scenes):
+        print(f"{plan.name} has {len(heads)} scene headings but scenes.py has "
+              f"{len(scenes)} scenes — nothing rewritten", file=sys.stderr)
+        return 1
+
+    # Every edit, as (start, end, replacement), applied back to front.
+    edits = []
+    at = 0.0
+    for m, beat in zip(rows, beats):
+        stop = at + beat.window
+        edits.append((m.start(), m.end(), f"| {_clock(at)}\u2013{_clock(stop)} | "))
+        at = stop
+    whole = at
+
+    at, slots = 0.0, []
+    for m, scene in zip(heads, scenes):
+        end = at + scene.target
+        slots.append((m.start(), at, end))
+        edits.append((m.start(), m.end(),
+                      f"{m.group(1)}({_clock(at)}\u2013{_clock(end)})"))
+        at = end
+
+    # A banner spans the scenes between it and the next banner.
+    banners = list(BANNER.finditer(text))
+    for i, m in enumerate(banners):
+        after = banners[i + 1].start() if i + 1 < len(banners) else len(text)
+        mine = [(a, b) for pos, a, b in slots if m.start() < pos < after]
+        if not mine:
+            continue
+        edits.append((m.start(), m.end(),
+                      f"{m.group(1)}({_clock(mine[0][0])}"
+                      f"\u2013{_clock(mine[-1][1])}){m.group(4)}"))
+
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    plan.write_text(text)
+    print(f"{plan.name}: {len(rows)} beat rows, {len(heads)} headings and "
+          f"{len(banners)} banners retimed; the cut runs {_clock(whole)}")
+    return 0
+
+
 # --- levelling ---------------------------------------------------------------
 
 # Where the narration should sit, as a mean level in dB. Recordings often come
@@ -836,6 +921,11 @@ def main(argv: list[str] | None = None) -> int:
                    help="where the render left its beat timing logs")
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(func=cmd_retime)
+
+    p = sub.add_parser("replan", help="rewrite the plan's timecodes from the code")
+    p.add_argument("--plan", default=None,
+                   help=f"which plan to rewrite (default {PLAN.name})")
+    p.set_defaults(func=cmd_replan)
 
     p = sub.add_parser("mix", help="lay a scene's narration under its video")
     p.add_argument("scene")

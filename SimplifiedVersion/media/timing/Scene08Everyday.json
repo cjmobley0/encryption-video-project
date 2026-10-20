@@ -1,48 +1,48 @@
 {
   "scene": "Scene08Everyday",
-  "target": 21.21,
-  "duration": 21.2,
+  "target": 24.19,
+  "duration": 24.1667,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
-      "note": "Encryption is used in many parts of daily life.",
-      "window": 2.5,
-      "animation": 1.7,
+      "note": "Messaging apps can use end-to-end encryption so that a message is protected while traveling from one phone to another.",
+      "window": 5.62,
+      "animation": 5.1,
       "start": 0.0,
-      "end": 2.5
+      "end": 5.6167
     },
     {
       "index": 2,
-      "note": "Messaging apps can use end-to-end encryption, so a message stays protected from one phone to another.",
-      "window": 6.0,
-      "animation": 6.0,
-      "start": 2.5,
-      "end": 8.5
+      "note": "Phones and computers can also encrypt stored files to make sure that information is harder to access if the device is lost or stolen.",
+      "window": 7.17,
+      "animation": 5.85,
+      "start": 5.6167,
+      "end": 12.7833
     },
     {
       "index": 3,
-      "note": "Phones and computers can encrypt stored files, so your information is harder to access if a device is lost or stolen.",
-      "window": 6.61,
-      "animation": 5.85,
-      "start": 8.5,
-      "end": 15.1
+      "note": "Encryption is used by banks, online stores, hospitals, businesses, and government agencies.",
+      "window": 5.72,
+      "animation": 5.1,
+      "start": 12.7833,
+      "end": 18.5
     },
     {
       "index": 4,
-      "note": "Banks, online stores, hospitals, businesses, government agencies, and VPNs use it too.",
-      "window": 5.1,
-      "animation": 5.1,
-      "start": 15.1,
-      "end": 20.2
+      "note": "It's also used to protect the information sent through virtual private networks or VPNs.",
+      "window": 4.68,
+      "animation": 4.4,
+      "start": 18.5,
+      "end": 23.1667
     },
     {
       "index": 5,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 20.2,
-      "end": 21.2
+      "start": 23.1667,
+      "end": 24.1667
     }
   ]
 }

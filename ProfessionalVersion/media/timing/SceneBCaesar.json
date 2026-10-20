@@ -1,0 +1,40 @@
+{
+  "scene": "SceneBCaesar",
+  "target": 12.92,
+  "duration": 12.9,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Caesar's cipher is the simplest example: shift each letter by a fixed amount.",
+      "window": 5.0,
+      "animation": 2.95,
+      "start": 0.0,
+      "end": 5.0
+    },
+    {
+      "index": 2,
+      "note": "With so few possible offsets, an attacker can test every one.",
+      "window": 3.75,
+      "animation": 2.45,
+      "start": 5.0,
+      "end": 8.75
+    },
+    {
+      "index": 3,
+      "note": "The key space is too small to provide meaningful security.",
+      "window": 3.17,
+      "animation": 1.9,
+      "start": 8.75,
+      "end": 11.9167
+    },
+    {
+      "index": 4,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 0.8,
+      "start": 11.9167,
+      "end": 12.9
+    }
+  ]
+}

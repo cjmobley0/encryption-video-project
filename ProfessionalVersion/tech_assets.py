@@ -131,12 +131,15 @@ class HistoryTimeline(VGroup):
     STOPS = (
         ("Caesar cipher", "~50 BC"),
         ("Enigma", "1920s"),
+        ("Diffie\u2013Hellman", "1976"),
         ("DES", "1977"),
         ("AES", "2001"),
     )
 
-    def __init__(self, width: float = 10.0, color: str = FG, **kw):
+    def __init__(self, width: float = 10.0, color: str = FG,
+                 marker: bool = False, **kw):
         super().__init__(**kw)
+        self._axis_width = width
         axis = Line(LEFT * width / 2, RIGHT * width / 2,
                     color=color, stroke_width=STROKE_THIN)
         head = Triangle(color=color, stroke_width=0, fill_color=color,
@@ -160,6 +163,41 @@ class HistoryTimeline(VGroup):
 
         self.add(axis, head, marks, labels)
         self.axis, self.head, self.marks, self.labels = axis, head, marks, labels
+
+        # Part 1 walks the marker along as the narration reaches each era.
+        # Scene 1 opens on the finished timeline and never moves it, so it
+        # asks for no marker and gets none.
+        self.marker = None
+        if marker:
+            # A caret through the axis rather than a flag above it: the stop
+            # labels alternate above and below the line, so anything perched
+            # on one side lands on half of them. Off-white, because the ticks
+            # are already gold and a gold caret among them reads as one more
+            # tick rather than as where we are.
+            self.marker = Line(DOWN * 0.3, UP * 0.3, color=FG,
+                               stroke_width=5)
+            self.marker.move_to(self.at(0))
+            self.add(self.marker)
+
+    def at(self, i: int):
+        """Where stop ``i`` sits on the axis, now.
+
+        Read off the tick each time rather than cached at construction: a
+        caller scales this and moves it to the bottom of the frame before
+        placing the marker, and a stored coordinate would still be pointing
+        at where the stop used to be.
+        """
+        return self.marks[i][0].get_center()
+
+    def above(self, i: int, buff: float = 1.5):
+        """Clear of the marker, where that era's picture belongs."""
+        return self.at(i) + UP * buff
+
+    def slide(self, i: int, **kw):
+        """The marker moving to stop ``i``."""
+        if self.marker is None:
+            raise ValueError("this timeline was built without a marker")
+        return self.marker.animate(**kw).move_to(self.at(i))
 
     def write_anim(self, run_time: float = 2.4):
         """Draw the axis, then land the stops on it one at a time."""
@@ -278,6 +316,21 @@ class Pipeline(VGroup):
 
     def output_at(self):
         return self.out_slot.get_center()
+
+    def fit(self, mob: Mobject, side: str = "in", margin: float = 0.84):
+        """Put a payload in a slot, shrinking it if it would not fit.
+
+        A caller scales the whole pipeline down but builds its plaintext at
+        the size the rest of the scene uses, so the words end up wider than
+        the box they are supposed to be sitting in. Only shrinks: a short
+        payload is left at the size it was asked for.
+        """
+        slot = self.in_slot if side == "in" else self.out_slot
+        room = slot.width * margin
+        if mob.width > room:
+            mob.scale_to_fit_width(room)
+        mob.move_to(slot.get_center())
+        return mob
 
     def insert_key_anim(self, run_time: float = 0.6):
         """Drop the key into the slot on top of the algorithm box."""
@@ -992,16 +1045,31 @@ class NetworkGlobe(VGroup):
             for y in (-0.62, -0.25, 0.25, 0.62)
         ])
 
-        dots = VGroup()
-        for i in range(nodes):
-            angle = TAU * i / nodes + 0.4
-            r = radius * (0.55 + 0.4 * ((i * 3) % 5) / 5)
-            dots.add(Dot(r * np.array([np.cos(angle), np.sin(angle), 0]),
-                         radius=0.075, color=PRIVATE))
+        # Nodes at irregular angles and radii, joined to whichever other
+        # nodes happen to be near them. An earlier version spaced them evenly
+        # and joined every node to the one two along, which is the definition
+        # of a star polygon — at seven nodes it drew a recognisable star, and
+        # the closing shot of a video is no place to put an unintended
+        # symbol. Short links between near neighbours cannot make one.
+        spots = [
+            (0.42, 0.88), (1.21, 0.52), (1.84, 0.80), (2.46, 0.45),
+            (3.05, 0.86), (3.71, 0.58), (4.34, 0.83), (5.02, 0.50),
+            (5.61, 0.78),
+        ][:max(nodes, 9)]
+        dots = VGroup(*[
+            Dot(radius * r * np.array([np.cos(a), np.sin(a), 0]),
+                radius=0.075, color=PRIVATE)
+            for a, r in spots
+        ])
+        # Hand-picked neighbours: every link is a short hop round the rim or
+        # between two nodes already close together, never a chord through
+        # the middle.
+        pairs = ((0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7),
+                 (7, 8), (8, 0), (1, 3), (4, 6))
         links = VGroup(*[
-            Line(dots[i].get_center(), dots[(i + 2) % nodes].get_center(),
+            Line(dots[i].get_center(), dots[j].get_center(),
                  color=PRIVATE, stroke_width=1.8, stroke_opacity=0.55)
-            for i in range(nodes)
+            for i, j in pairs if i < len(dots) and j < len(dots)
         ])
 
         self.add(outline, meridians, parallels, links, dots)

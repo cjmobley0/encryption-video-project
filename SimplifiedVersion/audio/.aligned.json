@@ -1,0 +1,174 @@
+{
+  "source": "p1simplifiednarration.mp4",
+  "duration": 60.587,
+  "lines": [
+    {
+      "stem": "sceneA_beat02",
+      "label": "SceneAWhyItMatters beat 2",
+      "line": "When you check your bank account online, information travels between your device and the bank.",
+      "heard": "When you take your bank account online, information travels between your device and the bank.",
+      "start": 0.0,
+      "end": 4.074,
+      "cut": [
+        0.0,
+        4.194
+      ],
+      "match": 0.933,
+      "notes": []
+    },
+    {
+      "stem": "sceneA_beat03",
+      "label": "SceneAWhyItMatters beat 3",
+      "line": "Encryption helps keep it private.",
+      "heard": "Encryption helps keep it private.",
+      "start": 4.788,
+      "end": 5.884,
+      "cut": [
+        4.668,
+        6.004
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneA_beat04",
+      "label": "SceneAWhyItMatters beat 4",
+      "line": "Even if someone intercepts the data, they shouldn't be able to read it without the right key.",
+      "heard": "Even if someone intercepts the data, they shouldn't be able to read it without the right key.",
+      "start": 6.559,
+      "end": 9.755,
+      "cut": [
+        6.439,
+        9.875
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneB_beat01",
+      "label": "SceneBCaesarEnigma beat 1",
+      "line": "Protecting messages isn't a new challenge.",
+      "heard": "Protecting messages isn't a new challenge.",
+      "start": 11.905,
+      "end": 13.527,
+      "cut": [
+        11.785,
+        13.647
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneB_beat02",
+      "label": "SceneBCaesarEnigma beat 2",
+      "line": "Julius Caesar used a cipher that shifted letters along the alphabet.",
+      "heard": "Julius Caesar used a cipher that shifted letters along the alphabet.",
+      "start": 14.136,
+      "end": 16.988,
+      "cut": [
+        14.016,
+        17.108
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneB_beat03",
+      "label": "SceneBCaesarEnigma beat 3",
+      "line": "It could hide a message from a casual reader, but it's easy to break now.",
+      "heard": "It hide messages from our casual reader, but it's easy to break now.",
+      "start": 17.558,
+      "end": 20.479,
+      "cut": [
+        17.438,
+        20.599
+      ],
+      "match": 0.75,
+      "notes": []
+    },
+    {
+      "stem": "sceneB_beat04",
+      "label": "SceneBCaesarEnigma beat 4",
+      "line": "During World War Two, German forces used Enigma machines that changed how letters were scrambled with every keystroke.",
+      "heard": "During World War II, German forces used enigma machines that changed how letters were scrambled with every keystroke.",
+      "start": 23.126,
+      "end": 28.267,
+      "cut": [
+        23.006,
+        28.387
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneB_beat05",
+      "label": "SceneBCaesarEnigma beat 5",
+      "line": "Polish mathematicians made early breakthroughs, and Allied codebreakers built on that work.",
+      "heard": "Polish mathematicians made early breakthroughs and allied code breakers built on that work.",
+      "start": 29.005,
+      "end": 32.847,
+      "cut": [
+        28.885,
+        32.967
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneC_beat01",
+      "label": "SceneCComputersAES beat 1",
+      "line": "As computers spread into everyday life, encryption had to protect more than military messages.",
+      "heard": "As computers spread into everyday life, encryption had to protect more than military messages.",
+      "start": 35.374,
+      "end": 39.86,
+      "cut": [
+        35.254,
+        39.98
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneC_beat02",
+      "label": "SceneCComputersAES beat 2",
+      "line": "In the nineteen seventies, researchers developed new ways for computers to protect data and establish shared keys.",
+      "heard": "In the 1970s, researchers developed new ways for computers to protect data and establish shared keys.",
+      "start": 40.344,
+      "end": 45.76,
+      "cut": [
+        40.224,
+        45.88
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "sceneC_beat03",
+      "label": "SceneCComputersAES beat 3",
+      "line": "In two thousand and one, the United States adopted the Advanced Encryption Standard, or AES, to protect sensitive digital information.",
+      "heard": "In 2001, the United States adopted the Advanced Encryption Standard, or AES, to protect sensitive digital information.",
+      "start": 46.258,
+      "end": 52.858,
+      "cut": [
+        46.138,
+        52.978
+      ],
+      "match": 0.95,
+      "notes": []
+    },
+    {
+      "stem": "sceneC_beat04",
+      "label": "SceneCComputersAES beat 4",
+      "line": "Today, AES is widely used to protect data on devices and across networks.",
+      "heard": "Today, AES is widely used to protect data on devices and across networks.",
+      "start": 55.153,
+      "end": 59.64,
+      "cut": [
+        55.033,
+        59.76
+      ],
+      "match": 1.0,
+      "notes": []
+    }
+  ]
+}

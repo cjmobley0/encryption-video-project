@@ -1,56 +1,64 @@
 {
   "scene": "Scene07Https",
-  "target": 20.79,
-  "duration": 20.7667,
+  "target": 27.45,
+  "duration": 27.45,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
       "note": "Many real systems use both types together.",
-      "window": 2.74,
+      "window": 2.7,
       "animation": 2.5,
       "start": 0.0,
-      "end": 2.7333
+      "end": 2.7
     },
     {
       "index": 2,
-      "note": "When you visit a secure website, public-key encryption helps your device and the website agree on a secret key.",
-      "window": 6.5,
-      "animation": 6.5,
-      "start": 2.7333,
-      "end": 9.2333
+      "note": "For example, when visiting a secure website, public key encryption helps your device and the website agree on a secret key.",
+      "window": 6.51,
+      "animation": 5.9,
+      "start": 2.7,
+      "end": 9.2
     },
     {
       "index": 3,
-      "note": "Then fast symmetric encryption protects the rest of the conversation.",
-      "window": 3.54,
+      "note": "Then, fast symmetric encryption protects the rest of the conversation.",
+      "window": 3.83,
       "animation": 3.3,
-      "start": 9.2333,
-      "end": 12.7667
+      "start": 9.2,
+      "end": 13.0167
     },
     {
       "index": 4,
-      "note": "That's what the padlock symbol in your browser means.",
-      "window": 3.1,
-      "animation": 3.1,
-      "start": 12.7667,
-      "end": 15.8667
+      "note": "Encryption is used in many parts of daily life.",
+      "window": 2.39,
+      "animation": 1.8,
+      "start": 13.0167,
+      "end": 15.4
     },
     {
       "index": 5,
-      "note": "HTTPS is encrypting the connection and protecting your passwords, shopping information, and personal details.",
-      "window": 3.91,
-      "animation": 3.5,
-      "start": 15.8667,
-      "end": 19.7667
+      "note": "When you see a padlock symbol in your web browser, HTTPS is helping encrypt the connection between your device and the website.",
+      "window": 6.93,
+      "animation": 5.4,
+      "start": 15.4,
+      "end": 22.3167
     },
     {
       "index": 6,
+      "note": "This helps protect passwords, shopping information, and other personal details.",
+      "window": 4.09,
+      "animation": 2.4,
+      "start": 22.3167,
+      "end": 26.4
+    },
+    {
+      "index": 7,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 19.7667,
-      "end": 20.7667
+      "start": 26.4,
+      "end": 27.4
     }
   ]
 }

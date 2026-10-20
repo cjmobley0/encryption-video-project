@@ -34,8 +34,18 @@
 # ...but not the per-animation fragments Manim stitches each scene from.
 **/media/videos/scenes/1080p60/partial_movie_files/
 
-# The stitched cuts and the per-scene mixes behind them.
-renders/
+# The per-scene mixes behind each cut, but not the cut itself: the two
+# finished videos are tracked so anyone who clones — or just browses the repo
+# on GitHub — can watch them without rendering anything. Same as media/ above,
+# the directory is opened a level at a time, because Git cannot re-include a
+# path inside an excluded directory.
+**/renders/*
+!**/renders/encryption-full.mp4
+!**/renders/professional-encryption-video.mp4
+# ...and the 720p30 web copies beside them, kept under GitHub's 10MB
+# attachment limit so each one can be uploaded and played inline in a README.
+!**/renders/encryption-full-web.mp4
+!**/renders/professional-encryption-video-web.mp4
 
 # Narration is tracked, not ignored: whoever records a line pushes it, and
 # whoever renders pulls it. So `audio/*.mp3` and friends stay in the repo, and
@@ -56,6 +66,18 @@ renders/
 # mtime, so every entry would be a miss on arrival anyway; it is rebuilt on the
 # first retime or mix.
 **/audio/.measured.json
+
+# A straight-through read arrives as a screen recording, hundreds of megabytes
+# of picture nobody needs — the reader's cue, not footage. What is kept instead
+# is under audio/raw/: the demuxed audio track, which is what the per-beat
+# clips are actually cut from, and the word timings whisper found in it. Those
+# two are tracked, so a fresh clone can re-cut every clip without the original
+# recording and without installing whisper. See SimplifiedVersion/align.py.
+*narration.mp4
+*narration.mov
+
+# Rebuilt from the .m4a on demand, and only the transcriber reads it.
+**/audio/raw/*.wav
 
 # Python
 __pycache__/

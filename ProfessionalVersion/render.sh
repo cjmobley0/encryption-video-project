@@ -42,6 +42,12 @@ fi
 # exists, add it at the top of this list and nothing else changes — Scene 1
 # already opens on the history timeline the intro is to end on.
 SCENES=(
+  SceneAKerckhoffs
+  SceneBCaesar
+  SceneCEnigma
+  SceneDKeyExchange
+  SceneEDesToAes
+  SceneFBeyond
   Scene01Bridge
   Scene02Pipeline
   Scene03Decryption
@@ -146,4 +152,4 @@ fi
 echo
 echo "Done: $FULL"
 ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$FULL" \
-  | awk '{printf "Runtime: %d:%02d  (plan: 8:00, before the intro)\n", $1/60, $1%60}'
+  | awk '{printf "Runtime: %d:%02d  (plan: 8:00, Part 1 + Part 2)\n", $1/60, $1%60}'

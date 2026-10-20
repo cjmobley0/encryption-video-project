@@ -1,48 +1,40 @@
 {
   "scene": "Scene02Ciphertext",
-  "target": 13.34,
-  "duration": 13.3167,
+  "target": 12.78,
+  "duration": 12.7667,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
       "note": "Encryption is a way of turning a readable message into a secret code.",
-      "window": 4.2,
-      "animation": 4.2,
+      "window": 3.44,
+      "animation": 3.2,
       "start": 0.0,
-      "end": 4.2
+      "end": 3.4333
     },
     {
       "index": 2,
       "note": "The readable message is called plaintext.",
-      "window": 2.27,
+      "window": 2.39,
       "animation": 1.9,
-      "start": 4.2,
-      "end": 6.4667
+      "start": 3.4333,
+      "end": 5.8167
     },
     {
       "index": 3,
-      "note": "After encryption, it becomes ciphertext,",
-      "window": 2.16,
-      "animation": 1.95,
-      "start": 6.4667,
-      "end": 8.6167
+      "note": "After encryption, it becomes ciphertext, which should look like meaningless information to anyone who's not supposed to read it.",
+      "window": 5.95,
+      "animation": 4.8,
+      "start": 5.8167,
+      "end": 11.75
     },
     {
       "index": 4,
-      "note": "which looks like meaningless information to anyone who isn't supposed to read it.",
-      "window": 3.7,
-      "animation": 3.7,
-      "start": 8.6167,
-      "end": 12.3167
-    },
-    {
-      "index": 5,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 12.3167,
-      "end": 13.3167
+      "start": 11.75,
+      "end": 12.75
     }
   ]
 }

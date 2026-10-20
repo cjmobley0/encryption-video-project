@@ -1,0 +1,48 @@
+{
+  "scene": "SceneDKeyExchange",
+  "target": 16.52,
+  "duration": 16.5167,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "As networks expanded, key exchange became its own challenge.",
+      "window": 3.62,
+      "animation": 1.7,
+      "start": 0.0,
+      "end": 3.6167
+    },
+    {
+      "index": 2,
+      "note": "How do two systems establish a shared secret without first meeting on a trusted channel?",
+      "window": 4.36,
+      "animation": 2.5,
+      "start": 3.6167,
+      "end": 7.9667
+    },
+    {
+      "index": 3,
+      "note": "Diffie and Hellman's nineteen seventy-six work offered an answer,",
+      "window": 3.4,
+      "animation": 2.2,
+      "start": 7.9667,
+      "end": 11.35
+    },
+    {
+      "index": 4,
+      "note": "but unauthenticated key exchange still leaves room for an active attacker.",
+      "window": 4.14,
+      "animation": 2.4,
+      "start": 11.35,
+      "end": 15.4833
+    },
+    {
+      "index": 5,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 0.8,
+      "start": 15.4833,
+      "end": 16.4667
+    }
+  ]
+}

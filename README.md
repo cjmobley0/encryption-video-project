@@ -6,8 +6,23 @@ Two cuts, from the same plan, palette and script:
 
 | | | |
 | --- | --- | --- |
-| [`ProfessionalVersion/`](ProfessionalVersion) | **animated** — silent cut in `ProfessionalVersion/renders/`, narration still to record; the history intro is still to be written | the full cut: 13 scenes, 77 narrated beats, 8:00 |
-| [`SimplifiedVersion/`](SimplifiedVersion) | **done** — the cut is in `SimplifiedVersion/renders/` | the proof of concept: 10 scenes, 46 narrated beats, ~3:28 |
+| [`ProfessionalVersion/`](ProfessionalVersion) | **done** — the cut is in `ProfessionalVersion/renders/`, narrated | the full cut: 19 scenes (Part 1 + Chapters 1–3), 94 narrated beats, 8:13 |
+| [`SimplifiedVersion/`](SimplifiedVersion) | **done** — the cut is in `SimplifiedVersion/renders/`, narrated | 13 scenes (Part 1 + Part 2), 50 narrated beats, 3:42 |
+
+## Watch
+
+Both cuts are in the repo, at full quality and in a smaller web copy:
+
+| | Full quality | Web copy |
+| --- | --- | --- |
+| **Professional** — 8:13 | [`professional-encryption-video.mp4`](ProfessionalVersion/renders/professional-encryption-video.mp4) · 1080p60 · 29 MB | [720p30 · 9 MB](ProfessionalVersion/renders/professional-encryption-video-web.mp4) |
+| **Simplified** — 3:42 | [`encryption-full.mp4`](SimplifiedVersion/renders/encryption-full.mp4) · 1080p60 · 15 MB | [720p30 · 9 MB](SimplifiedVersion/renders/encryption-full-web.mp4) |
+
+GitHub will not play a video that is committed to a repository — the file page
+offers it for download and nothing else, whatever its size. It plays video only
+when the file is *uploaded* to an issue, a comment or the README editor, which
+is capped at 10 MB on a free plan. That is what the web copies are for: drop one
+into the README editor on github.com and it becomes a player in the page.
 
 Each version is self-contained. What they share sits at the root:
 
@@ -28,9 +43,12 @@ Inside a version:
 | `scenes.py` | Every scene, with the narration line on each beat. |
 | `style.py`, `assets.py` | The palette and the reusable objects. `assets.py` is byte-identical in both versions. |
 | `tech_assets.py` | Objects only the full cut needs. Professional only. |
+| `part1_assets.py` | Objects only that cut's Part 1 needs. Simplified only. |
 | `narrate.py` | The narration pipeline: list the lines, re-time the cut, mix. |
+| `align.py` | Cuts one straight-through recording into the per-beat files. |
 | `render.sh` | Renders every scene in order and stitches them. |
 | `audio/` | One file per line of narration, plus `music.mp3` if there is one. |
+| `audio/raw/` | The straight-through reads those files were cut from. |
 | `renders/` | The stitched video. |
 | `media/` | Manim's own output. The 1080p60 scene renders and beat-timing logs are tracked, so the booth has a picture to play; the rest is cache. |
 | `.venv/` | That version's virtualenv. |
@@ -54,6 +72,19 @@ So the loop is **render → record → re-time → render again**:
 2. **Record** each line to that picture.
 3. **Re-time** — each beat's window stretches to the line actually read.
 4. **Render again** — the cut, with the audio under it.
+
+### The team logo
+
+Both end cards draw the Otter Digital mark from `team_logo.svg` at the root
+here, which is `team_logo.png` beside it traced with `potrace`. It is the SVG
+rather than the PNG for two reasons: it stays crisp at 4K, and Manim v0.22.0
+cannot draw a raster at all against current Pillow — `ImageMobject` builds its
+paste buffer with the wrong shape and dtype, and PIL rejects it.
+
+To redo the trace when the artwork changes, split the PNG into one bitmap per
+flat colour (nearest-colour per pixel, upsampled 4x so the edges are smooth),
+run each through `potrace -s -C '#rrggbb'`, and paste the resulting `<g>`
+blocks into a single SVG — navy first, blue over it.
 
 ## Setup
 
@@ -79,6 +110,33 @@ python3 -m venv .venv
 No LaTeX: every label is `Text`, never `Tex`.
 
 ## Recording the narration
+
+There are two ways in. The simplified cut was narrated the first way.
+
+### Read it straight through, and cut it up
+
+Record the whole part in one go, in whatever app is comfortable — a screen
+recording is fine, the picture is thrown away. Then `align.py` finds each line
+inside the audio and writes the per-beat files the cut reads:
+
+```bash
+cd SimplifiedVersion
+python3 align.py transcribe p1simplifiednarration.mp4   # once, needs whisper
+python3 align.py check      p1simplifiednarration.mp4 --from SceneAWhyItMatters
+python3 align.py split      p1simplifiednarration.mp4 --from SceneAWhyItMatters
+```
+
+`check` prints where every line landed and writes nothing. It also flags what
+it could not cut cleanly — a line the reader skipped or reworded, two lines run
+together with no breath between them, a line read out of order — and `split`
+refuses to write until those are dealt with, either in the recording or in
+`scenes.py`. See
+[`SimplifiedVersion/README.md`](SimplifiedVersion/README.md#read-it-straight-through-and-cut-it-up)
+for what each flag means. Flags are not unusual: the simplified read followed
+an earlier draft of the script, and the animation was conformed to it rather
+than the lines re-recorded.
+
+### The booth, one line at a time
 
 The booth takes one line at a time, with the animation that line belongs to
 playing beside it.

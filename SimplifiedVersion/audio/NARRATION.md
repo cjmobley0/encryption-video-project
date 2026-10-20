@@ -9,15 +9,42 @@ Any of .mp3, .wav, .m4a, .aiff, .aif, .flac, .aac will do. Leave a moment of sil
 each end if it helps you read — it gets trimmed. Beats marked *(no
 speech)* are music or a transition: there is nothing to record.
 
-## Scene01Intro
+## SceneAWhyItMatters
 
 | File | Line |
 | --- | --- |
 | — | *(no speech)* — `(music only)` |
-| `scene01_beat02.mp3` | Every day, we send private information online: |
-| `scene01_beat03.mp3` | messages, passwords, and payment details. |
-| `scene01_beat04.mp3` | Encryption is what keeps it safe. |
-| `scene01_beat05.mp3` | So, how does encryption actually work, and why do we use it so often? |
+| `sceneA_beat02.mp3` | When you check your bank account online, information travels between your device and the bank. |
+| `sceneA_beat03.mp3` | Encryption helps keep it private. |
+| `sceneA_beat04.mp3` | Even if someone intercepts the data, they shouldn't be able to read it without the right key. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneBCaesarEnigma
+
+| File | Line |
+| --- | --- |
+| `sceneB_beat01.mp3` | Protecting messages isn't a new challenge. |
+| `sceneB_beat02.mp3` | Julius Caesar used a cipher that shifted letters along the alphabet. |
+| `sceneB_beat03.mp3` | It could hide a message from a casual reader, but it's easy to break now. |
+| `sceneB_beat04.mp3` | During World War Two, German forces used Enigma machines that changed how letters were scrambled with every keystroke. |
+| `sceneB_beat05.mp3` | Polish mathematicians made early breakthroughs, and Allied codebreakers built on that work. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneCComputersAES
+
+| File | Line |
+| --- | --- |
+| `sceneC_beat01.mp3` | As computers spread into everyday life, encryption had to protect more than military messages. |
+| `sceneC_beat02.mp3` | In the nineteen seventies, researchers developed new ways for computers to protect data and establish shared keys. |
+| `sceneC_beat03.mp3` | In two thousand and one, the United States adopted the Advanced Encryption Standard, or AES, to protect sensitive digital information. |
+| `sceneC_beat04.mp3` | Today, AES is widely used to protect data on devices and across networks. |
+| — | *(no speech)* — `(transition)` |
+
+## Scene01Intro
+
+| File | Line |
+| --- | --- |
+| `scene01_beat01.mp3` | So, how does encryption actually work and why do we use it so often? |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene02Ciphertext
@@ -26,8 +53,7 @@ speech)* are music or a transition: there is nothing to record.
 | --- | --- |
 | `scene02_beat01.mp3` | Encryption is a way of turning a readable message into a secret code. |
 | `scene02_beat02.mp3` | The readable message is called plaintext. |
-| `scene02_beat03.mp3` | After encryption, it becomes ciphertext, |
-| `scene02_beat04.mp3` | which looks like meaningless information to anyone who isn't supposed to read it. |
+| `scene02_beat03.mp3` | After encryption, it becomes ciphertext, which should look like meaningless information to anyone who's not supposed to read it. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene03LockedBox
@@ -35,17 +61,16 @@ speech)* are music or a transition: there is nothing to record.
 | File | Line |
 | --- | --- |
 | `scene03_beat01.mp3` | Imagine putting a note inside a locked box. |
-| `scene03_beat02.mp3` | The note is the message, |
-| `scene03_beat03.mp3` | the lock is the encryption, |
-| `scene03_beat04.mp3` | and the key is what opens the box. |
-| `scene03_beat05.mp3` | The person receiving the message needs the right key to unlock it and read it. |
+| `scene03_beat02.mp3` | The note is the original message. |
+| `scene03_beat03.mp3` | The lock is the encryption process, and the key is what unlocks the box. |
+| `scene03_beat04.mp3` | The person receiving the message needs the right key to be able to unlock it and read it. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene04Math
 
 | File | Line |
 | --- | --- |
-| `scene04_beat01.mp3` | Computers do this with math. |
+| `scene04_beat01.mp3` | Computers do this using complicated mathematics. |
 | `scene04_beat02.mp3` | An encryption algorithm changes the message using a secret key. |
 | `scene04_beat03.mp3` | The receiver then uses the correct key to change it back. |
 | — | *(no speech)* — `(transition)` |
@@ -57,22 +82,21 @@ speech)* are music or a transition: there is nothing to record.
 | `scene05_beat01.mp3` | There are two main types of encryption. |
 | `scene05_beat02.mp3` | The first is symmetric encryption. |
 | `scene05_beat03.mp3` | It uses the same key to lock and unlock the information. |
-| `scene05_beat04.mp3` | It's fast, so it's great for protecting lots of data. |
-| `scene05_beat05.mp3` | The challenge is that both people need to get the same secret key safely. |
+| `scene05_beat04.mp3` | This is very useful for protecting large amounts of data. |
+| `scene05_beat05.mp3` | The challenge is that both people or devices need to receive the same secret key safely. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene06Asymmetric
 
 | File | Line |
 | --- | --- |
-| `scene06_beat01.mp3` | The second is asymmetric encryption, |
-| `scene06_beat02.mp3` | also called public-key encryption. |
-| `scene06_beat03.mp3` | It uses two keys: a public key and a private key. |
-| `scene06_beat04.mp3` | The public key can be shared with everyone. |
-| `scene06_beat05.mp3` | The private key must be kept secret. |
-| `scene06_beat06.mp3` | Think of a mailbox. |
-| `scene06_beat07.mp3` | Anyone can drop a letter in, like using your public key. |
-| `scene06_beat08.mp3` | But only you, with your private key, can open the mailbox and read the letters. |
+| `scene06_beat01.mp3` | Second is asymmetric encryption, also called public key encryption. |
+| `scene06_beat02.mp3` | This uses a public key and a private key. |
+| `scene06_beat03.mp3` | The public key can be shared with everyone. |
+| `scene06_beat04.mp3` | The private key must be kept secret. |
+| `scene06_beat05.mp3` | Someone can send you an encrypted message with your public key, but only your private key should be able to unlock it. |
+| `scene06_beat06.mp3` | A useful example is a mailbox. |
+| `scene06_beat07.mp3` | Anyone can put letters inside, like using a public key, but only the person with the private key could open the mailbox and read the letters. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene07Https
@@ -80,32 +104,30 @@ speech)* are music or a transition: there is nothing to record.
 | File | Line |
 | --- | --- |
 | `scene07_beat01.mp3` | Many real systems use both types together. |
-| `scene07_beat02.mp3` | When you visit a secure website, public-key encryption helps your device and the website agree on a secret key. |
-| `scene07_beat03.mp3` | Then fast symmetric encryption protects the rest of the conversation. |
-| `scene07_beat04.mp3` | That's what the padlock symbol in your browser means. |
-| `scene07_beat05.mp3` | HTTPS is encrypting the connection and protecting your passwords, shopping information, and personal details. |
+| `scene07_beat02.mp3` | For example, when visiting a secure website, public key encryption helps your device and the website agree on a secret key. |
+| `scene07_beat03.mp3` | Then, fast symmetric encryption protects the rest of the conversation. |
+| `scene07_beat04.mp3` | Encryption is used in many parts of daily life. |
+| `scene07_beat05.mp3` | When you see a padlock symbol in your web browser, HTTPS is helping encrypt the connection between your device and the website. |
+| `scene07_beat06.mp3` | This helps protect passwords, shopping information, and other personal details. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene08Everyday
 
 | File | Line |
 | --- | --- |
-| `scene08_beat01.mp3` | Encryption is used in many parts of daily life. |
-| `scene08_beat02.mp3` | Messaging apps can use end-to-end encryption, so a message stays protected from one phone to another. |
-| `scene08_beat03.mp3` | Phones and computers can encrypt stored files, so your information is harder to access if a device is lost or stolen. |
-| `scene08_beat04.mp3` | Banks, online stores, hospitals, businesses, government agencies, and VPNs use it too. |
+| `scene08_beat01.mp3` | Messaging apps can use end-to-end encryption so that a message is protected while traveling from one phone to another. |
+| `scene08_beat02.mp3` | Phones and computers can also encrypt stored files to make sure that information is harder to access if the device is lost or stolen. |
+| `scene08_beat03.mp3` | Encryption is used by banks, online stores, hospitals, businesses, and government agencies. |
+| `scene08_beat04.mp3` | It's also used to protect the information sent through virtual private networks or VPNs. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene09NotMagic
 
 | File | Line |
 | --- | --- |
-| `scene09_beat01.mp3` | Encryption is extremely important, but it isn't magic. |
-| `scene09_beat02.mp3` | It can't protect someone who gives away their password, |
-| `scene09_beat03.mp3` | clicks a dangerous link, |
-| `scene09_beat04.mp3` | or lets a malicious program onto their device. |
-| `scene09_beat05.mp3` | Encryption protects the information, |
-| `scene09_beat06.mp3` | but people still need strong passwords and safe decisions. |
+| `scene09_beat01.mp3` | Encryption is extremely important, but it is not magic. |
+| `scene09_beat02.mp3` | It cannot protect someone who gives away their password, clicks on a dangerous link, or allows a malicious program onto the device. |
+| `scene09_beat03.mp3` | Encryption protects the information, but people still need to use strong passwords and make safe decisions. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene10Outro
@@ -113,7 +135,7 @@ speech)* are music or a transition: there is nothing to record.
 | File | Line |
 | --- | --- |
 | `scene10_beat01.mp3` | In short, encryption is like a digital lock. |
-| `scene10_beat02.mp3` | It keeps private information private while it's being sent, stored, or shared. |
+| `scene10_beat02.mp3` | It helps keep private information private while it's being sent, stored, or shared. |
 | — | *(no speech)* — `(music only)` |
 
-46 lines to record, across 10 scenes.
+50 lines to record, across 13 scenes.

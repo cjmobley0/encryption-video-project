@@ -1,40 +1,40 @@
 {
   "scene": "Scene05Math",
-  "target": 15.36,
-  "duration": 15.35,
+  "target": 14.21,
+  "duration": 14.2,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
       "note": "Modern encryption is based on mathematics rather than simply hiding information.",
-      "window": 4.8,
+      "window": 4.5,
       "animation": 4.5,
       "start": 0.0,
-      "end": 4.8
+      "end": 4.5
     },
     {
       "index": 2,
       "note": "Algorithms are designed so that encrypting information is easy when the correct key is available,",
-      "window": 5.25,
+      "window": 4.98,
       "animation": 4.0,
-      "start": 4.8,
-      "end": 10.0333
+      "start": 4.5,
+      "end": 9.4667
     },
     {
       "index": 3,
       "note": "but reversing the process without the key is computationally impractical.",
-      "window": 4.31,
+      "window": 3.73,
       "animation": 3.5,
-      "start": 10.0333,
-      "end": 14.3333
+      "start": 9.4667,
+      "end": 13.1833
     },
     {
       "index": 4,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 14.3333,
-      "end": 15.3333
+      "start": 13.1833,
+      "end": 14.1833
     }
   ]
 }

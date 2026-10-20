@@ -9,11 +9,65 @@ Any of .mp3, .wav, .m4a, .aiff, .aif, .flac, .aac will do. Leave a moment of sil
 each end if it helps you read — it gets trimmed. Beats marked *(no
 speech)* are music or a transition: there is nothing to record.
 
+## SceneAKerckhoffs
+
+| File | Line |
+| --- | --- |
+| — | *(no speech)* — `(music only)` |
+| `sceneA_beat02.mp3` | The security of an encrypted system should not depend on keeping the algorithm secret. |
+| `sceneA_beat03.mp3` | An attacker may capture the traffic and study the cipher. |
+| `sceneA_beat04.mp3` | Without the key, that knowledge should not be enough to recover the data. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneBCaesar
+
+| File | Line |
+| --- | --- |
+| `sceneB_beat01.mp3` | Caesar's cipher is the simplest example: shift each letter by a fixed amount. |
+| `sceneB_beat02.mp3` | With so few possible offsets, an attacker can test every one. |
+| `sceneB_beat03.mp3` | The key space is too small to provide meaningful security. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneCEnigma
+
+| File | Line |
+| --- | --- |
+| `sceneC_beat01.mp3` | Enigma changed substitutions as its rotors advanced. |
+| `sceneC_beat02.mp3` | Polish cryptanalysts made the first major breakthroughs, and teams at Bletchley Park built on them. |
+| `sceneC_beat03.mp3` | The work exploited both the machine's structure and weaknesses in how it was used. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneDKeyExchange
+
+| File | Line |
+| --- | --- |
+| `sceneD_beat01.mp3` | As networks expanded, key exchange became its own challenge. |
+| `sceneD_beat02.mp3` | How do two systems establish a shared secret without first meeting on a trusted channel? |
+| `sceneD_beat03.mp3` | Diffie and Hellman's nineteen seventy-six work offered an answer, |
+| `sceneD_beat04.mp3` | but unauthenticated key exchange still leaves room for an active attacker. |
+| — | *(no speech)* — `(transition)` |
+
+## SceneEDesToAes
+
+| File | Line |
+| --- | --- |
+| `sceneE_beat01.mp3` | The Data Encryption Standard, or DES, became a U.S. federal standard in nineteen seventy-seven. |
+| `sceneE_beat02.mp3` | Its effective fifty-six-bit key ultimately became too small to resist exhaustive search. |
+| `sceneE_beat03.mp3` | In two thousand and one, NIST standardized the Advanced Encryption Standard, or AES, after a public competition to select a stronger successor. |
+
+## SceneFBeyond
+
+| File | Line |
+| --- | --- |
+| `sceneF_beat01.mp3` | Today, evaluating encryption means looking at more than the cipher: |
+| `sceneF_beat02.mp3` | how keys are established, how endpoints are authenticated, and how the system is implemented. |
+| — | *(no speech)* — `(transition)` |
+
 ## Scene01Bridge
 
 | File | Line |
 | --- | --- |
-| `scene01_beat01.mp3` | Now that we have looked at the history and evolution of encryption, |
+| `scene01_beat01.mp3` | Now that we looked at the history of encryption, |
 | `scene01_beat02.mp3` | we can examine how encryption works, the major types of encryption, and how encryption is used in modern technology. |
 | — | *(no speech)* — `(transition)` |
 
@@ -31,7 +85,7 @@ speech)* are music or a transition: there is nothing to record.
 
 | File | Line |
 | --- | --- |
-| `scene03_beat01.mp3` | The intended recipient can then use a key and a decryption algorithm to convert the ciphertext back into plaintext. |
+| `scene03_beat01.mp3` | The intended recipient can then use a key and a decryption algorithm to turn the ciphertext back into plaintext. |
 | `scene03_beat02.mp3` | This process is called decryption. |
 | — | *(no speech)* — `(transition)` |
 
@@ -43,7 +97,7 @@ speech)* are music or a transition: there is nothing to record.
 | `scene04_beat02.mp3` | The plaintext is the message placed inside the box. |
 | `scene04_beat03.mp3` | The encryption algorithm is the locking mechanism, |
 | `scene04_beat04.mp3` | and the key is what allows the box to be opened. |
-| `scene04_beat05.mp3` | Anyone might be able to see the locked box, but only someone with the correct key should be able to access the message. |
+| `scene04_beat05.mp3` | Anyone can see the locked box, but only someone with the correct key should be able to access the message. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene05Math
@@ -64,8 +118,8 @@ speech)* are music or a transition: there is nothing to record.
 | `scene06_beat03.mp3` | the length and randomness of the key, |
 | `scene06_beat04.mp3` | and how securely the key is stored. |
 | `scene06_beat05.mp3` | Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed. |
-| `scene06_beat06.mp3` | For example, if an attacker obtains a password used to protect an encrypted file, the encryption itself may not be broken. |
-| `scene06_beat07.mp3` | Instead, the attacker has obtained the key needed to unlock the information. |
+| `scene06_beat06.mp3` | For example, if an attacker obtains a password used to protect the encrypted file, the encryption itself may not be broken. |
+| `scene06_beat07.mp3` | Instead, the attackers obtain the key needed to unlock the information. |
 | `scene06_beat08.mp3` | This is why key management is one of the most important parts of cybersecurity. |
 | — | *(no speech)* — `(transition)` |
 
@@ -74,7 +128,7 @@ speech)* are music or a transition: there is nothing to record.
 | File | Line |
 | --- | --- |
 | — | *(no speech)* — `(music only)` |
-| `scene07_beat02.mp3` | There are two major categories of encryption: symmetric encryption and asymmetric encryption. |
+| `scene07_beat02.mp3` | There are two main categories of encryption. Symmetric encryption and asymmetric encryption. |
 | `scene07_beat03.mp3` | Symmetric encryption uses the same key for both encryption and decryption. |
 | `scene07_beat04.mp3` | The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it. |
 | `scene07_beat05.mp3` | Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data. |
@@ -106,7 +160,7 @@ speech)* are music or a transition: there is nothing to record.
 | `scene09_beat01.mp3` | In practice, many modern systems use a hybrid approach that combines both types. |
 | `scene09_beat02.mp3` | For example, when a user visits a website using HTTPS, |
 | `scene09_beat03.mp3` | asymmetric cryptography can help the browser and the server authenticate each other and establish a shared session key. |
-| `scene09_beat04.mp3` | After that, symmetric encryption is usually used to protect the actual data exchanged during the session because it is faster. |
+| `scene09_beat04.mp3` | After that, symmetric encryption is usually used to protect the actual data exchange during the session because it is faster. |
 | `scene09_beat05.mp3` | This combination provides both secure key exchange and efficient communication. |
 | — | *(no speech)* — `(transition)` |
 
@@ -116,11 +170,10 @@ speech)* are music or a transition: there is nothing to record.
 | --- | --- |
 | `scene10_beat01.mp3` | It is also important to distinguish encryption from hashing. |
 | `scene10_beat02.mp3` | Hashing transforms data into a fixed-length value, called a hash, but it is not designed to be reversed. |
-| `scene10_beat03.mp3` | Hashing is commonly used to store passwords securely |
-| `scene10_beat04.mp3` | and to verify whether data has been changed. |
-| `scene10_beat05.mp3` | Digital signatures are related to public-key cryptography as well, but they serve a different purpose. |
-| `scene10_beat06.mp3` | Encryption is mainly used to protect confidentiality, |
-| `scene10_beat07.mp3` | while digital signatures help verify the identity of the sender and confirm that the message has not been modified. |
+| `scene10_beat03.mp3` | Hashing is commonly used to store passwords securely and to verify whether data has been changed. |
+| `scene10_beat04.mp3` | Digital signatures are related to public-key cryptography as well, but they serve a different purpose. |
+| `scene10_beat05.mp3` | Encryption is mainly used to protect confidentiality, |
+| `scene10_beat06.mp3` | while digital signatures help verify the identity of the sender and confirm that the message has not been modified. |
 | — | *(no speech)* — `(transition)` |
 
 ## Scene11Applications
@@ -130,9 +183,9 @@ speech)* are music or a transition: there is nothing to record.
 | — | *(no speech)* — `(music only)` |
 | `scene11_beat02.mp3` | Encryption is used throughout everyday computing. |
 | `scene11_beat03.mp3` | One of the most familiar examples is HTTPS, which protects communication between a web browser and a website. |
-| `scene11_beat04.mp3` | When a website uses HTTPS, information such as login credentials, personal details, and payment information is encrypted while traveling across the internet. |
+| `scene11_beat04.mp3` | When a website uses HTTPS, information such as login credentials, personal information, and payment information is encrypted while traveling across the internet. |
 | `scene11_beat05.mp3` | Encryption is also used in messaging applications. |
-| `scene11_beat06.mp3` | End-to-end encryption is designed so that a message is encrypted on the sender’s device and decrypted only on the recipient’s device. |
+| `scene11_beat06.mp3` | End-to-end encryption is designed so that a message is encrypted on the sender’s device and only decrypted on the recipient’s device. |
 | `scene11_beat07.mp3` | Ideally, even the messaging provider cannot read the contents of the message while it is in transit. |
 | `scene11_beat08.mp3` | Another major application is data storage. |
 | `scene11_beat09.mp3` | Computers, smartphones, USB drives, and cloud services can encrypt stored files. |
@@ -159,10 +212,10 @@ speech)* are music or a transition: there is nothing to record.
 | `scene13_beat01.mp3` | However, encryption does not solve every security problem. |
 | `scene13_beat02.mp3` | It cannot protect data from a person who already has authorized access, |
 | `scene13_beat03.mp3` | and it cannot prevent every type of malware, phishing attack, or social-engineering attack. |
-| `scene13_beat04.mp3` | Encryption protects information, but the surrounding systems and users must also be secure. |
+| `scene13_beat04.mp3` | Encryption protects the information. The surrounding systems and users must also be secure. |
 | `scene13_beat05.mp3` | Overall, encryption supports three major security goals: confidentiality, integrity, and authentication. |
 | `scene13_beat06.mp3` | It helps keep information private, helps detect unauthorized changes, and can help verify the identity of the people or systems involved. |
-| `scene13_beat07.mp3` | As more communication, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity. |
+| `scene13_beat07.mp3` | As more communications, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity. |
 | — | *(no speech)* — `(music only)` |
 
-77 lines to record, across 13 scenes.
+94 lines to record, across 19 scenes.

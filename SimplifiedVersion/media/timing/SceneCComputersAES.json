@@ -1,0 +1,48 @@
+{
+  "scene": "SceneCComputersAES",
+  "target": 24.17,
+  "duration": 24.1667,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "As computers spread into everyday life, encryption had to protect more than military messages.",
+      "window": 4.94,
+      "animation": 3.35,
+      "start": 0.0,
+      "end": 4.9333
+    },
+    {
+      "index": 2,
+      "note": "In the nineteen seventies, researchers developed new ways for computers to protect data and establish shared keys.",
+      "window": 5.95,
+      "animation": 4.6,
+      "start": 4.9333,
+      "end": 10.8667
+    },
+    {
+      "index": 3,
+      "note": "In two thousand and one, the United States adopted the Advanced Encryption Standard, or AES, to protect sensitive digital information.",
+      "window": 7.09,
+      "animation": 5.2,
+      "start": 10.8667,
+      "end": 17.95
+    },
+    {
+      "index": 4,
+      "note": "Today, AES is widely used to protect data on devices and across networks.",
+      "window": 4.99,
+      "animation": 4.45,
+      "start": 17.95,
+      "end": 22.9333
+    },
+    {
+      "index": 5,
+      "note": "(transition)",
+      "window": 1.2,
+      "animation": 1.2,
+      "start": 22.9333,
+      "end": 24.1333
+    }
+  ]
+}

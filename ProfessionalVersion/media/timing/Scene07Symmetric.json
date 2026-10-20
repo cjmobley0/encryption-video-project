@@ -1,7 +1,7 @@
 {
   "scene": "Scene07Symmetric",
-  "target": 46.51,
-  "duration": 46.5,
+  "target": 42.96,
+  "duration": 42.95,
   "frame_rate": 60.0,
   "beats": [
     {
@@ -14,67 +14,67 @@
     },
     {
       "index": 2,
-      "note": "There are two major categories of encryption: symmetric encryption and asymmetric encryption.",
-      "window": 5.7,
+      "note": "There are two main categories of encryption. Symmetric encryption and asymmetric encryption.",
+      "window": 5.33,
       "animation": 2.6,
       "start": 2.0,
-      "end": 7.7
+      "end": 7.3167
     },
     {
       "index": 3,
       "note": "Symmetric encryption uses the same key for both encryption and decryption.",
-      "window": 4.39,
+      "window": 4.27,
       "animation": 2.5,
-      "start": 7.7,
-      "end": 12.0833
+      "start": 7.3167,
+      "end": 11.5833
     },
     {
       "index": 4,
       "note": "The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it.",
-      "window": 5.9,
-      "animation": 5.9,
-      "start": 12.0833,
-      "end": 17.9833
+      "window": 5.44,
+      "animation": 4.9,
+      "start": 11.5833,
+      "end": 17.0167
     },
     {
       "index": 5,
       "note": "Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data.",
-      "window": 6.6,
+      "window": 6.13,
       "animation": 5.7,
-      "start": 17.9833,
-      "end": 24.5833
+      "start": 17.0167,
+      "end": 23.1333
     },
     {
       "index": 6,
       "note": "Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES, and ChaCha20.",
-      "window": 7.01,
+      "window": 6.29,
       "animation": 3.5,
-      "start": 24.5833,
-      "end": 31.5833
+      "start": 23.1333,
+      "end": 29.4167
     },
     {
       "index": 7,
       "note": "However, symmetric encryption creates an important challenge: both parties need to obtain the same secret key securely.",
-      "window": 7.35,
+      "window": 6.72,
       "animation": 5.1,
-      "start": 31.5833,
-      "end": 38.9333
+      "start": 29.4167,
+      "end": 36.1333
     },
     {
       "index": 8,
       "note": "If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication.",
-      "window": 6.56,
-      "animation": 5.9,
-      "start": 38.9333,
-      "end": 45.4833
+      "window": 5.78,
+      "animation": 5.25,
+      "start": 36.1333,
+      "end": 41.9
     },
     {
       "index": 9,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 45.4833,
-      "end": 46.4833
+      "start": 41.9,
+      "end": 42.9
     }
   ]
 }

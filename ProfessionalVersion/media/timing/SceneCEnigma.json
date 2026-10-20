@@ -1,0 +1,40 @@
+{
+  "scene": "SceneCEnigma",
+  "target": 14.23,
+  "duration": 14.2167,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Enigma changed substitutions as its rotors advanced.",
+      "window": 3.53,
+      "animation": 3.2833,
+      "start": 0.0,
+      "end": 3.5167
+    },
+    {
+      "index": 2,
+      "note": "Polish cryptanalysts made the first major breakthroughs, and teams at Bletchley Park built on them.",
+      "window": 5.03,
+      "animation": 2.8,
+      "start": 3.5167,
+      "end": 8.5333
+    },
+    {
+      "index": 3,
+      "note": "The work exploited both the machine's structure and weaknesses in how it was used.",
+      "window": 4.67,
+      "animation": 3.15,
+      "start": 8.5333,
+      "end": 13.2
+    },
+    {
+      "index": 4,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 13.2,
+      "end": 14.2
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "scene": "SceneAWhyItMatters",
+  "target": 12.45,
+  "duration": 12.6333,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "(music only)",
+      "window": 2.0,
+      "animation": 1.95,
+      "start": 0.0,
+      "end": 2.0
+    },
+    {
+      "index": 2,
+      "note": "When you check your bank account online, information travels between your device and the bank.",
+      "window": 3.97,
+      "animation": 3.8,
+      "start": 2.0,
+      "end": 5.9667
+    },
+    {
+      "index": 3,
+      "note": "Encryption helps keep it private.",
+      "window": 1.59,
+      "animation": 0.9,
+      "start": 5.9667,
+      "end": 7.55
+    },
+    {
+      "index": 4,
+      "note": "Even if someone intercepts the data, they shouldn't be able to read it without the right key.",
+      "window": 3.69,
+      "animation": 3.2,
+      "start": 7.55,
+      "end": 11.2333
+    },
+    {
+      "index": 5,
+      "note": "(transition)",
+      "window": 1.2,
+      "animation": 1.4,
+      "start": 11.2333,
+      "end": 12.6333
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 # Encryption video (Manim)
 
 The video laid out in [`encryption-video-plan.md`](encryption-video-plan.md):
-ten scenes, 3:28 of animation, 100% [Manim Community](https://www.manim.community/)
-— no AI-generated footage anywhere.
+thirteen scenes, 3:42, 100% [Manim Community](https://www.manim.community/)
+— no AI-generated footage anywhere. Part 1 (Scenes A–C) is why it matters and
+a short history; Part 2 (Scenes 1–10) is how encryption works.
 
 The final cut lands at `renders/encryption-full.mp4`.
 
@@ -13,11 +14,13 @@ The final cut lands at `renders/encryption-full.mp4`.
 | `encryption-video-plan.md` | The plan this build follows. The source of truth. |
 | `style.py` | Palette, type, and the base scene with the beat timer. |
 | `assets.py` | Every reusable object: keys, boxes, people, mailbox, icons. |
-| `scenes.py` | `Scene01Intro` … `Scene10Outro`. |
+| `scenes.py` | `SceneAWhyItMatters` … `SceneCComputersAES`, then `Scene01Intro` … `Scene10Outro`. |
 | `_frames.py` | Pulls a strip of sample frames out of a render, for checking. |
 | `narrate.py` | The narration pipeline: list the lines, re-time the cut, mix the audio. |
-| `render.sh` | Renders all ten scenes in order and stitches the cut. |
+| `align.py` | Cuts one long recording into the per-beat files, by what was said. |
+| `render.sh` | Renders all thirteen scenes in order and stitches the cut. |
 | `audio/` | One file per line of narration (`scene01_beat02.mp3` …), plus `music.mp3`. |
+| `audio/raw/` | The continuous reads the clips were cut from, and their word timings. |
 | `renders/` | The stitched video. |
 | `media/` | Manim's own output. The 1080p60 renders and `timing/` are tracked for the booth; the rest is cache. |
 
@@ -33,20 +36,24 @@ checkout at [`../manim`](..).
 
 | # | Scene | Slot | Length |
 | --- | --- | --- | --- |
-| 1 | `Scene01Intro` | 0:00–0:18 | 18s |
-| 2 | `Scene02Ciphertext` | 0:18–0:37 | 19s |
-| 3 | `Scene03LockedBox` | 0:37–0:55 | 18s |
-| 4 | `Scene04Math` | 0:55–1:08 | 13s |
-| 5 | `Scene05Symmetric` | 1:08–1:29 | 21s |
-| 6 | `Scene06Asymmetric` | 1:29–1:59 | 30s |
-| 7 | `Scene07Https` | 1:59–2:25 | 26s |
-| 8 | `Scene08Everyday` | 2:25–2:51 | 26s |
-| 9 | `Scene09NotMagic` | 2:51–3:11 | 20s |
-| 10 | `Scene10Outro` | 3:11–3:28 | 17s |
+| A | `SceneAWhyItMatters` | 0:00–0:12 | 12s |
+| B | `SceneBCaesarEnigma` | 0:12–0:32 | 20s |
+| C | `SceneCComputersAES` | 0:32–0:56 | 24s |
+| 1 | `Scene01Intro` | 0:56–1:01 | 5s |
+| 2 | `Scene02Ciphertext` | 1:01–1:13 | 13s |
+| 3 | `Scene03LockedBox` | 1:13–1:27 | 14s |
+| 4 | `Scene04Math` | 1:27–1:38 | 10s |
+| 5 | `Scene05Symmetric` | 1:38–1:54 | 16s |
+| 6 | `Scene06Asymmetric` | 1:54–2:19 | 25s |
+| 7 | `Scene07Https` | 2:19–2:47 | 27s |
+| 8 | `Scene08Everyday` | 2:47–3:11 | 24s |
+| 9 | `Scene09NotMagic` | 3:11–3:28 | 17s |
+| 10 | `Scene10Outro` | 3:28–3:42 | 14s |
 
-These are the plan's slots, which the animation was built against. Re-timing to
-a real narration track moves them; `narrate.py status` prints where they
-actually sit.
+These are the real lengths: the cut has been re-timed to the recorded
+narration, so each slot is the lines in it plus their breathing room.
+`narrate.py status` reprints them, and a re-time after any re-record will move
+them again.
 
 ## Rendering
 
@@ -96,7 +103,80 @@ the line spoken over that window. `narrate.py` reads those lines straight out of
 `scenes.py` with `ast`, so the recording list, the timing and the mixdown cannot
 drift from what the animation actually says.
 
-### Record, in the booth
+### Read it straight through, and cut it up
+
+This is how the narration in `audio/` was made, and the route to use for a
+re-record. One continuous read of the whole part, in whatever app records
+comfortably — the takes here came in as screen recordings, so they arrived as
+`.mp4` with the picture attached. `align.py` throws the picture away, finds
+each line inside the audio, and writes the same per-beat files the rest of the
+pipeline already reads.
+
+```bash
+python3 align.py transcribe p1simplifiednarration.mp4   # once per recording
+python3 align.py check      p1simplifiednarration.mp4 --from SceneAWhyItMatters
+python3 align.py split      p1simplifiednarration.mp4 --from SceneAWhyItMatters
+```
+
+`--from` and `--to` say which scenes the recording covers, so one file can hold
+one part and another the rest. `check` prints where every line landed and
+writes nothing; `split` writes `audio/sceneNN_beatMM.mp3`. Both are safe to
+re-run.
+
+How a line is found:
+
+1. **Transcribe once.** `transcribe` runs [whisper](https://github.com/openai/whisper)
+   and saves the word timings to `audio/raw/<name>.words.json`. That file is
+   tracked, so this is the only step that needs whisper installed — everyone
+   else can re-cut from the saved timings with the standard library and
+   `ffmpeg`. It will find any python on the machine that can `import whisper`;
+   `--python` names one if it guesses wrong.
+2. **Match the words.** The lines to look for come out of the beat blocks in
+   `scenes.py`, so the target is known. The scripted words and the heard words
+   are aligned with `difflib`, which tolerates the reader going off script — a
+   dropped "the", "mathematics" for "math" — and still says which heard word
+   each scripted word became.
+3. **Cut on the breath, not the transcript.** Whisper places a word within a
+   few tenths of a second, and at the edge of a sentence it is routinely
+   further out: it gives a segment an end time and hands the next segment the
+   same number, with the breath between them unaccounted for. So every
+   boundary is moved onto the pause that is really there, found by
+   `silencedetect` through the same cleanup the mixdown uses. Pauses inside a
+   line are left alone — readers breathe mid-sentence too.
+
+It also copes with a line read more than once. A reader who fluffs a sentence
+says it again, so its words turn up twice with the rest of the read in
+between; the hits are grouped into attempts and only one is cut — the fullest,
+and the later one if two are equally full, because that is the take meant to
+stand. The audio in between goes into no clip, and `check` says so.
+
+`check` flags anything it could not cut cleanly, and those flags are worth
+reading before `split`:
+
+- **a line that was not found**, or only partly: the reader said something
+  else. Either the wording in `scenes.py` is wrong or that line needs doing
+  again.
+- **two lines read as one continuous phrase**: there is no breath in the
+  middle to cut at. Cutting anyway would put the pad from
+  `narrate.py retime` into the middle of a sentence, so those beats want
+  merging in `scenes.py` instead — one window, with both animations in it.
+- **a line read out of order**: the read reached it somewhere else, and the
+  scene order has to follow.
+- **a long gap before a line**: several seconds that go into no clip. Usually
+  a take the reader abandoned and did again, which is handled; worth a listen
+  to confirm that is what it was.
+
+`split` refuses to write while anything is flagged. `--force` writes the clips
+that did line up and skips the rest; `--dry-run` shows the cuts without
+writing. Everything it decided is left in `audio/.aligned.json`.
+
+A line arriving this way is a real take, so `narrate.py scratch` will not speak
+over it afterwards.
+
+### Record one line at a time, in the booth
+
+The booth is the other way in, and still works — it was not used for the
+recordings in `audio/`.
 
 ```bash
 ../record.sh --project simplified      # or: .venv/bin/python narrate.py serve
@@ -249,6 +329,18 @@ change.
 .venv/bin/python narrate.py status     # what is recorded, and how long it runs
 ```
 
+The plan's timecodes come from the same numbers, so bring them with it:
+
+```bash
+.venv/bin/python narrate.py replan
+```
+
+That rewrites every beat row, scene heading and chapter banner in the plan
+from the lengths in `scenes.py`, and touches nothing else — not the wording,
+not the *On screen* column. Running it twice changes nothing the second time.
+Without it the plan quietly disagrees with the cut, and the plan is what the
+next person reads.
+
 ### The mix
 
 `render.sh` picks audio up if it is there and ignores it if it is not: with an
@@ -313,10 +405,14 @@ already uses to stitch the cut. Nothing new to install.
 
 ## The end card
 
-`Scene10Outro` ends on an end card built from `CREDITS_NAMES`,
-`CREDITS_MEMBERS`, `CREDITS_CLASS` and `CREDITS_TOOLS` at the top of
-`scenes.py`. The professional cut carries the same four, so change them in
-both.
+`Scene10Outro` ends on an end card built from `CREDITS_LOGO`, `CREDITS_TEAM`,
+`CREDITS_CLASS` and `CREDITS_TOOLS` at the top of `scenes.py`, laid out by the
+`team_logo` and `team_roster` helpers beside them. `CREDITS_TEAM` is a name and
+a role per member, and the roster draws them as two columns. The professional
+cut carries the same four, so change them in both.
+
+`CREDITS_LOGO` is the shared `team_logo.svg` at the root of the repo; see the
+root README on where it comes from.
 
 ## Setup
 

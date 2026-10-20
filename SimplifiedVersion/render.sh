@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Render every scene of encryption-video-plan.md and stitch them into one file.
+# Scenes A-C are Part 1; 01-10 are Part 2.
 #
 #   ./render.sh          # 480p15 preview, fast
 #   ./render.sh -qh      # 1080p60 final
@@ -35,6 +36,9 @@ if [[ ! -x "$VENV/manim" ]]; then
 fi
 
 SCENES=(
+  SceneAWhyItMatters
+  SceneBCaesarEnigma
+  SceneCComputersAES
   Scene01Intro
   Scene02Ciphertext
   Scene03LockedBox
@@ -136,4 +140,4 @@ fi
 echo
 echo "Done: $FULL"
 ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$FULL" \
-  | awk '{printf "Runtime: %d:%02d  (plan: 3:28 of animation)\n", $1/60, $1%60}'
+  | awk '{printf "Runtime: %d:%02d  (plan: 3:39, Part 1 + Part 2)\n", $1/60, $1%60}'

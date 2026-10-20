@@ -1,0 +1,1021 @@
+{
+ "model": "small.en",
+ "text": " When you take your bank account online, information travels between your device and the bank. Encryption helps keep it private. Even if someone intercepts the data, they shouldn't be able to read it without the right key. Protecting messages isn't a new challenge. Julius Caesar used a cipher that shifted letters along the alphabet. It hide messages from our casual reader, but it's easy to break now. During World War II, German forces used enigma machines that changed how letters were scrambled with every keystroke. Polish mathematicians made early breakthroughs and allied code breakers built on that work. As computers spread into everyday life, encryption had to protect more than military messages. In the 1970s, researchers developed new ways for computers to protect data and establish shared keys. In 2001, the United States adopted the Advanced Encryption Standard, or AES, to protect sensitive digital information. Today, AES is widely used to protect data on devices and across networks.",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.28,
+   "text": " When you take your bank account online, information travels between your device and the bank."
+  },
+  {
+   "start": 4.9,
+   "end": 5.86,
+   "text": " Encryption helps keep it private."
+  },
+  {
+   "start": 6.54,
+   "end": 9.78,
+   "text": " Even if someone intercepts the data, they shouldn't be able to read it without the right key."
+  },
+  {
+   "start": 11.92,
+   "end": 13.56,
+   "text": " Protecting messages isn't a new challenge."
+  },
+  {
+   "start": 14.16,
+   "end": 16.96,
+   "text": " Julius Caesar used a cipher that shifted letters along the alphabet."
+  },
+  {
+   "start": 17.52,
+   "end": 20.52,
+   "text": " It hide messages from our casual reader, but it's easy to break now."
+  },
+  {
+   "start": 22.8,
+   "end": 28.28,
+   "text": " During World War II, German forces used enigma machines that changed how letters were scrambled with every keystroke."
+  },
+  {
+   "start": 28.28,
+   "end": 32.88,
+   "text": " Polish mathematicians made early breakthroughs and allied code breakers built on that work."
+  },
+  {
+   "start": 35.42,
+   "end": 39.74,
+   "text": " As computers spread into everyday life, encryption had to protect more than military messages."
+  },
+  {
+   "start": 40.28,
+   "end": 45.28,
+   "text": " In the 1970s, researchers developed new ways for computers to protect data and establish shared"
+  },
+  {
+   "start": 45.28,
+   "end": 50.58,
+   "text": " keys. In 2001, the United States adopted the Advanced Encryption Standard, or AES,"
+  },
+  {
+   "start": 50.96,
+   "end": 58.04,
+   "text": " to protect sensitive digital information. Today, AES is widely used to protect data on"
+  },
+  {
+   "start": 58.04,
+   "end": 59.44,
+   "text": " devices and across networks."
+  }
+ ],
+ "words": [
+  {
+   "word": "When",
+   "start": 0.0,
+   "end": 0.66,
+   "prob": 0.676
+  },
+  {
+   "word": "you",
+   "start": 0.66,
+   "end": 0.78,
+   "prob": 0.993
+  },
+  {
+   "word": "take",
+   "start": 0.78,
+   "end": 0.94,
+   "prob": 0.985
+  },
+  {
+   "word": "your",
+   "start": 0.94,
+   "end": 1.06,
+   "prob": 0.992
+  },
+  {
+   "word": "bank",
+   "start": 1.06,
+   "end": 1.22,
+   "prob": 0.996
+  },
+  {
+   "word": "account",
+   "start": 1.22,
+   "end": 1.46,
+   "prob": 0.997
+  },
+  {
+   "word": "online,",
+   "start": 1.46,
+   "end": 1.84,
+   "prob": 0.99
+  },
+  {
+   "word": "information",
+   "start": 2.26,
+   "end": 2.44,
+   "prob": 0.984
+  },
+  {
+   "word": "travels",
+   "start": 2.44,
+   "end": 2.82,
+   "prob": 0.999
+  },
+  {
+   "word": "between",
+   "start": 2.82,
+   "end": 3.18,
+   "prob": 0.992
+  },
+  {
+   "word": "your",
+   "start": 3.18,
+   "end": 3.34,
+   "prob": 0.78
+  },
+  {
+   "word": "device",
+   "start": 3.34,
+   "end": 3.62,
+   "prob": 0.992
+  },
+  {
+   "word": "and",
+   "start": 3.62,
+   "end": 3.84,
+   "prob": 0.994
+  },
+  {
+   "word": "the",
+   "start": 3.84,
+   "end": 3.92,
+   "prob": 0.97
+  },
+  {
+   "word": "bank.",
+   "start": 3.92,
+   "end": 4.28,
+   "prob": 0.999
+  },
+  {
+   "word": "Encryption",
+   "start": 4.9,
+   "end": 4.9,
+   "prob": 0.57
+  },
+  {
+   "word": "helps",
+   "start": 4.9,
+   "end": 5.18,
+   "prob": 0.988
+  },
+  {
+   "word": "keep",
+   "start": 5.18,
+   "end": 5.4,
+   "prob": 0.933
+  },
+  {
+   "word": "it",
+   "start": 5.4,
+   "end": 5.56,
+   "prob": 0.992
+  },
+  {
+   "word": "private.",
+   "start": 5.56,
+   "end": 5.86,
+   "prob": 0.998
+  },
+  {
+   "word": "Even",
+   "start": 6.54,
+   "end": 6.68,
+   "prob": 0.983
+  },
+  {
+   "word": "if",
+   "start": 6.68,
+   "end": 6.84,
+   "prob": 0.997
+  },
+  {
+   "word": "someone",
+   "start": 6.84,
+   "end": 7.0,
+   "prob": 0.973
+  },
+  {
+   "word": "intercepts",
+   "start": 7.0,
+   "end": 7.56,
+   "prob": 0.968
+  },
+  {
+   "word": "the",
+   "start": 7.56,
+   "end": 7.62,
+   "prob": 0.979
+  },
+  {
+   "word": "data,",
+   "start": 7.62,
+   "end": 7.8,
+   "prob": 0.993
+  },
+  {
+   "word": "they",
+   "start": 7.96,
+   "end": 8.1,
+   "prob": 0.993
+  },
+  {
+   "word": "shouldn't",
+   "start": 8.1,
+   "end": 8.3,
+   "prob": 0.971
+  },
+  {
+   "word": "be",
+   "start": 8.3,
+   "end": 8.42,
+   "prob": 0.994
+  },
+  {
+   "word": "able",
+   "start": 8.42,
+   "end": 8.56,
+   "prob": 0.997
+  },
+  {
+   "word": "to",
+   "start": 8.56,
+   "end": 8.72,
+   "prob": 0.997
+  },
+  {
+   "word": "read",
+   "start": 8.72,
+   "end": 8.84,
+   "prob": 0.997
+  },
+  {
+   "word": "it",
+   "start": 8.84,
+   "end": 9.04,
+   "prob": 0.986
+  },
+  {
+   "word": "without",
+   "start": 9.04,
+   "end": 9.22,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 9.22,
+   "end": 9.36,
+   "prob": 0.995
+  },
+  {
+   "word": "right",
+   "start": 9.36,
+   "end": 9.5,
+   "prob": 0.998
+  },
+  {
+   "word": "key.",
+   "start": 9.5,
+   "end": 9.78,
+   "prob": 0.996
+  },
+  {
+   "word": "Protecting",
+   "start": 11.92,
+   "end": 12.2,
+   "prob": 0.812
+  },
+  {
+   "word": "messages",
+   "start": 12.2,
+   "end": 12.54,
+   "prob": 0.992
+  },
+  {
+   "word": "isn't",
+   "start": 12.54,
+   "end": 12.98,
+   "prob": 0.995
+  },
+  {
+   "word": "a",
+   "start": 12.98,
+   "end": 13.12,
+   "prob": 0.998
+  },
+  {
+   "word": "new",
+   "start": 13.12,
+   "end": 13.22,
+   "prob": 0.991
+  },
+  {
+   "word": "challenge.",
+   "start": 13.22,
+   "end": 13.56,
+   "prob": 0.999
+  },
+  {
+   "word": "Julius",
+   "start": 14.16,
+   "end": 14.38,
+   "prob": 0.996
+  },
+  {
+   "word": "Caesar",
+   "start": 14.38,
+   "end": 14.62,
+   "prob": 0.96
+  },
+  {
+   "word": "used",
+   "start": 14.62,
+   "end": 14.92,
+   "prob": 0.988
+  },
+  {
+   "word": "a",
+   "start": 14.92,
+   "end": 15.08,
+   "prob": 0.975
+  },
+  {
+   "word": "cipher",
+   "start": 15.08,
+   "end": 15.32,
+   "prob": 0.947
+  },
+  {
+   "word": "that",
+   "start": 15.32,
+   "end": 15.54,
+   "prob": 0.994
+  },
+  {
+   "word": "shifted",
+   "start": 15.54,
+   "end": 15.8,
+   "prob": 0.994
+  },
+  {
+   "word": "letters",
+   "start": 15.8,
+   "end": 16.14,
+   "prob": 0.994
+  },
+  {
+   "word": "along",
+   "start": 16.14,
+   "end": 16.44,
+   "prob": 0.992
+  },
+  {
+   "word": "the",
+   "start": 16.44,
+   "end": 16.58,
+   "prob": 0.983
+  },
+  {
+   "word": "alphabet.",
+   "start": 16.58,
+   "end": 16.96,
+   "prob": 0.999
+  },
+  {
+   "word": "It",
+   "start": 17.52,
+   "end": 17.6,
+   "prob": 0.716
+  },
+  {
+   "word": "hide",
+   "start": 17.6,
+   "end": 17.78,
+   "prob": 0.229
+  },
+  {
+   "word": "messages",
+   "start": 17.78,
+   "end": 18.14,
+   "prob": 0.999
+  },
+  {
+   "word": "from",
+   "start": 18.14,
+   "end": 18.32,
+   "prob": 0.997
+  },
+  {
+   "word": "our",
+   "start": 18.32,
+   "end": 18.44,
+   "prob": 0.544
+  },
+  {
+   "word": "casual",
+   "start": 18.44,
+   "end": 18.72,
+   "prob": 0.972
+  },
+  {
+   "word": "reader,",
+   "start": 18.72,
+   "end": 19.08,
+   "prob": 0.993
+  },
+  {
+   "word": "but",
+   "start": 19.3,
+   "end": 19.56,
+   "prob": 0.997
+  },
+  {
+   "word": "it's",
+   "start": 19.56,
+   "end": 19.72,
+   "prob": 0.981
+  },
+  {
+   "word": "easy",
+   "start": 19.72,
+   "end": 19.88,
+   "prob": 0.963
+  },
+  {
+   "word": "to",
+   "start": 19.88,
+   "end": 20.06,
+   "prob": 0.999
+  },
+  {
+   "word": "break",
+   "start": 20.06,
+   "end": 20.2,
+   "prob": 0.991
+  },
+  {
+   "word": "now.",
+   "start": 20.2,
+   "end": 20.52,
+   "prob": 0.978
+  },
+  {
+   "word": "During",
+   "start": 22.8,
+   "end": 23.28,
+   "prob": 0.991
+  },
+  {
+   "word": "World",
+   "start": 23.28,
+   "end": 23.48,
+   "prob": 0.927
+  },
+  {
+   "word": "War",
+   "start": 23.48,
+   "end": 23.66,
+   "prob": 0.999
+  },
+  {
+   "word": "II,",
+   "start": 23.66,
+   "end": 23.98,
+   "prob": 0.886
+  },
+  {
+   "word": "German",
+   "start": 24.16,
+   "end": 24.4,
+   "prob": 0.973
+  },
+  {
+   "word": "forces",
+   "start": 24.4,
+   "end": 24.76,
+   "prob": 0.991
+  },
+  {
+   "word": "used",
+   "start": 24.76,
+   "end": 25.08,
+   "prob": 0.957
+  },
+  {
+   "word": "enigma",
+   "start": 25.08,
+   "end": 25.46,
+   "prob": 0.908
+  },
+  {
+   "word": "machines",
+   "start": 25.46,
+   "end": 25.86,
+   "prob": 0.989
+  },
+  {
+   "word": "that",
+   "start": 25.86,
+   "end": 26.16,
+   "prob": 0.966
+  },
+  {
+   "word": "changed",
+   "start": 26.16,
+   "end": 26.44,
+   "prob": 0.942
+  },
+  {
+   "word": "how",
+   "start": 26.44,
+   "end": 26.64,
+   "prob": 0.997
+  },
+  {
+   "word": "letters",
+   "start": 26.64,
+   "end": 26.9,
+   "prob": 0.994
+  },
+  {
+   "word": "were",
+   "start": 26.9,
+   "end": 27.06,
+   "prob": 0.974
+  },
+  {
+   "word": "scrambled",
+   "start": 27.06,
+   "end": 27.36,
+   "prob": 0.997
+  },
+  {
+   "word": "with",
+   "start": 27.36,
+   "end": 27.66,
+   "prob": 0.988
+  },
+  {
+   "word": "every",
+   "start": 27.66,
+   "end": 27.86,
+   "prob": 0.955
+  },
+  {
+   "word": "keystroke.",
+   "start": 27.86,
+   "end": 28.28,
+   "prob": 0.949
+  },
+  {
+   "word": "Polish",
+   "start": 28.28,
+   "end": 29.18,
+   "prob": 0.695
+  },
+  {
+   "word": "mathematicians",
+   "start": 29.18,
+   "end": 29.88,
+   "prob": 0.994
+  },
+  {
+   "word": "made",
+   "start": 29.88,
+   "end": 30.1,
+   "prob": 0.993
+  },
+  {
+   "word": "early",
+   "start": 30.1,
+   "end": 30.42,
+   "prob": 0.988
+  },
+  {
+   "word": "breakthroughs",
+   "start": 30.42,
+   "end": 31.02,
+   "prob": 0.981
+  },
+  {
+   "word": "and",
+   "start": 31.02,
+   "end": 31.2,
+   "prob": 0.776
+  },
+  {
+   "word": "allied",
+   "start": 31.2,
+   "end": 31.48,
+   "prob": 0.61
+  },
+  {
+   "word": "code",
+   "start": 31.48,
+   "end": 31.72,
+   "prob": 0.971
+  },
+  {
+   "word": "breakers",
+   "start": 31.72,
+   "end": 32.04,
+   "prob": 0.707
+  },
+  {
+   "word": "built",
+   "start": 32.04,
+   "end": 32.26,
+   "prob": 0.991
+  },
+  {
+   "word": "on",
+   "start": 32.26,
+   "end": 32.46,
+   "prob": 0.992
+  },
+  {
+   "word": "that",
+   "start": 32.46,
+   "end": 32.56,
+   "prob": 0.864
+  },
+  {
+   "word": "work.",
+   "start": 32.56,
+   "end": 32.88,
+   "prob": 0.993
+  },
+  {
+   "word": "As",
+   "start": 35.42,
+   "end": 35.46,
+   "prob": 0.952
+  },
+  {
+   "word": "computers",
+   "start": 35.46,
+   "end": 35.8,
+   "prob": 0.994
+  },
+  {
+   "word": "spread",
+   "start": 35.8,
+   "end": 36.1,
+   "prob": 0.976
+  },
+  {
+   "word": "into",
+   "start": 36.1,
+   "end": 36.34,
+   "prob": 0.983
+  },
+  {
+   "word": "everyday",
+   "start": 36.34,
+   "end": 36.56,
+   "prob": 0.976
+  },
+  {
+   "word": "life,",
+   "start": 36.56,
+   "end": 37.0,
+   "prob": 0.998
+  },
+  {
+   "word": "encryption",
+   "start": 37.48,
+   "end": 37.66,
+   "prob": 0.985
+  },
+  {
+   "word": "had",
+   "start": 37.66,
+   "end": 37.9,
+   "prob": 0.966
+  },
+  {
+   "word": "to",
+   "start": 37.9,
+   "end": 38.0,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 38.0,
+   "end": 38.22,
+   "prob": 0.997
+  },
+  {
+   "word": "more",
+   "start": 38.22,
+   "end": 38.56,
+   "prob": 0.995
+  },
+  {
+   "word": "than",
+   "start": 38.56,
+   "end": 38.84,
+   "prob": 0.994
+  },
+  {
+   "word": "military",
+   "start": 38.84,
+   "end": 39.22,
+   "prob": 0.989
+  },
+  {
+   "word": "messages.",
+   "start": 39.22,
+   "end": 39.74,
+   "prob": 0.997
+  },
+  {
+   "word": "In",
+   "start": 40.28,
+   "end": 40.38,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 40.38,
+   "end": 40.48,
+   "prob": 0.997
+  },
+  {
+   "word": "1970s,",
+   "start": 40.48,
+   "end": 41.48,
+   "prob": 0.954
+  },
+  {
+   "word": "researchers",
+   "start": 41.66,
+   "end": 41.88,
+   "prob": 0.993
+  },
+  {
+   "word": "developed",
+   "start": 41.88,
+   "end": 42.32,
+   "prob": 0.996
+  },
+  {
+   "word": "new",
+   "start": 42.32,
+   "end": 42.54,
+   "prob": 0.996
+  },
+  {
+   "word": "ways",
+   "start": 42.54,
+   "end": 42.74,
+   "prob": 0.998
+  },
+  {
+   "word": "for",
+   "start": 42.74,
+   "end": 42.94,
+   "prob": 0.995
+  },
+  {
+   "word": "computers",
+   "start": 42.94,
+   "end": 43.26,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 43.26,
+   "end": 43.5,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 43.5,
+   "end": 43.76,
+   "prob": 0.997
+  },
+  {
+   "word": "data",
+   "start": 43.76,
+   "end": 44.1,
+   "prob": 0.997
+  },
+  {
+   "word": "and",
+   "start": 44.1,
+   "end": 44.56,
+   "prob": 0.977
+  },
+  {
+   "word": "establish",
+   "start": 44.56,
+   "end": 44.96,
+   "prob": 0.978
+  },
+  {
+   "word": "shared",
+   "start": 44.96,
+   "end": 45.28,
+   "prob": 0.997
+  },
+  {
+   "word": "keys.",
+   "start": 45.28,
+   "end": 45.7,
+   "prob": 0.994
+  },
+  {
+   "word": "In",
+   "start": 46.2,
+   "end": 46.32,
+   "prob": 0.993
+  },
+  {
+   "word": "2001,",
+   "start": 46.32,
+   "end": 46.96,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 47.44,
+   "end": 47.58,
+   "prob": 0.981
+  },
+  {
+   "word": "United",
+   "start": 47.58,
+   "end": 47.78,
+   "prob": 0.989
+  },
+  {
+   "word": "States",
+   "start": 47.78,
+   "end": 48.1,
+   "prob": 0.999
+  },
+  {
+   "word": "adopted",
+   "start": 48.1,
+   "end": 48.5,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 48.5,
+   "end": 48.74,
+   "prob": 0.995
+  },
+  {
+   "word": "Advanced",
+   "start": 48.74,
+   "end": 49.08,
+   "prob": 0.928
+  },
+  {
+   "word": "Encryption",
+   "start": 49.08,
+   "end": 49.5,
+   "prob": 0.986
+  },
+  {
+   "word": "Standard,",
+   "start": 49.5,
+   "end": 49.94,
+   "prob": 0.978
+  },
+  {
+   "word": "or",
+   "start": 50.22,
+   "end": 50.26,
+   "prob": 0.999
+  },
+  {
+   "word": "AES,",
+   "start": 50.26,
+   "end": 50.58,
+   "prob": 0.955
+  },
+  {
+   "word": "to",
+   "start": 50.96,
+   "end": 51.02,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 51.02,
+   "end": 51.3,
+   "prob": 0.998
+  },
+  {
+   "word": "sensitive",
+   "start": 51.3,
+   "end": 51.8,
+   "prob": 0.982
+  },
+  {
+   "word": "digital",
+   "start": 51.8,
+   "end": 52.2,
+   "prob": 0.981
+  },
+  {
+   "word": "information.",
+   "start": 52.2,
+   "end": 52.74,
+   "prob": 0.996
+  },
+  {
+   "word": "Today,",
+   "start": 54.82,
+   "end": 55.42,
+   "prob": 0.977
+  },
+  {
+   "word": "AES",
+   "start": 56.04,
+   "end": 56.14,
+   "prob": 0.993
+  },
+  {
+   "word": "is",
+   "start": 56.14,
+   "end": 56.5,
+   "prob": 0.998
+  },
+  {
+   "word": "widely",
+   "start": 56.5,
+   "end": 56.72,
+   "prob": 0.999
+  },
+  {
+   "word": "used",
+   "start": 56.72,
+   "end": 57.04,
+   "prob": 0.988
+  },
+  {
+   "word": "to",
+   "start": 57.04,
+   "end": 57.2,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 57.2,
+   "end": 57.42,
+   "prob": 0.998
+  },
+  {
+   "word": "data",
+   "start": 57.42,
+   "end": 57.68,
+   "prob": 0.997
+  },
+  {
+   "word": "on",
+   "start": 57.68,
+   "end": 58.04,
+   "prob": 0.995
+  },
+  {
+   "word": "devices",
+   "start": 58.04,
+   "end": 58.48,
+   "prob": 0.904
+  },
+  {
+   "word": "and",
+   "start": 58.48,
+   "end": 58.76,
+   "prob": 0.947
+  },
+  {
+   "word": "across",
+   "start": 58.76,
+   "end": 59.04,
+   "prob": 0.998
+  },
+  {
+   "word": "networks.",
+   "start": 59.04,
+   "end": 59.44,
+   "prob": 0.989
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+  "scene": "SceneFBeyond",
+  "target": 9.75,
+  "duration": 9.7333,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "Today, evaluating encryption means looking at more than the cipher:",
+      "window": 3.69,
+      "animation": 2.5167,
+      "start": 0.0,
+      "end": 3.6833
+    },
+    {
+      "index": 2,
+      "note": "how keys are established, how endpoints are authenticated, and how the system is implemented.",
+      "window": 5.06,
+      "animation": 3.2,
+      "start": 3.6833,
+      "end": 8.7333
+    },
+    {
+      "index": 3,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 8.7333,
+      "end": 9.7333
+    }
+  ]
+}

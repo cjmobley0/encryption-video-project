@@ -1,64 +1,64 @@
 {
   "scene": "Scene12Organizations",
-  "target": 44.75,
-  "duration": 44.75,
+  "target": 39.87,
+  "duration": 39.8667,
   "frame_rate": 60.0,
   "beats": [
     {
       "index": 1,
       "note": "Encryption is also important in online banking and electronic payments.",
-      "window": 4.43,
+      "window": 3.97,
       "animation": 2.2,
       "start": 0.0,
-      "end": 4.4167
+      "end": 3.9667
     },
     {
       "index": 2,
       "note": "Financial institutions use cryptographic protocols to protect account information, verify transactions, and reduce the risk of unauthorized access.",
-      "window": 9.41,
+      "window": 8.12,
       "animation": 6.6,
-      "start": 4.4167,
-      "end": 13.8167
+      "start": 3.9667,
+      "end": 12.0833
     },
     {
       "index": 3,
       "note": "Virtual private networks, or VPNs, use encryption to protect data traveling between a device and a VPN server.",
-      "window": 7.71,
+      "window": 6.87,
       "animation": 5.5,
-      "start": 13.8167,
-      "end": 21.5167
+      "start": 12.0833,
+      "end": 18.95
     },
     {
       "index": 4,
       "note": "This can help prevent people on the same network from easily viewing the user\u2019s traffic.",
-      "window": 4.85,
+      "window": 4.52,
       "animation": 3.7,
-      "start": 21.5167,
-      "end": 26.3667
+      "start": 18.95,
+      "end": 23.4667
     },
     {
       "index": 5,
       "note": "Businesses and governments use encryption to protect confidential records, intellectual property, medical data, and classified information.",
-      "window": 8.89,
+      "window": 7.68,
       "animation": 6.7667,
-      "start": 26.3667,
-      "end": 35.25
+      "start": 23.4667,
+      "end": 31.1333
     },
     {
       "index": 6,
       "note": "In these environments, encryption is often combined with access controls, authentication, monitoring, and other security measures.",
-      "window": 8.46,
+      "window": 7.71,
       "animation": 5.3,
-      "start": 35.25,
-      "end": 43.7
+      "start": 31.1333,
+      "end": 38.8333
     },
     {
       "index": 7,
       "note": "(transition)",
       "window": 1.0,
       "animation": 1.0,
-      "start": 43.7,
-      "end": 44.7
+      "start": 38.8333,
+      "end": 39.8333
     }
   ]
 }

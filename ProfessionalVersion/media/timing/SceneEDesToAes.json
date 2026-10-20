@@ -1,0 +1,32 @@
+{
+  "scene": "SceneEDesToAes",
+  "target": 19.02,
+  "duration": 19.0,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "The Data Encryption Standard, or DES, became a U.S. federal standard in nineteen seventy-seven.",
+      "window": 5.57,
+      "animation": 2.4,
+      "start": 0.0,
+      "end": 5.5667
+    },
+    {
+      "index": 2,
+      "note": "Its effective fifty-six-bit key ultimately became too small to resist exhaustive search.",
+      "window": 5.54,
+      "animation": 3.5,
+      "start": 5.5667,
+      "end": 11.1
+    },
+    {
+      "index": 3,
+      "note": "In two thousand and one, NIST standardized the Advanced Encryption Standard, or AES, after a public competition to select a stronger successor.",
+      "window": 7.91,
+      "animation": 5.9,
+      "start": 11.1,
+      "end": 19.0
+    }
+  ]
+}

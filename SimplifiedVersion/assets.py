@@ -16,7 +16,7 @@ from manim import *
 
 from style import (
     BG, BODY, CIPHER, FG, LABEL, MONO, PLAIN, PRIVATE, PUBLIC, SMALL, SNOOP,
-    STROKE, STROKE_THIN, SURFACE, SURFACE_HI, caption, mono,
+    STROKE, STROKE_THIN, SURFACE, SURFACE_HI, caption, mono, title,
 )
 
 # --- keys, locks, boxes ----------------------------------------------------
@@ -48,7 +48,7 @@ class Key(VGroup):
 
 
 class Padlock(VGroup):
-    """Arc shackle over a rounded body, with a keyhole the camera can zoom to."""
+    """Ring shackle over a rounded body, with a keyhole the camera can zoom to."""
 
     def __init__(self, color: str = PRIVATE, height: float = 1.1,
                  locked: bool = True, **kw):
@@ -57,10 +57,17 @@ class Padlock(VGroup):
             width=0.95, height=0.78, corner_radius=0.14,
             color=color, fill_opacity=1, stroke_width=0,
         )
-        shackle = Arc(
-            radius=0.3, start_angle=0, angle=PI, color=color, stroke_width=10,
+        # A filled ring rather than a stroked arc. Stroke width is absolute:
+        # it survives scale_to_fit_height below and every later scale of a
+        # group the lock sits in, so a stroked shackle keeps its full weight
+        # on a small lock and closes its own arc up into a blob. 0.105 wide
+        # is what stroke_width=10 drew at the default height.
+        shackle = AnnularSector(
+            inner_radius=0.3 - 0.0525, outer_radius=0.3 + 0.0525,
+            start_angle=0, angle=PI, color=color, fill_opacity=1,
+            stroke_width=0,
         )
-        shackle.move_to(body.get_top() + UP * 0.22)
+        shackle.shift(body.get_top() + UP * 0.07 - shackle.get_arc_center())
         keyhole = VGroup(
             Circle(radius=0.11, color=BG, fill_opacity=1, stroke_width=0),
             Triangle(color=BG, fill_opacity=1, stroke_width=0)
@@ -147,6 +154,28 @@ class Note(VGroup):
         self.add(card, label)
         self.card, self.label = card, label
         self.message = text
+        self.pad, self.size = pad, size
+
+    def fitted_card(self, text: str | None = None) -> RoundedRectangle:
+        """The card this note would have been cut with, for ``text``.
+
+        ``scramble`` swaps the label for another string without touching the
+        card, so a card built around a four-character packet cannot hold a
+        line of ciphertext. ``Transform`` the card into this to grow it, in
+        the same beat the message changes.
+
+        The note may have been scaled since it was built, so the padding and
+        the corner are scaled with it. ``scramble`` pins the font size, which
+        is what tells us by how much.
+        """
+        scale = self.label.font_size / self.size
+        label = self.label if text is None else (
+            mono(text, size=self.label.font_size).move_to(self.label))
+        return RoundedRectangle(
+            width=label.width + 2 * self.pad * scale,
+            height=label.height + 2 * self.pad * scale,
+            corner_radius=0.14 * scale,
+        ).move_to(label).match_style(self.card)
 
 
 POOL = string.ascii_letters + string.digits + "#$%&*@!?"
@@ -455,16 +484,27 @@ class Server(VGroup):
 
 
 class BrowserBar(VGroup):
+    """A browser address pill: padlock, then the URL.
+
+    ``width`` is a minimum, not a promise. The padlock and the text are laid
+    out at a fixed size, so a pill asked for narrower than its own contents
+    used to let the URL run out of both ends; it now grows to fit instead.
+    Callers that want a particular size scale the finished bar.
+    """
+
+    PAD = 0.42          # from the padlock to the left edge, and after the URL
+
     def __init__(self, url: str = "https://", width: float = 5.2, **kw):
         super().__init__(**kw)
-        bar = RoundedRectangle(
-            width=width, height=0.8, corner_radius=0.4, color=FG,
-            stroke_width=STROKE_THIN, fill_color=SURFACE, fill_opacity=1,
-        )
         lock = Padlock(color=PRIVATE, height=0.42)
-        lock.move_to(bar.get_left() + RIGHT * 0.55)
         text = Text(url, font=MONO, font_size=28, color=FG)
         text.next_to(lock, RIGHT, buff=0.28)
+        needed = lock.width + 0.28 + text.width + 2 * self.PAD
+        bar = RoundedRectangle(
+            width=max(width, needed), height=0.8, corner_radius=0.4, color=FG,
+            stroke_width=STROKE_THIN, fill_color=SURFACE, fill_opacity=1,
+        )
+        VGroup(lock, text).next_to(bar.get_left(), RIGHT, buff=self.PAD)
         self.add(bar, lock, text)
         self.bar, self.lock, self.url_text = bar, lock, text
 
@@ -528,6 +568,140 @@ class FileStack(VGroup):
             sheets.add(page)
         self.add(*reversed(sheets.submobjects))
         self.sheets = sheets
+
+
+# --- Caesar and Enigma -----------------------------------------------------
+#
+# Part 1 of both cuts draws these the same way, so they live here with the
+# rest of the shared objects. Anything a single cut's history needs on its
+# own — its timeline, its cards — does not.
+
+
+class AlphabetShift(VGroup):
+    """Two rows of letters: the plain alphabet, and one that slides under it.
+
+    The lower row carries three letters more than the upper one, wrapping A, B
+    and C round to the right-hand end, so that sliding it left by three places
+    leaves no gap. After ``slide(k)``, ``under(i + k)`` is the letter sitting
+    below ``top[i]`` — which is what that letter encrypts to.
+    """
+
+    LETTERS = string.ascii_uppercase
+
+    def __init__(self, k: int = 3, width: float = 11.6, color: str = FG,
+                 shift_color: str = PRIVATE, size: int = 21, gap: float = 0.5,
+                 **kw):
+        super().__init__(**kw)
+        self.k = k
+        self.cell = width / 26
+        top, bottom = VGroup(), VGroup()
+        for i, ch in enumerate(self.LETTERS):
+            top.add(Text(ch, font=MONO, font_size=size, color=color)
+                    .move_to(RIGHT * self.x(i) + UP * gap))
+        # The extra k cells start off-frame to the right and slide into view.
+        for i in range(26 + k):
+            bottom.add(Text(self.LETTERS[i % 26], font=MONO, font_size=size,
+                            color=shift_color)
+                       .move_to(RIGHT * self.x(i) + DOWN * gap))
+        self.add(top, bottom)
+        self.top, self.bottom = top, bottom
+
+    def x(self, i: int) -> float:
+        return -26 * self.cell / 2 + self.cell * (i + 0.5)
+
+    def under(self, i: int):
+        return self.bottom[i]
+
+    def plain(self, ch: str):
+        return self.top[self.LETTERS.index(ch)]
+
+    def cipher(self, ch: str):
+        """The cell that ``ch`` encrypts to, once the row has slid."""
+        return self.bottom[self.LETTERS.index(ch) + self.k]
+
+    def leaving(self) -> VGroup:
+        """The cells the slide pushes off the left edge."""
+        return VGroup(*self.bottom[: self.k])
+
+    def slide(self, **kw):
+        return self.bottom.animate(**kw).shift(LEFT * self.k * self.cell)
+
+
+class EnigmaRotors(VGroup):
+    """Three rotor wheels over a lamp board, as simply as it can be drawn.
+
+    Only what the narration claims: the rotors turn, and the lamp that lights
+    is different every time the same key is pressed.
+    """
+
+    LETTERS = string.ascii_uppercase
+
+    ROMAN = ("I", "II", "III")
+
+    def __init__(self, color: str = FG, lamp_color: str = PRIVATE,
+                 radius: float = 0.62, numbered: bool = False, **kw):
+        super().__init__(**kw)
+        wheels = VGroup()
+        for n in range(3):
+            ring = Circle(radius=radius, color=color, stroke_width=STROKE,
+                          fill_color=SURFACE, fill_opacity=1)
+            notch = Line(UP * radius * 0.52, UP * radius * 0.92, color=lamp_color,
+                         stroke_width=STROKE_THIN).move_to(
+                ring.get_center() + UP * radius * 0.72)
+            spokes = VGroup(*[
+                Line(ORIGIN, UP * radius * 0.78, color=color,
+                     stroke_width=STROKE_THIN, stroke_opacity=0.5)
+                .rotate(a, about_point=ORIGIN).shift(ring.get_center())
+                for a in np.linspace(0, TAU, 8, endpoint=False)
+            ])
+            parts = [ring, spokes, notch]
+            if numbered:
+                # The rotor's number sits in the hub, where a real machine
+                # shows the ring setting.
+                parts.append(caption(self.ROMAN[n], color, SMALL - 4)
+                             .move_to(ring.get_center()))
+            wheels.add(VGroup(*parts))
+        wheels.arrange(RIGHT, buff=0.34)
+
+        lamps, letters = VGroup(), VGroup()
+        for row, chunk in enumerate((self.LETTERS[:13], self.LETTERS[13:])):
+            for col, ch in enumerate(chunk):
+                spot = RIGHT * (col - 6) * 0.62 + DOWN * row * 0.62
+                lamps.add(Circle(radius=0.2, color=SNOOP, stroke_width=2.6,
+                                 fill_color=SURFACE, fill_opacity=1).move_to(spot))
+                letters.add(Text(ch, font=MONO, font_size=15, color=SNOOP)
+                            .move_to(spot))
+        board = VGroup(lamps, letters)
+        board.next_to(wheels, DOWN, buff=0.62)
+        self.add(wheels, board)
+        self.wheels, self.lamps, self.letters = wheels, lamps, letters
+
+    def lamp(self, ch: str):
+        return self.lamps[self.LETTERS.index(ch)]
+
+    def glyph(self, ch: str):
+        return self.letters[self.LETTERS.index(ch)]
+
+    def lit(self, ch: str, color: str = PRIVATE):
+        """The lamp for ``ch`` coming on."""
+        return AnimationGroup(
+            self.lamp(ch).animate.set_stroke(color).set_fill(color, opacity=0.85),
+            self.glyph(ch).animate.set_color(BG),
+        )
+
+    def dark(self, ch: str):
+        """That lamp going out again."""
+        return AnimationGroup(
+            self.lamp(ch).animate.set_stroke(SNOOP).set_fill(SURFACE, opacity=1),
+            self.glyph(ch).animate.set_color(SNOOP),
+        )
+
+    def step(self, turns: float = TAU / 26, **kw):
+        """The rotors advancing by one key press, the right-hand one most."""
+        return AnimationGroup(*[
+            Rotate(w, turns * mult, about_point=w.get_center())
+            for w, mult in zip(self.wheels, (0.25, 0.6, 1.0))
+        ], **kw)
 
 
 # --- icons -----------------------------------------------------------------
@@ -620,6 +794,23 @@ def icon(kind: str, color: str = FG, height: float = 0.9) -> VGroup:
                          fill_color=color, fill_opacity=0.9)
         base.next_to(cols, DOWN, buff=0.04)
         g.add(roof, cols, base)
+
+    elif kind == "scroll":
+        sheet = Rectangle(width=1.5, height=1.1, color=color,
+                          stroke_width=STROKE, fill_color=SURFACE, fill_opacity=1)
+        rolls = VGroup(*[
+            Circle(radius=0.17, color=color, stroke_width=STROKE_THIN,
+                   fill_color=SURFACE_HI, fill_opacity=1)
+            for _ in range(2)
+        ])
+        rolls[0].move_to(sheet.get_left())
+        rolls[1].move_to(sheet.get_right())
+        ruled = VGroup(*[
+            Line(LEFT * 0.42, RIGHT * 0.42, color=color, stroke_width=2,
+                 stroke_opacity=0.6).shift(UP * dy)
+            for dy in (0.26, 0.0, -0.26)
+        ]).move_to(sheet)
+        g.add(sheet, ruled, rolls)
 
     elif kind == "hospital":
         shell = RoundedRectangle(

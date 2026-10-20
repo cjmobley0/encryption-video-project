@@ -1,0 +1,1072 @@
+{
+  "source": "p2professionalnarration.mp4",
+  "duration": 405.035,
+  "lines": [
+    {
+      "stem": "scene01_beat01",
+      "label": "Scene01Bridge beat 1",
+      "line": "Now that we looked at the history of encryption,",
+      "heard": "Now that we looked at the history of encryption,",
+      "start": 0.0,
+      "end": 3.001,
+      "cut": [
+        0.0,
+        3.121
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene01_beat02",
+      "label": "Scene01Bridge beat 2",
+      "line": "we can examine how encryption works, the major types of encryption, and how encryption is used in modern technology.",
+      "heard": "we can now examine how encryption works, the major types of encryption, and how encryption is used in modern technology.",
+      "start": 3.344,
+      "end": 9.09,
+      "cut": [
+        3.224,
+        9.21
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene02_beat01",
+      "label": "Scene02Pipeline beat 1",
+      "line": "At its most basic level, encryption is the process of transforming readable information into an unreadable format so that unauthorized people cannot understand it.",
+      "heard": "At its most basic level, encryption is the process of transforming readable information into an unreadable format so that unauthorized people cannot understand it.",
+      "start": 12.087,
+      "end": 20.529,
+      "cut": [
+        11.967,
+        20.649
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene02_beat02",
+      "label": "Scene02Pipeline beat 2",
+      "line": "The original readable information is called plaintext.",
+      "heard": "The original readable information is called plaintext.",
+      "start": 21.908,
+      "end": 24.556,
+      "cut": [
+        21.788,
+        24.676
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene02_beat03",
+      "label": "Scene02Pipeline beat 3",
+      "line": "Encryption uses a mathematical algorithm and a key to transform the plaintext into ciphertext.",
+      "heard": "Encryption uses a mathematical algorithm and a key to transform the plaintext into ciphertext.",
+      "start": 25.18,
+      "end": 30.064,
+      "cut": [
+        25.06,
+        30.184
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene02_beat04",
+      "label": "Scene02Pipeline beat 4",
+      "line": "Ciphertext may look like a random sequence of letters, numbers, or symbols.",
+      "heard": "Ciphertext may look like a random sequence of letters, numbers, or symbols.",
+      "start": 30.753,
+      "end": 34.393,
+      "cut": [
+        30.633,
+        34.513
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene02_beat05",
+      "label": "Scene02Pipeline beat 5",
+      "line": "Although the ciphertext still contains the original information, it is designed to be meaningless to anyone who does not have the correct key.",
+      "heard": "Although the ciphertext still contains the original information, it is designed to be meaningless to anyone who does not have the correct key.",
+      "start": 35.237,
+      "end": 41.359,
+      "cut": [
+        35.117,
+        41.479
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene03_beat01",
+      "label": "Scene03Decryption beat 1",
+      "line": "The intended recipient can then use a key and a decryption algorithm to turn the ciphertext back into plaintext.",
+      "heard": "The intended recipient can then use a key and a decryption algorithm to turn the ciphertext back into plaintext.",
+      "start": 42.985,
+      "end": 48.79,
+      "cut": [
+        42.865,
+        48.91
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene03_beat02",
+      "label": "Scene03Decryption beat 2",
+      "line": "This process is called decryption.",
+      "heard": "This process is called decryption.",
+      "start": 49.246,
+      "end": 50.725,
+      "cut": [
+        49.126,
+        50.845
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene04_beat01",
+      "label": "Scene04LockedBox beat 1",
+      "line": "A simple analogy is a locked box.",
+      "heard": "A simple analogy is a locked box.",
+      "start": 52.251,
+      "end": 54.112,
+      "cut": [
+        52.131,
+        54.232
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene04_beat02",
+      "label": "Scene04LockedBox beat 2",
+      "line": "The plaintext is the message placed inside the box.",
+      "heard": "Plain text is the message placed inside the box.",
+      "start": 54.832,
+      "end": 57.697,
+      "cut": [
+        54.712,
+        57.817
+      ],
+      "match": 0.9,
+      "notes": []
+    },
+    {
+      "stem": "scene04_beat03",
+      "label": "Scene04LockedBox beat 3",
+      "line": "The encryption algorithm is the locking mechanism,",
+      "heard": "The encryption algorithm is the locking mechanism,",
+      "start": 58.052,
+      "end": 60.662,
+      "cut": [
+        57.932,
+        60.782
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene04_beat04",
+      "label": "Scene04LockedBox beat 4",
+      "line": "and the key is what allows the box to be opened.",
+      "heard": "and the key is what allows the box to be opened.",
+      "start": 61.225,
+      "end": 63.348,
+      "cut": [
+        61.105,
+        63.468
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene04_beat05",
+      "label": "Scene04LockedBox beat 5",
+      "line": "Anyone can see the locked box, but only someone with the correct key should be able to access the message.",
+      "heard": "Anyone can see the locked box, but only someone with the correct key should be able to access the message.",
+      "start": 64.091,
+      "end": 68.872,
+      "cut": [
+        63.971,
+        68.992
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene05_beat01",
+      "label": "Scene05Math beat 1",
+      "line": "Modern encryption is based on mathematics rather than simply hiding information.",
+      "heard": "Modern encryption is based on mathematics rather than simply hiding information.",
+      "start": 82.498,
+      "end": 85.93,
+      "cut": [
+        82.378,
+        86.05
+      ],
+      "match": 1.0,
+      "notes": [
+        "13.8s between this line and the one before it, which goes into neither clip \u2014 most likely a take that was read again. Worth a listen if it is not."
+      ]
+    },
+    {
+      "stem": "scene05_beat02",
+      "label": "Scene05Math beat 2",
+      "line": "Algorithms are designed so that encrypting information is easy when the correct key is available,",
+      "heard": "Algorithms are designed so that encrypting information is easy when the correct key is available,",
+      "start": 86.574,
+      "end": 90.743,
+      "cut": [
+        86.454,
+        90.863
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene05_beat03",
+      "label": "Scene05Math beat 3",
+      "line": "but reversing the process without the key is computationally impractical.",
+      "heard": "but reversing the process without the key is computationally impractical.",
+      "start": 90.992,
+      "end": 93.923,
+      "cut": [
+        90.872,
+        94.043
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat01",
+      "label": "Scene06Strength beat 1",
+      "line": "The strength of encryption depends on several factors.",
+      "heard": "The strength of encryption depends on several factors.",
+      "start": 94.658,
+      "end": 96.888,
+      "cut": [
+        94.538,
+        97.008
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat02",
+      "label": "Scene06Strength beat 2",
+      "line": "These include the quality of the algorithm,",
+      "heard": "These include the quality of the algorithm,",
+      "start": 97.386,
+      "end": 99.05,
+      "cut": [
+        97.266,
+        99.17
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat03",
+      "label": "Scene06Strength beat 3",
+      "line": "the length and randomness of the key,",
+      "heard": "the length and randomness of the key,",
+      "start": 99.283,
+      "end": 100.713,
+      "cut": [
+        99.163,
+        100.833
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat04",
+      "label": "Scene06Strength beat 4",
+      "line": "and how securely the key is stored.",
+      "heard": "and how securely the key is stored.",
+      "start": 101.276,
+      "end": 102.772,
+      "cut": [
+        101.156,
+        102.892
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat05",
+      "label": "Scene06Strength beat 5",
+      "line": "Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed.",
+      "heard": "Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed.",
+      "start": 103.456,
+      "end": 108.506,
+      "cut": [
+        103.336,
+        108.626
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat06",
+      "label": "Scene06Strength beat 6",
+      "line": "For example, if an attacker obtains a password used to protect the encrypted file, the encryption itself may not be broken.",
+      "heard": "For example, if an attacker obtains a password used to protect the encrypted file, the encryption itself may not be broken.",
+      "start": 109.593,
+      "end": 115.531,
+      "cut": [
+        109.473,
+        115.651
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat07",
+      "label": "Scene06Strength beat 7",
+      "line": "Instead, the attackers obtain the key needed to unlock the information.",
+      "heard": "Instead, the attackers obtain the key needed to unlock the information.",
+      "start": 116.085,
+      "end": 119.341,
+      "cut": [
+        115.965,
+        119.461
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene06_beat08",
+      "label": "Scene06Strength beat 8",
+      "line": "This is why key management is one of the most important parts of cybersecurity.",
+      "heard": "This is why key management is one of the most important parts of cybersecurity.",
+      "start": 119.926,
+      "end": 123.071,
+      "cut": [
+        119.806,
+        123.191
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat02",
+      "label": "Scene07Symmetric beat 2",
+      "line": "There are two main categories of encryption. Symmetric encryption and asymmetric encryption.",
+      "heard": "There are two main categories of encryption. Symmetric Encryption and Asymmetric Encryption.",
+      "start": 125.925,
+      "end": 130.466,
+      "cut": [
+        125.805,
+        130.586
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat03",
+      "label": "Scene07Symmetric beat 3",
+      "line": "Symmetric encryption uses the same key for both encryption and decryption.",
+      "heard": "encryption uses the same key for both encryption and decryption.",
+      "start": 131.14,
+      "end": 134.618,
+      "cut": [
+        131.02,
+        134.738
+      ],
+      "match": 0.909,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat04",
+      "label": "Scene07Symmetric beat 4",
+      "line": "The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it.",
+      "heard": "The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it.",
+      "start": 135.199,
+      "end": 139.806,
+      "cut": [
+        135.079,
+        139.926
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat05",
+      "label": "Scene07Symmetric beat 5",
+      "line": "Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data.",
+      "heard": "Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data.",
+      "start": 141.163,
+      "end": 146.493,
+      "cut": [
+        141.043,
+        146.613
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat06",
+      "label": "Scene07Symmetric beat 6",
+      "line": "Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES, and ChaCha20.",
+      "heard": "Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES, and",
+      "start": 147.119,
+      "end": 152.573,
+      "cut": [
+        146.999,
+        152.693
+      ],
+      "match": 0.923,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat07",
+      "label": "Scene07Symmetric beat 7",
+      "line": "However, symmetric encryption creates an important challenge: both parties need to obtain the same secret key securely.",
+      "heard": "However, symmetric encryption creates an important challenge. Both parties need to obtain the same secret key securely.",
+      "start": 153.8,
+      "end": 159.724,
+      "cut": [
+        153.68,
+        159.844
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene07_beat08",
+      "label": "Scene07Symmetric beat 8",
+      "line": "If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication.",
+      "heard": "If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication.",
+      "start": 160.454,
+      "end": 165.44,
+      "cut": [
+        160.334,
+        165.56
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat01",
+      "label": "Scene08Asymmetric beat 1",
+      "line": "Asymmetric encryption, also called public-key encryption, uses a pair of mathematically related keys: a public key and a private key.",
+      "heard": "Asymmetric encryption, also called public key encryption, uses a pair of mathematically related keys, a public key and a private key.",
+      "start": 166.965,
+      "end": 173.77,
+      "cut": [
+        166.845,
+        173.89
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat02",
+      "label": "Scene08Asymmetric beat 2",
+      "line": "The public key can be shared openly.",
+      "heard": "The public key can be shared openly.",
+      "start": 174.439,
+      "end": 175.898,
+      "cut": [
+        174.319,
+        176.018
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat03",
+      "label": "Scene08Asymmetric beat 3",
+      "line": "The private key must be kept secret.",
+      "heard": "The private key must be kept secret.",
+      "start": 176.364,
+      "end": 177.728,
+      "cut": [
+        176.244,
+        177.848
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat04",
+      "label": "Scene08Asymmetric beat 4",
+      "line": "Information encrypted with the public key can generally be decrypted only with the corresponding private key.",
+      "heard": "Information encrypted with the public key can generally be decrypted only with the corresponding private key.",
+      "start": 178.364,
+      "end": 182.908,
+      "cut": [
+        178.244,
+        183.028
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat05",
+      "label": "Scene08Asymmetric beat 5",
+      "line": "For example, if someone wants to send a secure message to a recipient, they can encrypt the message using the recipient\u2019s public key.",
+      "heard": "For example, if someone wants to send a secure message to a recipient, they can encrypt the message using the recipient's public key.",
+      "start": 184.127,
+      "end": 190.355,
+      "cut": [
+        184.007,
+        190.475
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat06",
+      "label": "Scene08Asymmetric beat 6",
+      "line": "Only the recipient\u2019s private key should be able to decrypt it.",
+      "heard": "Only the recipient's private key should be able to decrypt it.",
+      "start": 190.928,
+      "end": 193.346,
+      "cut": [
+        190.808,
+        193.466
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat07",
+      "label": "Scene08Asymmetric beat 7",
+      "line": "Asymmetric encryption solves much of the key-distribution problem because the public key does not need to be kept secret.",
+      "heard": "Asymmetric encryption solves much of the key distribution problem because the public key does not need to be kept secret.",
+      "start": 194.758,
+      "end": 199.732,
+      "cut": [
+        194.638,
+        199.852
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat08",
+      "label": "Scene08Asymmetric beat 8",
+      "line": "However, it is typically slower and more computationally expensive than symmetric encryption.",
+      "heard": "However, it is typically slower and more computationally expensive than symmetric encryption.",
+      "start": 200.372,
+      "end": 204.517,
+      "cut": [
+        200.252,
+        204.637
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat09",
+      "label": "Scene08Asymmetric beat 9",
+      "line": "Examples of public-key algorithms include RSA and elliptic-curve cryptography, often called ECC.",
+      "heard": "Examples of public key algorithms include RSA, an elliptic curve cryptography, often called ECC.",
+      "start": 205.609,
+      "end": 211.248,
+      "cut": [
+        205.489,
+        211.368
+      ],
+      "match": 0.929,
+      "notes": []
+    },
+    {
+      "stem": "scene08_beat10",
+      "label": "Scene08Asymmetric beat 10",
+      "line": "ECC can provide strong security with shorter key sizes, which makes it useful in mobile devices, web browsers, and other systems with limited resources.",
+      "heard": "ECC can provide strong security with shorter key sizes, which makes it useful in mobile devices, web browsers, and other systems with limited resources.",
+      "start": 211.941,
+      "end": 219.681,
+      "cut": [
+        211.821,
+        219.801
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene09_beat01",
+      "label": "Scene09Hybrid beat 1",
+      "line": "In practice, many modern systems use a hybrid approach that combines both types.",
+      "heard": "In practice, many modern systems use a hybrid approach that combines both types.",
+      "start": 220.053,
+      "end": 223.944,
+      "cut": [
+        219.933,
+        224.064
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene09_beat02",
+      "label": "Scene09Hybrid beat 2",
+      "line": "For example, when a user visits a website using HTTPS,",
+      "heard": "For example, when a user visits a website using HTTPS,",
+      "start": 225.106,
+      "end": 228.232,
+      "cut": [
+        224.986,
+        228.352
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene09_beat03",
+      "label": "Scene09Hybrid beat 3",
+      "line": "asymmetric cryptography can help the browser and the server authenticate each other and establish a shared session key.",
+      "heard": "asymmetric cryptography can help the browser and the server authenticate each other and establish a shared session key.",
+      "start": 228.484,
+      "end": 233.88,
+      "cut": [
+        228.364,
+        234.0
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene09_beat04",
+      "label": "Scene09Hybrid beat 4",
+      "line": "After that, symmetric encryption is usually used to protect the actual data exchange during the session because it is faster.",
+      "heard": "After that, symmetric encryption is usually used to protect the actual data exchange during the session because it is faster.",
+      "start": 234.619,
+      "end": 240.156,
+      "cut": [
+        234.499,
+        240.276
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene09_beat05",
+      "label": "Scene09Hybrid beat 5",
+      "line": "This combination provides both secure key exchange and efficient communication.",
+      "heard": "This combination provides both secure key exchange and efficient communication.",
+      "start": 240.937,
+      "end": 244.574,
+      "cut": [
+        240.817,
+        244.694
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat01",
+      "label": "Scene10Hashing beat 1",
+      "line": "It is also important to distinguish encryption from hashing.",
+      "heard": "It is also important to distinguish encryption from hashing.",
+      "start": 245.719,
+      "end": 248.221,
+      "cut": [
+        245.599,
+        248.341
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat02",
+      "label": "Scene10Hashing beat 2",
+      "line": "Hashing transforms data into a fixed-length value, called a hash, but it is not designed to be reversed.",
+      "heard": "Hashing transforms data into a fixed -length value, called a hash, but is not designed to be reversed.",
+      "start": 248.851,
+      "end": 254.298,
+      "cut": [
+        248.731,
+        254.418
+      ],
+      "match": 0.947,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat03",
+      "label": "Scene10Hashing beat 3",
+      "line": "Hashing is commonly used to store passwords securely and to verify whether data has been changed.",
+      "heard": "Hashing is commonly used to store passwords securely and to verify whether data has been changed.",
+      "start": 254.802,
+      "end": 259.163,
+      "cut": [
+        254.682,
+        259.283
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat04",
+      "label": "Scene10Hashing beat 4",
+      "line": "Digital signatures are related to public-key cryptography as well, but they serve a different purpose.",
+      "heard": "Digital signatures are related to public key cryptography as well, but they serve a different purpose.",
+      "start": 260.751,
+      "end": 265.254,
+      "cut": [
+        260.631,
+        265.374
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat05",
+      "label": "Scene10Hashing beat 5",
+      "line": "Encryption is mainly used to protect confidentiality,",
+      "heard": "Encryption is mainly used to protect confidentiality,",
+      "start": 265.885,
+      "end": 268.114,
+      "cut": [
+        265.765,
+        268.234
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene10_beat06",
+      "label": "Scene10Hashing beat 6",
+      "line": "while digital signatures help verify the identity of the sender and confirm that the message has not been modified.",
+      "heard": "while digital signatures help verify the identity of the sender and confirm that the message has not been modified.",
+      "start": 268.573,
+      "end": 273.647,
+      "cut": [
+        268.453,
+        273.767
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat02",
+      "label": "Scene11Applications beat 2",
+      "line": "Encryption is used throughout everyday computing.",
+      "heard": "Encryption is used throughout everyday computing.",
+      "start": 276.438,
+      "end": 278.187,
+      "cut": [
+        276.318,
+        278.307
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat03",
+      "label": "Scene11Applications beat 3",
+      "line": "One of the most familiar examples is HTTPS, which protects communication between a web browser and a website.",
+      "heard": "One of the most familiar examples is HTTPS, which protects communication between a web browser and a website.",
+      "start": 278.869,
+      "end": 283.975,
+      "cut": [
+        278.749,
+        284.095
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat04",
+      "label": "Scene11Applications beat 4",
+      "line": "When a website uses HTTPS, information such as login credentials, personal information, and payment information is encrypted while traveling across the internet.",
+      "heard": "When a website uses HTTPS, information such as login credentials, personal information, and payment information is encrypted while traveling across the internet.",
+      "start": 284.64,
+      "end": 293.143,
+      "cut": [
+        284.52,
+        293.263
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat05",
+      "label": "Scene11Applications beat 5",
+      "line": "Encryption is also used in messaging applications.",
+      "heard": "Encryption is also used in messaging applications.",
+      "start": 294.352,
+      "end": 296.59,
+      "cut": [
+        294.232,
+        296.71
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat06",
+      "label": "Scene11Applications beat 6",
+      "line": "End-to-end encryption is designed so that a message is encrypted on the sender\u2019s device and only decrypted on the recipient\u2019s device.",
+      "heard": "End -to -end encryption is designed so that a message is encrypted on the sender's device and only decrypted on the recipient's device.",
+      "start": 297.032,
+      "end": 302.802,
+      "cut": [
+        296.912,
+        302.922
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat07",
+      "label": "Scene11Applications beat 7",
+      "line": "Ideally, even the messaging provider cannot read the contents of the message while it is in transit.",
+      "heard": "Ideally, even the messaging provider cannot read the contents of the message while it is in transit.",
+      "start": 303.435,
+      "end": 307.639,
+      "cut": [
+        303.315,
+        307.759
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat08",
+      "label": "Scene11Applications beat 8",
+      "line": "Another major application is data storage.",
+      "heard": "Another major application is data storage.",
+      "start": 308.831,
+      "end": 310.739,
+      "cut": [
+        308.711,
+        310.859
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat09",
+      "label": "Scene11Applications beat 9",
+      "line": "Computers, smartphones, USB drives, and cloud services can encrypt stored files.",
+      "heard": "Computers, smartphones, USB drives, and cloud services can encrypt stored files.",
+      "start": 311.014,
+      "end": 315.359,
+      "cut": [
+        310.894,
+        315.479
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat10",
+      "label": "Scene11Applications beat 10",
+      "line": "This is called encryption at rest.",
+      "heard": "This is called encryption at rest.",
+      "start": 315.908,
+      "end": 317.354,
+      "cut": [
+        315.788,
+        317.474
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene11_beat11",
+      "label": "Scene11Applications beat 11",
+      "line": "If a device is lost or stolen, encryption can make it much more difficult for someone to access the information stored on it.",
+      "heard": "If a device is lost or stolen, encryption can make it much more difficult for someone to access the information stored on it.",
+      "start": 317.932,
+      "end": 323.194,
+      "cut": [
+        317.812,
+        323.314
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat01",
+      "label": "Scene12Organizations beat 1",
+      "line": "Encryption is also important in online banking and electronic payments.",
+      "heard": "Encryption is also important in online baking and electronic payments.",
+      "start": 325.008,
+      "end": 328.183,
+      "cut": [
+        324.888,
+        328.303
+      ],
+      "match": 0.9,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat02",
+      "label": "Scene12Organizations beat 2",
+      "line": "Financial institutions use cryptographic protocols to protect account information, verify transactions, and reduce the risk of unauthorized access.",
+      "heard": "Financial institutions use cryptographic protocols to protect account information, verify transactions, and reduce the risk of unauthorized access.",
+      "start": 328.815,
+      "end": 336.143,
+      "cut": [
+        328.695,
+        336.263
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat03",
+      "label": "Scene12Organizations beat 3",
+      "line": "Virtual private networks, or VPNs, use encryption to protect data traveling between a device and a VPN server.",
+      "heard": "Virtual private networks, or VPNs, use encryption to protect data traveling between a device and a VPN server.",
+      "start": 337.823,
+      "end": 343.902,
+      "cut": [
+        337.703,
+        344.022
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat04",
+      "label": "Scene12Organizations beat 4",
+      "line": "This can help prevent people on the same network from easily viewing the user\u2019s traffic.",
+      "heard": "This can help prevent people on the same network from easily viewing the user's traffic.",
+      "start": 344.777,
+      "end": 348.5,
+      "cut": [
+        344.657,
+        348.62
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat05",
+      "label": "Scene12Organizations beat 5",
+      "line": "Businesses and governments use encryption to protect confidential records, intellectual property, medical data, and classified information.",
+      "heard": "Businesses and governments use encryption to protect confidential records, intellectual property, medical data, and classified information.",
+      "start": 349.813,
+      "end": 356.699,
+      "cut": [
+        349.693,
+        356.819
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene12_beat06",
+      "label": "Scene12Organizations beat 6",
+      "line": "In these environments, encryption is often combined with access controls, authentication, monitoring, and other security measures.",
+      "heard": "In these environments, encryption is often combined with access controls, authentication, monitoring, and other security measures.",
+      "start": 357.269,
+      "end": 364.178,
+      "cut": [
+        357.149,
+        364.298
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat01",
+      "label": "Scene13Conclusion beat 1",
+      "line": "However, encryption does not solve every security problem.",
+      "heard": "However, encryption does not solve every security problem.",
+      "start": 365.727,
+      "end": 368.206,
+      "cut": [
+        365.607,
+        368.326
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat02",
+      "label": "Scene13Conclusion beat 2",
+      "line": "It cannot protect data from a person who already has authorized access,",
+      "heard": "It cannot protect data from a person who already has authorized access,",
+      "start": 368.736,
+      "end": 371.698,
+      "cut": [
+        368.616,
+        371.818
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat03",
+      "label": "Scene13Conclusion beat 3",
+      "line": "and it cannot prevent every type of malware, phishing attack, or social-engineering attack.",
+      "heard": "and it cannot prevent every type of malware, phishing attack, or social engineering attack.",
+      "start": 372.015,
+      "end": 375.704,
+      "cut": [
+        371.895,
+        375.824
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat04",
+      "label": "Scene13Conclusion beat 4",
+      "line": "Encryption protects the information. The surrounding systems and users must also be secure.",
+      "heard": "Encryption protects the information. The surrounding systems and users must also be secure.",
+      "start": 376.37,
+      "end": 380.715,
+      "cut": [
+        376.25,
+        380.835
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat05",
+      "label": "Scene13Conclusion beat 5",
+      "line": "Overall, encryption supports three major security goals: confidentiality, integrity, and authentication.",
+      "heard": "Overall, encryption supports three major security goals. Confidentiality, Integrity, and Authentication.",
+      "start": 382.406,
+      "end": 388.229,
+      "cut": [
+        382.286,
+        388.349
+      ],
+      "match": 1.0,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat06",
+      "label": "Scene13Conclusion beat 6",
+      "line": "It helps keep information private, helps detect unauthorized changes, and can help verify the identity of the people or systems involved.",
+      "heard": "It helps keep information private, helps detect unauthorized charges, and can help verify the identity of the people or systems involved.",
+      "start": 388.903,
+      "end": 395.328,
+      "cut": [
+        388.783,
+        395.448
+      ],
+      "match": 0.952,
+      "notes": []
+    },
+    {
+      "stem": "scene13_beat07",
+      "label": "Scene13Conclusion beat 7",
+      "line": "As more communications, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity.",
+      "heard": "As more communications, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity.",
+      "start": 396.079,
+      "end": 404.169,
+      "cut": [
+        395.959,
+        404.289
+      ],
+      "match": 1.0,
+      "notes": []
+    }
+  ]
+}

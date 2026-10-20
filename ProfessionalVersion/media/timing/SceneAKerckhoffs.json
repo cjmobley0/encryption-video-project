@@ -1,0 +1,48 @@
+{
+  "scene": "SceneAKerckhoffs",
+  "target": 15.14,
+  "duration": 15.1167,
+  "frame_rate": 60.0,
+  "beats": [
+    {
+      "index": 1,
+      "note": "(music only)",
+      "window": 2.0,
+      "animation": 2.0,
+      "start": 0.0,
+      "end": 2.0
+    },
+    {
+      "index": 2,
+      "note": "The security of an encrypted system should not depend on keeping the algorithm secret.",
+      "window": 4.94,
+      "animation": 4.8,
+      "start": 2.0,
+      "end": 6.9333
+    },
+    {
+      "index": 3,
+      "note": "An attacker may capture the traffic and study the cipher.",
+      "window": 3.31,
+      "animation": 1.95,
+      "start": 6.9333,
+      "end": 10.2333
+    },
+    {
+      "index": 4,
+      "note": "Without the key, that knowledge should not be enough to recover the data.",
+      "window": 3.89,
+      "animation": 3.1,
+      "start": 10.2333,
+      "end": 14.1167
+    },
+    {
+      "index": 5,
+      "note": "(transition)",
+      "window": 1.0,
+      "animation": 1.0,
+      "start": 14.1167,
+      "end": 15.1167
+    }
+  ]
+}

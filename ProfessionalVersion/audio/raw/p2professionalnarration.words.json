@@ -1,0 +1,7185 @@
+{
+ "model": "small.en",
+ "text": "Now that we looked at the history of encryption, we can now examine how encryption works, the major types of encryption, and how encryption is used in modern technology. How encryption works At its most basic level, encryption is the process of transforming readable information into an unreadable format so that unauthorized people cannot understand it. The original readable information is called plaintext. Encryption uses a mathematical algorithm and a key to transform the plaintext into ciphertext. Ciphertext may look like a random sequence of letters, numbers, or symbols. Although the ciphertext still contains the original information, it is designed to be meaningless to anyone who does not have the correct key. The intended recipient can then use a key and a decryption algorithm to turn the ciphertext back into plaintext. This process is called decryption. A simple analogy is a locked box. Plain text is the message placed inside the box. The encryption algorithm is the locking mechanism, and the key is what allows the box to be opened. Anyone can see the locked box, but only someone with the correct key should be able to access the message. Modern encryption is based on mathematics rather than hiding information. Algorithms are designed so that encryption is easy when the correct key is available, but reversing a process without the key is computationally impractical. Modern encryption is based on mathematics rather than simply hiding information. Algorithms are designed so that encrypting information is easy when the correct key is available, but reversing the process without the key is computationally impractical. The strength of encryption depends on several factors. These include the quality of the algorithm, the length and randomness of the key, and how securely the key is stored. Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed. For example, if an attacker obtains a password used to protect the encrypted file, the encryption itself may not be broken. Instead, the attackers obtain the key needed to unlock the information. This is why key management is one of the most important parts of cybersecurity. Types of Encryption There are two main categories of encryption. Symmetric Encryption and Asymmetric Encryption. The metric encryption uses the same key for both encryption and decryption. The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt it. Symmetric encryption is generally fast and efficient, which makes it useful for encrypting large amounts of data. Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES, and the Tasha 20. However, symmetric encryption creates an important challenge. Both parties need to obtain the same secret key securely. If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication. Asymmetric encryption, also called public key encryption, uses a pair of mathematically related keys, a public key and a private key. The public key can be shared openly. The private key must be kept secret. Information encrypted with the public key can generally be decrypted only with the corresponding private key. For example, if someone wants to send a secure message to a recipient, they can encrypt the message using the recipient's public key. Only the recipient's private key should be able to decrypt it. Asymmetric encryption solves much of the key distribution problem because the public key does not need to be kept secret. However, it is typically slower and more computationally expensive than symmetric encryption. Examples of public key algorithms include RSA, an elliptic curve cryptography, often called ECC. ECC can provide strong security with shorter key sizes, which makes it useful in mobile devices, web browsers, and other systems with limited resources. In practice, many modern systems use a hybrid approach that combines both types. For example, when a user visits a website using HTTPS, asymmetric cryptography can help the browser and the server authenticate each other and establish a shared session key. After that, symmetric encryption is usually used to protect the actual data exchange during the session because it is faster. This combination provides both secure key exchange and efficient communication. It is also important to distinguish encryption from hashing. Hashing transforms data into a fixed-length value, called a hash, but is not designed to be reversed. Hashing is commonly used to store passwords securely and to verify whether data has been changed. Digital signatures are related to public key cryptography as well, but they serve a different purpose. Encryption is mainly used to protect confidentiality, while digital signatures help verify the identity of the sender and confirm that the message has not been modified. Applications of Encryption Encryption is used throughout everyday computing. One of the most familiar examples is HTTPS, which protects communication between a web browser and a website. When a website uses HTTPS, information such as login credentials, personal information, and payment information is encrypted while traveling across the internet. Encryption is also used in messaging applications. End-to-end encryption is designed so that a message is encrypted on the sender's device and only decrypted on the recipient's device. Ideally, even the messaging provider cannot read the contents of the message while it is in transit. Another major application is data storage. Computers, smartphones, USB drives, and cloud services can encrypt stored files. This is called encryption at rest. If a device is lost or stolen, encryption can make it much more difficult for someone to access the information stored on it. Encryption is also important in online baking and electronic payments. Financial institutions use cryptographic protocols to protect account information, verify transactions, and reduce the risk of unauthorized access. Virtual private networks, or VPNs, use encryption to protect data traveling between a device and a VPN server. This can help prevent people on the same network from easily viewing the user's traffic. Businesses and governments use encryption to protect confidential records, intellectual property, medical data, and classified information. In these environments, encryption is often combined with access controls, authentication, monitoring, and other security measures. However, encryption does not solve every security problem. It cannot protect data from a person who already has authorized access, and it cannot prevent every type of malware, phishing attack, or social engineering attack. Encryption protects the information. The surrounding systems and users must also be secure. Overall, encryption supports three major security goals. Confidentiality, Integrity, and Authentication. It helps keep information private, helps detect unauthorized charges, and can help verify the identity of the people or systems involved. As more communications, commerce, and personal activity move online, encryption has become a fundamental part of modern computer science and cybersecurity.",
+ "words": [
+  {
+   "word": "Now",
+   "start": 0.0,
+   "end": 1.16,
+   "prob": 0.925
+  },
+  {
+   "word": "that",
+   "start": 1.16,
+   "end": 1.26,
+   "prob": 0.986
+  },
+  {
+   "word": "we",
+   "start": 1.26,
+   "end": 1.44,
+   "prob": 0.996
+  },
+  {
+   "word": "looked",
+   "start": 1.44,
+   "end": 1.66,
+   "prob": 0.657
+  },
+  {
+   "word": "at",
+   "start": 1.66,
+   "end": 1.86,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "start": 1.86,
+   "end": 1.98,
+   "prob": 0.996
+  },
+  {
+   "word": "history",
+   "start": 1.98,
+   "end": 2.26,
+   "prob": 0.994
+  },
+  {
+   "word": "of",
+   "start": 2.26,
+   "end": 2.44,
+   "prob": 0.999
+  },
+  {
+   "word": "encryption,",
+   "start": 2.44,
+   "end": 2.76,
+   "prob": 0.977
+  },
+  {
+   "word": "we",
+   "start": 3.18,
+   "end": 3.4,
+   "prob": 0.985
+  },
+  {
+   "word": "can",
+   "start": 3.4,
+   "end": 3.52,
+   "prob": 0.99
+  },
+  {
+   "word": "now",
+   "start": 3.52,
+   "end": 3.68,
+   "prob": 0.993
+  },
+  {
+   "word": "examine",
+   "start": 3.68,
+   "end": 4.04,
+   "prob": 0.993
+  },
+  {
+   "word": "how",
+   "start": 4.04,
+   "end": 4.38,
+   "prob": 0.988
+  },
+  {
+   "word": "encryption",
+   "start": 4.38,
+   "end": 4.64,
+   "prob": 0.996
+  },
+  {
+   "word": "works,",
+   "start": 4.64,
+   "end": 5.04,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 5.42,
+   "end": 5.5,
+   "prob": 0.99
+  },
+  {
+   "word": "major",
+   "start": 5.5,
+   "end": 5.72,
+   "prob": 0.998
+  },
+  {
+   "word": "types",
+   "start": 5.72,
+   "end": 6.0,
+   "prob": 0.997
+  },
+  {
+   "word": "of",
+   "start": 6.0,
+   "end": 6.14,
+   "prob": 0.995
+  },
+  {
+   "word": "encryption,",
+   "start": 6.14,
+   "end": 6.42,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 6.74,
+   "end": 7.12,
+   "prob": 0.998
+  },
+  {
+   "word": "how",
+   "start": 7.12,
+   "end": 7.26,
+   "prob": 0.998
+  },
+  {
+   "word": "encryption",
+   "start": 7.26,
+   "end": 7.54,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 7.54,
+   "end": 7.78,
+   "prob": 0.998
+  },
+  {
+   "word": "used",
+   "start": 7.78,
+   "end": 8.04,
+   "prob": 0.998
+  },
+  {
+   "word": "in",
+   "start": 8.04,
+   "end": 8.28,
+   "prob": 0.998
+  },
+  {
+   "word": "modern",
+   "start": 8.28,
+   "end": 8.46,
+   "prob": 0.998
+  },
+  {
+   "word": "technology.",
+   "start": 8.46,
+   "end": 9.14,
+   "prob": 0.996
+  },
+  {
+   "word": "How",
+   "start": 10.58,
+   "end": 10.72,
+   "prob": 0.947
+  },
+  {
+   "word": "encryption",
+   "start": 10.72,
+   "end": 11.0,
+   "prob": 0.944
+  },
+  {
+   "word": "works",
+   "start": 11.0,
+   "end": 11.46,
+   "prob": 0.999
+  },
+  {
+   "word": "At",
+   "start": 11.46,
+   "end": 12.16,
+   "prob": 0.202
+  },
+  {
+   "word": "its",
+   "start": 12.16,
+   "end": 12.3,
+   "prob": 0.912
+  },
+  {
+   "word": "most",
+   "start": 12.3,
+   "end": 12.46,
+   "prob": 0.996
+  },
+  {
+   "word": "basic",
+   "start": 12.46,
+   "end": 12.8,
+   "prob": 0.998
+  },
+  {
+   "word": "level,",
+   "start": 12.8,
+   "end": 13.16,
+   "prob": 0.997
+  },
+  {
+   "word": "encryption",
+   "start": 13.48,
+   "end": 13.56,
+   "prob": 0.989
+  },
+  {
+   "word": "is",
+   "start": 13.56,
+   "end": 13.82,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 13.82,
+   "end": 13.98,
+   "prob": 0.989
+  },
+  {
+   "word": "process",
+   "start": 13.98,
+   "end": 14.32,
+   "prob": 0.998
+  },
+  {
+   "word": "of",
+   "start": 14.32,
+   "end": 14.7,
+   "prob": 0.997
+  },
+  {
+   "word": "transforming",
+   "start": 14.7,
+   "end": 15.26,
+   "prob": 0.992
+  },
+  {
+   "word": "readable",
+   "start": 15.26,
+   "end": 15.8,
+   "prob": 0.956
+  },
+  {
+   "word": "information",
+   "start": 15.8,
+   "end": 16.38,
+   "prob": 0.997
+  },
+  {
+   "word": "into",
+   "start": 16.38,
+   "end": 16.9,
+   "prob": 0.992
+  },
+  {
+   "word": "an",
+   "start": 16.9,
+   "end": 17.06,
+   "prob": 0.993
+  },
+  {
+   "word": "unreadable",
+   "start": 17.06,
+   "end": 17.5,
+   "prob": 0.95
+  },
+  {
+   "word": "format",
+   "start": 17.5,
+   "end": 18.02,
+   "prob": 0.999
+  },
+  {
+   "word": "so",
+   "start": 18.02,
+   "end": 18.52,
+   "prob": 0.778
+  },
+  {
+   "word": "that",
+   "start": 18.52,
+   "end": 18.66,
+   "prob": 0.994
+  },
+  {
+   "word": "unauthorized",
+   "start": 18.66,
+   "end": 19.12,
+   "prob": 0.97
+  },
+  {
+   "word": "people",
+   "start": 19.12,
+   "end": 19.56,
+   "prob": 1.0
+  },
+  {
+   "word": "cannot",
+   "start": 19.56,
+   "end": 19.9,
+   "prob": 0.888
+  },
+  {
+   "word": "understand",
+   "start": 19.9,
+   "end": 20.36,
+   "prob": 0.999
+  },
+  {
+   "word": "it.",
+   "start": 20.36,
+   "end": 20.88,
+   "prob": 0.996
+  },
+  {
+   "word": "The",
+   "start": 21.86,
+   "end": 21.98,
+   "prob": 0.994
+  },
+  {
+   "word": "original",
+   "start": 21.98,
+   "end": 22.36,
+   "prob": 0.997
+  },
+  {
+   "word": "readable",
+   "start": 22.36,
+   "end": 22.68,
+   "prob": 0.976
+  },
+  {
+   "word": "information",
+   "start": 22.68,
+   "end": 23.26,
+   "prob": 0.996
+  },
+  {
+   "word": "is",
+   "start": 23.26,
+   "end": 23.64,
+   "prob": 0.997
+  },
+  {
+   "word": "called",
+   "start": 23.64,
+   "end": 23.86,
+   "prob": 0.999
+  },
+  {
+   "word": "plaintext.",
+   "start": 23.86,
+   "end": 24.44,
+   "prob": 0.777
+  },
+  {
+   "word": "Encryption",
+   "start": 25.24,
+   "end": 25.48,
+   "prob": 0.988
+  },
+  {
+   "word": "uses",
+   "start": 25.48,
+   "end": 25.8,
+   "prob": 0.996
+  },
+  {
+   "word": "a",
+   "start": 25.8,
+   "end": 25.98,
+   "prob": 0.978
+  },
+  {
+   "word": "mathematical",
+   "start": 25.98,
+   "end": 26.42,
+   "prob": 0.999
+  },
+  {
+   "word": "algorithm",
+   "start": 26.42,
+   "end": 26.94,
+   "prob": 0.214
+  },
+  {
+   "word": "and",
+   "start": 26.94,
+   "end": 27.4,
+   "prob": 0.924
+  },
+  {
+   "word": "a",
+   "start": 27.4,
+   "end": 27.52,
+   "prob": 0.932
+  },
+  {
+   "word": "key",
+   "start": 27.52,
+   "end": 27.72,
+   "prob": 0.993
+  },
+  {
+   "word": "to",
+   "start": 27.72,
+   "end": 27.92,
+   "prob": 0.994
+  },
+  {
+   "word": "transform",
+   "start": 27.92,
+   "end": 28.36,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 28.36,
+   "end": 28.58,
+   "prob": 0.981
+  },
+  {
+   "word": "plaintext",
+   "start": 28.58,
+   "end": 28.96,
+   "prob": 0.676
+  },
+  {
+   "word": "into",
+   "start": 28.96,
+   "end": 29.36,
+   "prob": 0.987
+  },
+  {
+   "word": "ciphertext.",
+   "start": 29.36,
+   "end": 29.96,
+   "prob": 0.903
+  },
+  {
+   "word": "Ciphertext",
+   "start": 30.86,
+   "end": 31.16,
+   "prob": 0.706
+  },
+  {
+   "word": "may",
+   "start": 31.16,
+   "end": 31.42,
+   "prob": 0.962
+  },
+  {
+   "word": "look",
+   "start": 31.42,
+   "end": 31.62,
+   "prob": 0.997
+  },
+  {
+   "word": "like",
+   "start": 31.62,
+   "end": 31.78,
+   "prob": 0.998
+  },
+  {
+   "word": "a",
+   "start": 31.78,
+   "end": 31.88,
+   "prob": 0.996
+  },
+  {
+   "word": "random",
+   "start": 31.88,
+   "end": 32.06,
+   "prob": 0.996
+  },
+  {
+   "word": "sequence",
+   "start": 32.06,
+   "end": 32.5,
+   "prob": 0.998
+  },
+  {
+   "word": "of",
+   "start": 32.5,
+   "end": 32.8,
+   "prob": 0.998
+  },
+  {
+   "word": "letters,",
+   "start": 32.8,
+   "end": 33.14,
+   "prob": 0.996
+  },
+  {
+   "word": "numbers,",
+   "start": 33.36,
+   "end": 33.52,
+   "prob": 0.998
+  },
+  {
+   "word": "or",
+   "start": 33.74,
+   "end": 33.84,
+   "prob": 0.997
+  },
+  {
+   "word": "symbols.",
+   "start": 33.84,
+   "end": 34.22,
+   "prob": 0.999
+  },
+  {
+   "word": "Although",
+   "start": 35.28,
+   "end": 35.46,
+   "prob": 0.987
+  },
+  {
+   "word": "the",
+   "start": 35.46,
+   "end": 35.7,
+   "prob": 0.983
+  },
+  {
+   "word": "ciphertext",
+   "start": 35.7,
+   "end": 36.14,
+   "prob": 0.994
+  },
+  {
+   "word": "still",
+   "start": 36.14,
+   "end": 36.36,
+   "prob": 0.996
+  },
+  {
+   "word": "contains",
+   "start": 36.36,
+   "end": 36.7,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 36.7,
+   "end": 36.9,
+   "prob": 0.996
+  },
+  {
+   "word": "original",
+   "start": 36.9,
+   "end": 37.16,
+   "prob": 0.997
+  },
+  {
+   "word": "information,",
+   "start": 37.16,
+   "end": 37.78,
+   "prob": 0.997
+  },
+  {
+   "word": "it",
+   "start": 38.44,
+   "end": 38.62,
+   "prob": 0.989
+  },
+  {
+   "word": "is",
+   "start": 38.62,
+   "end": 38.72,
+   "prob": 0.996
+  },
+  {
+   "word": "designed",
+   "start": 38.72,
+   "end": 39.02,
+   "prob": 0.996
+  },
+  {
+   "word": "to",
+   "start": 39.02,
+   "end": 39.2,
+   "prob": 0.999
+  },
+  {
+   "word": "be",
+   "start": 39.2,
+   "end": 39.34,
+   "prob": 0.997
+  },
+  {
+   "word": "meaningless",
+   "start": 39.34,
+   "end": 39.68,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 39.68,
+   "end": 39.92,
+   "prob": 0.991
+  },
+  {
+   "word": "anyone",
+   "start": 39.92,
+   "end": 40.14,
+   "prob": 0.995
+  },
+  {
+   "word": "who",
+   "start": 40.14,
+   "end": 40.34,
+   "prob": 0.996
+  },
+  {
+   "word": "does",
+   "start": 40.34,
+   "end": 40.44,
+   "prob": 0.992
+  },
+  {
+   "word": "not",
+   "start": 40.44,
+   "end": 40.6,
+   "prob": 0.999
+  },
+  {
+   "word": "have",
+   "start": 40.6,
+   "end": 40.72,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 40.72,
+   "end": 40.86,
+   "prob": 0.996
+  },
+  {
+   "word": "correct",
+   "start": 40.86,
+   "end": 41.04,
+   "prob": 0.99
+  },
+  {
+   "word": "key.",
+   "start": 41.04,
+   "end": 41.34,
+   "prob": 0.999
+  },
+  {
+   "word": "The",
+   "start": 42.7,
+   "end": 43.06,
+   "prob": 0.991
+  },
+  {
+   "word": "intended",
+   "start": 43.06,
+   "end": 43.36,
+   "prob": 0.99
+  },
+  {
+   "word": "recipient",
+   "start": 43.36,
+   "end": 43.82,
+   "prob": 0.998
+  },
+  {
+   "word": "can",
+   "start": 43.82,
+   "end": 44.14,
+   "prob": 0.994
+  },
+  {
+   "word": "then",
+   "start": 44.14,
+   "end": 44.3,
+   "prob": 0.99
+  },
+  {
+   "word": "use",
+   "start": 44.3,
+   "end": 44.5,
+   "prob": 0.998
+  },
+  {
+   "word": "a",
+   "start": 44.5,
+   "end": 44.72,
+   "prob": 0.995
+  },
+  {
+   "word": "key",
+   "start": 44.72,
+   "end": 44.98,
+   "prob": 0.997
+  },
+  {
+   "word": "and",
+   "start": 44.98,
+   "end": 45.26,
+   "prob": 0.982
+  },
+  {
+   "word": "a",
+   "start": 45.26,
+   "end": 45.4,
+   "prob": 0.96
+  },
+  {
+   "word": "decryption",
+   "start": 45.4,
+   "end": 45.72,
+   "prob": 0.992
+  },
+  {
+   "word": "algorithm",
+   "start": 45.72,
+   "end": 46.22,
+   "prob": 0.999
+  },
+  {
+   "word": "to",
+   "start": 46.22,
+   "end": 46.56,
+   "prob": 0.996
+  },
+  {
+   "word": "turn",
+   "start": 46.56,
+   "end": 46.76,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 46.76,
+   "end": 46.92,
+   "prob": 0.994
+  },
+  {
+   "word": "ciphertext",
+   "start": 46.92,
+   "end": 47.46,
+   "prob": 0.997
+  },
+  {
+   "word": "back",
+   "start": 47.46,
+   "end": 47.82,
+   "prob": 0.998
+  },
+  {
+   "word": "into",
+   "start": 47.82,
+   "end": 48.12,
+   "prob": 0.993
+  },
+  {
+   "word": "plaintext.",
+   "start": 48.12,
+   "end": 48.68,
+   "prob": 0.958
+  },
+  {
+   "word": "This",
+   "start": 49.2,
+   "end": 49.34,
+   "prob": 0.992
+  },
+  {
+   "word": "process",
+   "start": 49.34,
+   "end": 49.68,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 49.68,
+   "end": 49.92,
+   "prob": 0.999
+  },
+  {
+   "word": "called",
+   "start": 49.92,
+   "end": 50.14,
+   "prob": 0.996
+  },
+  {
+   "word": "decryption.",
+   "start": 50.14,
+   "end": 50.68,
+   "prob": 0.96
+  },
+  {
+   "word": "A",
+   "start": 51.76,
+   "end": 52.28,
+   "prob": 0.501
+  },
+  {
+   "word": "simple",
+   "start": 52.28,
+   "end": 52.54,
+   "prob": 0.99
+  },
+  {
+   "word": "analogy",
+   "start": 52.54,
+   "end": 53.0,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 53.0,
+   "end": 53.24,
+   "prob": 0.995
+  },
+  {
+   "word": "a",
+   "start": 53.24,
+   "end": 53.38,
+   "prob": 0.95
+  },
+  {
+   "word": "locked",
+   "start": 53.38,
+   "end": 53.52,
+   "prob": 0.973
+  },
+  {
+   "word": "box.",
+   "start": 53.52,
+   "end": 54.0,
+   "prob": 0.985
+  },
+  {
+   "word": "Plain",
+   "start": 54.74,
+   "end": 55.0,
+   "prob": 0.88
+  },
+  {
+   "word": "text",
+   "start": 55.0,
+   "end": 55.24,
+   "prob": 0.894
+  },
+  {
+   "word": "is",
+   "start": 55.24,
+   "end": 55.64,
+   "prob": 0.993
+  },
+  {
+   "word": "the",
+   "start": 55.64,
+   "end": 55.8,
+   "prob": 0.965
+  },
+  {
+   "word": "message",
+   "start": 55.8,
+   "end": 56.1,
+   "prob": 0.989
+  },
+  {
+   "word": "placed",
+   "start": 56.1,
+   "end": 56.36,
+   "prob": 0.981
+  },
+  {
+   "word": "inside",
+   "start": 56.36,
+   "end": 56.78,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "start": 56.78,
+   "end": 56.94,
+   "prob": 0.98
+  },
+  {
+   "word": "box.",
+   "start": 56.94,
+   "end": 57.26,
+   "prob": 0.993
+  },
+  {
+   "word": "The",
+   "start": 57.98,
+   "end": 58.16,
+   "prob": 0.984
+  },
+  {
+   "word": "encryption",
+   "start": 58.16,
+   "end": 58.5,
+   "prob": 0.931
+  },
+  {
+   "word": "algorithm",
+   "start": 58.5,
+   "end": 58.92,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 58.92,
+   "end": 59.36,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 59.36,
+   "end": 59.64,
+   "prob": 0.985
+  },
+  {
+   "word": "locking",
+   "start": 59.64,
+   "end": 60.06,
+   "prob": 0.914
+  },
+  {
+   "word": "mechanism,",
+   "start": 60.06,
+   "end": 60.58,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 61.12,
+   "end": 61.4,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "start": 61.4,
+   "end": 61.56,
+   "prob": 0.985
+  },
+  {
+   "word": "key",
+   "start": 61.56,
+   "end": 61.74,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 61.74,
+   "end": 61.94,
+   "prob": 0.995
+  },
+  {
+   "word": "what",
+   "start": 61.94,
+   "end": 62.1,
+   "prob": 0.998
+  },
+  {
+   "word": "allows",
+   "start": 62.1,
+   "end": 62.34,
+   "prob": 0.992
+  },
+  {
+   "word": "the",
+   "start": 62.34,
+   "end": 62.54,
+   "prob": 0.992
+  },
+  {
+   "word": "box",
+   "start": 62.54,
+   "end": 62.72,
+   "prob": 0.992
+  },
+  {
+   "word": "to",
+   "start": 62.72,
+   "end": 62.88,
+   "prob": 0.995
+  },
+  {
+   "word": "be",
+   "start": 62.88,
+   "end": 62.96,
+   "prob": 0.994
+  },
+  {
+   "word": "opened.",
+   "start": 62.96,
+   "end": 63.28,
+   "prob": 0.986
+  },
+  {
+   "word": "Anyone",
+   "start": 64.04,
+   "end": 64.28,
+   "prob": 0.987
+  },
+  {
+   "word": "can",
+   "start": 64.28,
+   "end": 64.54,
+   "prob": 0.993
+  },
+  {
+   "word": "see",
+   "start": 64.54,
+   "end": 64.8,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "start": 64.8,
+   "end": 64.92,
+   "prob": 0.996
+  },
+  {
+   "word": "locked",
+   "start": 64.92,
+   "end": 65.08,
+   "prob": 0.931
+  },
+  {
+   "word": "box,",
+   "start": 65.08,
+   "end": 65.44,
+   "prob": 0.996
+  },
+  {
+   "word": "but",
+   "start": 65.64,
+   "end": 65.76,
+   "prob": 0.998
+  },
+  {
+   "word": "only",
+   "start": 65.76,
+   "end": 65.94,
+   "prob": 0.998
+  },
+  {
+   "word": "someone",
+   "start": 65.94,
+   "end": 66.26,
+   "prob": 0.997
+  },
+  {
+   "word": "with",
+   "start": 66.26,
+   "end": 66.46,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 66.46,
+   "end": 66.56,
+   "prob": 0.978
+  },
+  {
+   "word": "correct",
+   "start": 66.56,
+   "end": 66.82,
+   "prob": 0.983
+  },
+  {
+   "word": "key",
+   "start": 66.82,
+   "end": 67.14,
+   "prob": 0.998
+  },
+  {
+   "word": "should",
+   "start": 67.14,
+   "end": 67.5,
+   "prob": 0.991
+  },
+  {
+   "word": "be",
+   "start": 67.5,
+   "end": 67.64,
+   "prob": 0.996
+  },
+  {
+   "word": "able",
+   "start": 67.64,
+   "end": 67.76,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 67.76,
+   "end": 67.9,
+   "prob": 0.987
+  },
+  {
+   "word": "access",
+   "start": 67.9,
+   "end": 68.22,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 68.22,
+   "end": 68.4,
+   "prob": 0.995
+  },
+  {
+   "word": "message.",
+   "start": 68.4,
+   "end": 68.76,
+   "prob": 0.994
+  },
+  {
+   "word": "Modern",
+   "start": 70.18,
+   "end": 70.38,
+   "prob": 0.948
+  },
+  {
+   "word": "encryption",
+   "start": 70.38,
+   "end": 70.74,
+   "prob": 0.987
+  },
+  {
+   "word": "is",
+   "start": 70.74,
+   "end": 71.02,
+   "prob": 0.998
+  },
+  {
+   "word": "based",
+   "start": 71.02,
+   "end": 71.18,
+   "prob": 0.998
+  },
+  {
+   "word": "on",
+   "start": 71.18,
+   "end": 71.38,
+   "prob": 0.999
+  },
+  {
+   "word": "mathematics",
+   "start": 71.38,
+   "end": 71.88,
+   "prob": 0.994
+  },
+  {
+   "word": "rather",
+   "start": 71.88,
+   "end": 72.18,
+   "prob": 0.826
+  },
+  {
+   "word": "than",
+   "start": 72.18,
+   "end": 72.38,
+   "prob": 0.998
+  },
+  {
+   "word": "hiding",
+   "start": 72.38,
+   "end": 72.56,
+   "prob": 0.998
+  },
+  {
+   "word": "information.",
+   "start": 72.56,
+   "end": 73.12,
+   "prob": 0.992
+  },
+  {
+   "word": "Algorithms",
+   "start": 74.06,
+   "end": 74.32,
+   "prob": 0.934
+  },
+  {
+   "word": "are",
+   "start": 74.32,
+   "end": 74.44,
+   "prob": 0.998
+  },
+  {
+   "word": "designed",
+   "start": 74.44,
+   "end": 74.74,
+   "prob": 0.999
+  },
+  {
+   "word": "so",
+   "start": 74.74,
+   "end": 75.02,
+   "prob": 0.986
+  },
+  {
+   "word": "that",
+   "start": 75.02,
+   "end": 75.28,
+   "prob": 0.997
+  },
+  {
+   "word": "encryption",
+   "start": 75.28,
+   "end": 75.76,
+   "prob": 0.957
+  },
+  {
+   "word": "is",
+   "start": 75.76,
+   "end": 76.02,
+   "prob": 0.998
+  },
+  {
+   "word": "easy",
+   "start": 76.02,
+   "end": 76.38,
+   "prob": 0.993
+  },
+  {
+   "word": "when",
+   "start": 76.38,
+   "end": 76.72,
+   "prob": 0.986
+  },
+  {
+   "word": "the",
+   "start": 76.72,
+   "end": 76.84,
+   "prob": 0.991
+  },
+  {
+   "word": "correct",
+   "start": 76.84,
+   "end": 76.98,
+   "prob": 0.97
+  },
+  {
+   "word": "key",
+   "start": 76.98,
+   "end": 77.18,
+   "prob": 0.995
+  },
+  {
+   "word": "is",
+   "start": 77.18,
+   "end": 77.28,
+   "prob": 0.998
+  },
+  {
+   "word": "available,",
+   "start": 77.28,
+   "end": 77.64,
+   "prob": 0.998
+  },
+  {
+   "word": "but",
+   "start": 77.64,
+   "end": 78.28,
+   "prob": 0.128
+  },
+  {
+   "word": "reversing",
+   "start": 78.28,
+   "end": 78.64,
+   "prob": 0.949
+  },
+  {
+   "word": "a",
+   "start": 78.64,
+   "end": 78.82,
+   "prob": 0.837
+  },
+  {
+   "word": "process",
+   "start": 78.82,
+   "end": 79.22,
+   "prob": 0.997
+  },
+  {
+   "word": "without",
+   "start": 79.22,
+   "end": 79.78,
+   "prob": 0.962
+  },
+  {
+   "word": "the",
+   "start": 79.78,
+   "end": 79.96,
+   "prob": 0.958
+  },
+  {
+   "word": "key",
+   "start": 79.96,
+   "end": 80.14,
+   "prob": 0.976
+  },
+  {
+   "word": "is",
+   "start": 80.14,
+   "end": 80.44,
+   "prob": 0.988
+  },
+  {
+   "word": "computationally",
+   "start": 80.44,
+   "end": 81.1,
+   "prob": 0.994
+  },
+  {
+   "word": "impractical.",
+   "start": 81.1,
+   "end": 81.58,
+   "prob": 0.998
+  },
+  {
+   "word": "Modern",
+   "start": 82.6,
+   "end": 82.64,
+   "prob": 0.93
+  },
+  {
+   "word": "encryption",
+   "start": 82.64,
+   "end": 83.04,
+   "prob": 0.98
+  },
+  {
+   "word": "is",
+   "start": 83.04,
+   "end": 83.38,
+   "prob": 0.997
+  },
+  {
+   "word": "based",
+   "start": 83.38,
+   "end": 83.56,
+   "prob": 0.997
+  },
+  {
+   "word": "on",
+   "start": 83.56,
+   "end": 83.8,
+   "prob": 0.998
+  },
+  {
+   "word": "mathematics",
+   "start": 83.8,
+   "end": 84.32,
+   "prob": 0.987
+  },
+  {
+   "word": "rather",
+   "start": 84.32,
+   "end": 84.6,
+   "prob": 0.774
+  },
+  {
+   "word": "than",
+   "start": 84.6,
+   "end": 84.84,
+   "prob": 0.996
+  },
+  {
+   "word": "simply",
+   "start": 84.84,
+   "end": 85.08,
+   "prob": 0.988
+  },
+  {
+   "word": "hiding",
+   "start": 85.08,
+   "end": 85.3,
+   "prob": 0.999
+  },
+  {
+   "word": "information.",
+   "start": 85.3,
+   "end": 85.96,
+   "prob": 0.993
+  },
+  {
+   "word": "Algorithms",
+   "start": 86.7,
+   "end": 87.0,
+   "prob": 0.983
+  },
+  {
+   "word": "are",
+   "start": 87.0,
+   "end": 87.1,
+   "prob": 0.997
+  },
+  {
+   "word": "designed",
+   "start": 87.1,
+   "end": 87.36,
+   "prob": 0.998
+  },
+  {
+   "word": "so",
+   "start": 87.36,
+   "end": 87.58,
+   "prob": 0.979
+  },
+  {
+   "word": "that",
+   "start": 87.58,
+   "end": 87.72,
+   "prob": 0.995
+  },
+  {
+   "word": "encrypting",
+   "start": 87.72,
+   "end": 88.16,
+   "prob": 0.993
+  },
+  {
+   "word": "information",
+   "start": 88.16,
+   "end": 88.5,
+   "prob": 0.997
+  },
+  {
+   "word": "is",
+   "start": 88.5,
+   "end": 88.8,
+   "prob": 0.998
+  },
+  {
+   "word": "easy",
+   "start": 88.8,
+   "end": 89.14,
+   "prob": 0.994
+  },
+  {
+   "word": "when",
+   "start": 89.14,
+   "end": 89.5,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "start": 89.5,
+   "end": 89.64,
+   "prob": 0.996
+  },
+  {
+   "word": "correct",
+   "start": 89.64,
+   "end": 89.84,
+   "prob": 0.991
+  },
+  {
+   "word": "key",
+   "start": 89.84,
+   "end": 90.02,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 90.02,
+   "end": 90.12,
+   "prob": 0.998
+  },
+  {
+   "word": "available,",
+   "start": 90.12,
+   "end": 90.5,
+   "prob": 0.999
+  },
+  {
+   "word": "but",
+   "start": 90.9,
+   "end": 91.06,
+   "prob": 0.972
+  },
+  {
+   "word": "reversing",
+   "start": 91.06,
+   "end": 91.36,
+   "prob": 0.981
+  },
+  {
+   "word": "the",
+   "start": 91.36,
+   "end": 91.52,
+   "prob": 0.863
+  },
+  {
+   "word": "process",
+   "start": 91.52,
+   "end": 91.78,
+   "prob": 0.997
+  },
+  {
+   "word": "without",
+   "start": 91.78,
+   "end": 92.08,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 92.08,
+   "end": 92.28,
+   "prob": 0.986
+  },
+  {
+   "word": "key",
+   "start": 92.28,
+   "end": 92.46,
+   "prob": 0.999
+  },
+  {
+   "word": "is",
+   "start": 92.46,
+   "end": 92.66,
+   "prob": 0.997
+  },
+  {
+   "word": "computationally",
+   "start": 92.66,
+   "end": 93.28,
+   "prob": 0.998
+  },
+  {
+   "word": "impractical.",
+   "start": 93.28,
+   "end": 93.82,
+   "prob": 0.999
+  },
+  {
+   "word": "The",
+   "start": 94.6,
+   "end": 94.72,
+   "prob": 0.974
+  },
+  {
+   "word": "strength",
+   "start": 94.72,
+   "end": 94.94,
+   "prob": 0.993
+  },
+  {
+   "word": "of",
+   "start": 94.94,
+   "end": 95.08,
+   "prob": 0.999
+  },
+  {
+   "word": "encryption",
+   "start": 95.08,
+   "end": 95.48,
+   "prob": 0.987
+  },
+  {
+   "word": "depends",
+   "start": 95.48,
+   "end": 95.86,
+   "prob": 0.996
+  },
+  {
+   "word": "on",
+   "start": 95.86,
+   "end": 96.08,
+   "prob": 0.998
+  },
+  {
+   "word": "several",
+   "start": 96.08,
+   "end": 96.26,
+   "prob": 0.982
+  },
+  {
+   "word": "factors.",
+   "start": 96.26,
+   "end": 96.74,
+   "prob": 1.0
+  },
+  {
+   "word": "These",
+   "start": 97.28,
+   "end": 97.48,
+   "prob": 0.988
+  },
+  {
+   "word": "include",
+   "start": 97.48,
+   "end": 97.8,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 97.8,
+   "end": 97.98,
+   "prob": 0.985
+  },
+  {
+   "word": "quality",
+   "start": 97.98,
+   "end": 98.22,
+   "prob": 0.997
+  },
+  {
+   "word": "of",
+   "start": 98.22,
+   "end": 98.4,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 98.4,
+   "end": 98.52,
+   "prob": 0.987
+  },
+  {
+   "word": "algorithm,",
+   "start": 98.52,
+   "end": 98.94,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "start": 99.28,
+   "end": 99.36,
+   "prob": 0.995
+  },
+  {
+   "word": "length",
+   "start": 99.36,
+   "end": 99.58,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 99.58,
+   "end": 99.76,
+   "prob": 0.991
+  },
+  {
+   "word": "randomness",
+   "start": 99.76,
+   "end": 100.18,
+   "prob": 0.937
+  },
+  {
+   "word": "of",
+   "start": 100.18,
+   "end": 100.32,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 100.32,
+   "end": 100.44,
+   "prob": 0.991
+  },
+  {
+   "word": "key,",
+   "start": 100.44,
+   "end": 100.66,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 100.98,
+   "end": 101.36,
+   "prob": 0.995
+  },
+  {
+   "word": "how",
+   "start": 101.36,
+   "end": 101.5,
+   "prob": 0.999
+  },
+  {
+   "word": "securely",
+   "start": 101.5,
+   "end": 101.92,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 101.92,
+   "end": 102.18,
+   "prob": 0.997
+  },
+  {
+   "word": "key",
+   "start": 102.18,
+   "end": 102.34,
+   "prob": 0.999
+  },
+  {
+   "word": "is",
+   "start": 102.34,
+   "end": 102.44,
+   "prob": 0.998
+  },
+  {
+   "word": "stored.",
+   "start": 102.44,
+   "end": 102.74,
+   "prob": 1.0
+  },
+  {
+   "word": "Even",
+   "start": 102.74,
+   "end": 103.56,
+   "prob": 0.359
+  },
+  {
+   "word": "a",
+   "start": 103.56,
+   "end": 103.72,
+   "prob": 0.989
+  },
+  {
+   "word": "strong",
+   "start": 103.72,
+   "end": 103.94,
+   "prob": 0.994
+  },
+  {
+   "word": "algorithm",
+   "start": 103.94,
+   "end": 104.34,
+   "prob": 0.992
+  },
+  {
+   "word": "can",
+   "start": 104.34,
+   "end": 104.56,
+   "prob": 0.989
+  },
+  {
+   "word": "be",
+   "start": 104.56,
+   "end": 104.68,
+   "prob": 0.996
+  },
+  {
+   "word": "compromised",
+   "start": 104.68,
+   "end": 105.14,
+   "prob": 0.997
+  },
+  {
+   "word": "if",
+   "start": 105.14,
+   "end": 105.44,
+   "prob": 0.981
+  },
+  {
+   "word": "a",
+   "start": 105.44,
+   "end": 105.52,
+   "prob": 0.769
+  },
+  {
+   "word": "key",
+   "start": 105.52,
+   "end": 105.66,
+   "prob": 0.997
+  },
+  {
+   "word": "is",
+   "start": 105.66,
+   "end": 105.78,
+   "prob": 0.993
+  },
+  {
+   "word": "stolen,",
+   "start": 105.78,
+   "end": 106.14,
+   "prob": 0.998
+  },
+  {
+   "word": "guessed,",
+   "start": 106.74,
+   "end": 107.14,
+   "prob": 0.983
+  },
+  {
+   "word": "or",
+   "start": 107.44,
+   "end": 107.48,
+   "prob": 0.987
+  },
+  {
+   "word": "accidentally",
+   "start": 107.48,
+   "end": 107.86,
+   "prob": 0.988
+  },
+  {
+   "word": "exposed.",
+   "start": 107.86,
+   "end": 108.44,
+   "prob": 0.992
+  },
+  {
+   "word": "For",
+   "start": 109.66,
+   "end": 109.68,
+   "prob": 0.922
+  },
+  {
+   "word": "example,",
+   "start": 109.68,
+   "end": 109.92,
+   "prob": 0.998
+  },
+  {
+   "word": "if",
+   "start": 110.44,
+   "end": 110.48,
+   "prob": 0.853
+  },
+  {
+   "word": "an",
+   "start": 110.48,
+   "end": 110.62,
+   "prob": 0.992
+  },
+  {
+   "word": "attacker",
+   "start": 110.62,
+   "end": 110.88,
+   "prob": 0.999
+  },
+  {
+   "word": "obtains",
+   "start": 110.88,
+   "end": 111.2,
+   "prob": 0.982
+  },
+  {
+   "word": "a",
+   "start": 111.2,
+   "end": 111.4,
+   "prob": 0.993
+  },
+  {
+   "word": "password",
+   "start": 111.4,
+   "end": 111.72,
+   "prob": 0.999
+  },
+  {
+   "word": "used",
+   "start": 111.72,
+   "end": 112.0,
+   "prob": 0.991
+  },
+  {
+   "word": "to",
+   "start": 112.0,
+   "end": 112.16,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 112.16,
+   "end": 112.44,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 112.44,
+   "end": 112.58,
+   "prob": 0.613
+  },
+  {
+   "word": "encrypted",
+   "start": 112.58,
+   "end": 112.82,
+   "prob": 0.971
+  },
+  {
+   "word": "file,",
+   "start": 112.82,
+   "end": 113.28,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 113.86,
+   "end": 113.94,
+   "prob": 0.98
+  },
+  {
+   "word": "encryption",
+   "start": 113.94,
+   "end": 114.22,
+   "prob": 0.996
+  },
+  {
+   "word": "itself",
+   "start": 114.22,
+   "end": 114.62,
+   "prob": 0.987
+  },
+  {
+   "word": "may",
+   "start": 114.62,
+   "end": 114.84,
+   "prob": 0.991
+  },
+  {
+   "word": "not",
+   "start": 114.84,
+   "end": 115.02,
+   "prob": 0.996
+  },
+  {
+   "word": "be",
+   "start": 115.02,
+   "end": 115.16,
+   "prob": 0.998
+  },
+  {
+   "word": "broken.",
+   "start": 115.16,
+   "end": 115.48,
+   "prob": 0.999
+  },
+  {
+   "word": "Instead,",
+   "start": 116.06,
+   "end": 116.38,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "start": 116.6,
+   "end": 116.64,
+   "prob": 0.991
+  },
+  {
+   "word": "attackers",
+   "start": 116.64,
+   "end": 116.98,
+   "prob": 0.916
+  },
+  {
+   "word": "obtain",
+   "start": 116.98,
+   "end": 117.46,
+   "prob": 0.889
+  },
+  {
+   "word": "the",
+   "start": 117.46,
+   "end": 117.68,
+   "prob": 0.992
+  },
+  {
+   "word": "key",
+   "start": 117.68,
+   "end": 117.86,
+   "prob": 0.997
+  },
+  {
+   "word": "needed",
+   "start": 117.86,
+   "end": 118.1,
+   "prob": 0.968
+  },
+  {
+   "word": "to",
+   "start": 118.1,
+   "end": 118.32,
+   "prob": 0.999
+  },
+  {
+   "word": "unlock",
+   "start": 118.32,
+   "end": 118.62,
+   "prob": 0.995
+  },
+  {
+   "word": "the",
+   "start": 118.62,
+   "end": 118.8,
+   "prob": 0.982
+  },
+  {
+   "word": "information.",
+   "start": 118.8,
+   "end": 119.3,
+   "prob": 0.996
+  },
+  {
+   "word": "This",
+   "start": 119.82,
+   "end": 120.0,
+   "prob": 0.987
+  },
+  {
+   "word": "is",
+   "start": 120.0,
+   "end": 120.12,
+   "prob": 0.998
+  },
+  {
+   "word": "why",
+   "start": 120.12,
+   "end": 120.3,
+   "prob": 0.998
+  },
+  {
+   "word": "key",
+   "start": 120.3,
+   "end": 120.5,
+   "prob": 0.892
+  },
+  {
+   "word": "management",
+   "start": 120.5,
+   "end": 120.76,
+   "prob": 0.995
+  },
+  {
+   "word": "is",
+   "start": 120.76,
+   "end": 121.06,
+   "prob": 0.998
+  },
+  {
+   "word": "one",
+   "start": 121.06,
+   "end": 121.2,
+   "prob": 0.995
+  },
+  {
+   "word": "of",
+   "start": 121.2,
+   "end": 121.32,
+   "prob": 0.994
+  },
+  {
+   "word": "the",
+   "start": 121.32,
+   "end": 121.4,
+   "prob": 0.995
+  },
+  {
+   "word": "most",
+   "start": 121.4,
+   "end": 121.62,
+   "prob": 0.993
+  },
+  {
+   "word": "important",
+   "start": 121.62,
+   "end": 121.92,
+   "prob": 0.998
+  },
+  {
+   "word": "parts",
+   "start": 121.92,
+   "end": 122.2,
+   "prob": 0.979
+  },
+  {
+   "word": "of",
+   "start": 122.2,
+   "end": 122.48,
+   "prob": 0.998
+  },
+  {
+   "word": "cybersecurity.",
+   "start": 122.48,
+   "end": 122.76,
+   "prob": 0.743
+  },
+  {
+   "word": "Types",
+   "start": 124.6,
+   "end": 124.76,
+   "prob": 0.685
+  },
+  {
+   "word": "of",
+   "start": 124.76,
+   "end": 124.94,
+   "prob": 0.987
+  },
+  {
+   "word": "Encryption",
+   "start": 124.94,
+   "end": 125.36,
+   "prob": 0.723
+  },
+  {
+   "word": "There",
+   "start": 125.36,
+   "end": 126.0,
+   "prob": 0.898
+  },
+  {
+   "word": "are",
+   "start": 126.0,
+   "end": 126.12,
+   "prob": 0.996
+  },
+  {
+   "word": "two",
+   "start": 126.12,
+   "end": 126.26,
+   "prob": 0.96
+  },
+  {
+   "word": "main",
+   "start": 126.26,
+   "end": 126.48,
+   "prob": 0.993
+  },
+  {
+   "word": "categories",
+   "start": 126.48,
+   "end": 126.94,
+   "prob": 0.997
+  },
+  {
+   "word": "of",
+   "start": 126.94,
+   "end": 127.22,
+   "prob": 0.994
+  },
+  {
+   "word": "encryption.",
+   "start": 127.22,
+   "end": 127.54,
+   "prob": 0.984
+  },
+  {
+   "word": "Symmetric",
+   "start": 128.0,
+   "end": 128.3,
+   "prob": 0.979
+  },
+  {
+   "word": "Encryption",
+   "start": 128.3,
+   "end": 128.76,
+   "prob": 0.81
+  },
+  {
+   "word": "and",
+   "start": 128.76,
+   "end": 129.38,
+   "prob": 0.914
+  },
+  {
+   "word": "Asymmetric",
+   "start": 129.38,
+   "end": 129.98,
+   "prob": 0.967
+  },
+  {
+   "word": "Encryption.",
+   "start": 129.98,
+   "end": 130.48,
+   "prob": 0.993
+  },
+  {
+   "word": "The",
+   "start": 130.48,
+   "end": 131.18,
+   "prob": 0.696
+  },
+  {
+   "word": "metric",
+   "start": 131.18,
+   "end": 131.4,
+   "prob": 0.877
+  },
+  {
+   "word": "encryption",
+   "start": 131.4,
+   "end": 131.7,
+   "prob": 0.986
+  },
+  {
+   "word": "uses",
+   "start": 131.7,
+   "end": 132.14,
+   "prob": 0.982
+  },
+  {
+   "word": "the",
+   "start": 132.14,
+   "end": 132.4,
+   "prob": 0.994
+  },
+  {
+   "word": "same",
+   "start": 132.4,
+   "end": 132.58,
+   "prob": 0.993
+  },
+  {
+   "word": "key",
+   "start": 132.58,
+   "end": 132.84,
+   "prob": 0.994
+  },
+  {
+   "word": "for",
+   "start": 132.84,
+   "end": 133.08,
+   "prob": 0.989
+  },
+  {
+   "word": "both",
+   "start": 133.08,
+   "end": 133.26,
+   "prob": 0.99
+  },
+  {
+   "word": "encryption",
+   "start": 133.26,
+   "end": 133.66,
+   "prob": 0.948
+  },
+  {
+   "word": "and",
+   "start": 133.66,
+   "end": 134.08,
+   "prob": 0.996
+  },
+  {
+   "word": "decryption.",
+   "start": 134.08,
+   "end": 134.6,
+   "prob": 0.992
+  },
+  {
+   "word": "The",
+   "start": 135.1,
+   "end": 135.28,
+   "prob": 0.987
+  },
+  {
+   "word": "sender",
+   "start": 135.28,
+   "end": 135.44,
+   "prob": 0.997
+  },
+  {
+   "word": "uses",
+   "start": 135.44,
+   "end": 135.72,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 135.72,
+   "end": 135.98,
+   "prob": 0.989
+  },
+  {
+   "word": "key",
+   "start": 135.98,
+   "end": 136.16,
+   "prob": 0.997
+  },
+  {
+   "word": "to",
+   "start": 136.16,
+   "end": 136.38,
+   "prob": 0.997
+  },
+  {
+   "word": "encrypt",
+   "start": 136.38,
+   "end": 136.64,
+   "prob": 0.995
+  },
+  {
+   "word": "the",
+   "start": 136.64,
+   "end": 136.82,
+   "prob": 0.966
+  },
+  {
+   "word": "message,",
+   "start": 136.82,
+   "end": 137.12,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 137.44,
+   "end": 137.48,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 137.48,
+   "end": 137.56,
+   "prob": 0.994
+  },
+  {
+   "word": "recipient",
+   "start": 137.56,
+   "end": 137.84,
+   "prob": 0.997
+  },
+  {
+   "word": "uses",
+   "start": 137.84,
+   "end": 138.2,
+   "prob": 0.994
+  },
+  {
+   "word": "that",
+   "start": 138.2,
+   "end": 138.52,
+   "prob": 0.947
+  },
+  {
+   "word": "same",
+   "start": 138.52,
+   "end": 138.78,
+   "prob": 0.885
+  },
+  {
+   "word": "key",
+   "start": 138.78,
+   "end": 139.06,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 139.06,
+   "end": 139.34,
+   "prob": 0.997
+  },
+  {
+   "word": "decrypt",
+   "start": 139.34,
+   "end": 139.64,
+   "prob": 0.991
+  },
+  {
+   "word": "it.",
+   "start": 139.64,
+   "end": 140.28,
+   "prob": 0.993
+  },
+  {
+   "word": "Symmetric",
+   "start": 141.2,
+   "end": 141.46,
+   "prob": 0.966
+  },
+  {
+   "word": "encryption",
+   "start": 141.46,
+   "end": 141.76,
+   "prob": 0.975
+  },
+  {
+   "word": "is",
+   "start": 141.76,
+   "end": 142.14,
+   "prob": 0.998
+  },
+  {
+   "word": "generally",
+   "start": 142.14,
+   "end": 142.5,
+   "prob": 0.997
+  },
+  {
+   "word": "fast",
+   "start": 142.5,
+   "end": 142.92,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 142.92,
+   "end": 143.14,
+   "prob": 0.996
+  },
+  {
+   "word": "efficient,",
+   "start": 143.14,
+   "end": 143.46,
+   "prob": 0.999
+  },
+  {
+   "word": "which",
+   "start": 143.74,
+   "end": 143.9,
+   "prob": 0.996
+  },
+  {
+   "word": "makes",
+   "start": 143.9,
+   "end": 144.06,
+   "prob": 0.997
+  },
+  {
+   "word": "it",
+   "start": 144.06,
+   "end": 144.24,
+   "prob": 0.995
+  },
+  {
+   "word": "useful",
+   "start": 144.24,
+   "end": 144.6,
+   "prob": 0.992
+  },
+  {
+   "word": "for",
+   "start": 144.6,
+   "end": 144.94,
+   "prob": 0.993
+  },
+  {
+   "word": "encrypting",
+   "start": 144.94,
+   "end": 145.58,
+   "prob": 0.997
+  },
+  {
+   "word": "large",
+   "start": 145.58,
+   "end": 145.8,
+   "prob": 0.995
+  },
+  {
+   "word": "amounts",
+   "start": 145.8,
+   "end": 146.02,
+   "prob": 0.998
+  },
+  {
+   "word": "of",
+   "start": 146.02,
+   "end": 146.2,
+   "prob": 1.0
+  },
+  {
+   "word": "data.",
+   "start": 146.2,
+   "end": 146.44,
+   "prob": 0.998
+  },
+  {
+   "word": "Common",
+   "start": 147.14,
+   "end": 147.28,
+   "prob": 0.994
+  },
+  {
+   "word": "symmetric",
+   "start": 147.28,
+   "end": 147.68,
+   "prob": 0.993
+  },
+  {
+   "word": "encryption",
+   "start": 147.68,
+   "end": 148.0,
+   "prob": 0.987
+  },
+  {
+   "word": "algorithms",
+   "start": 148.0,
+   "end": 148.5,
+   "prob": 0.998
+  },
+  {
+   "word": "include",
+   "start": 148.5,
+   "end": 149.04,
+   "prob": 0.993
+  },
+  {
+   "word": "the",
+   "start": 149.04,
+   "end": 149.3,
+   "prob": 0.989
+  },
+  {
+   "word": "Advanced",
+   "start": 149.3,
+   "end": 149.68,
+   "prob": 0.767
+  },
+  {
+   "word": "Encryption",
+   "start": 149.68,
+   "end": 150.1,
+   "prob": 0.99
+  },
+  {
+   "word": "Standard,",
+   "start": 150.1,
+   "end": 150.52,
+   "prob": 0.976
+  },
+  {
+   "word": "or",
+   "start": 150.84,
+   "end": 150.88,
+   "prob": 0.998
+  },
+  {
+   "word": "AES,",
+   "start": 150.88,
+   "end": 151.26,
+   "prob": 0.98
+  },
+  {
+   "word": "and",
+   "start": 151.66,
+   "end": 151.8,
+   "prob": 0.5
+  },
+  {
+   "word": "the",
+   "start": 151.8,
+   "end": 151.9,
+   "prob": 0.916
+  },
+  {
+   "word": "Tasha",
+   "start": 151.9,
+   "end": 152.14,
+   "prob": 0.133
+  },
+  {
+   "word": "20.",
+   "start": 152.14,
+   "end": 152.5,
+   "prob": 0.359
+  },
+  {
+   "word": "However,",
+   "start": 153.62,
+   "end": 154.08,
+   "prob": 0.989
+  },
+  {
+   "word": "symmetric",
+   "start": 154.34,
+   "end": 154.64,
+   "prob": 0.995
+  },
+  {
+   "word": "encryption",
+   "start": 154.64,
+   "end": 155.04,
+   "prob": 0.999
+  },
+  {
+   "word": "creates",
+   "start": 155.04,
+   "end": 155.5,
+   "prob": 0.998
+  },
+  {
+   "word": "an",
+   "start": 155.5,
+   "end": 155.66,
+   "prob": 0.998
+  },
+  {
+   "word": "important",
+   "start": 155.66,
+   "end": 155.92,
+   "prob": 1.0
+  },
+  {
+   "word": "challenge.",
+   "start": 155.92,
+   "end": 156.38,
+   "prob": 0.999
+  },
+  {
+   "word": "Both",
+   "start": 156.38,
+   "end": 157.08,
+   "prob": 0.244
+  },
+  {
+   "word": "parties",
+   "start": 157.08,
+   "end": 157.42,
+   "prob": 0.983
+  },
+  {
+   "word": "need",
+   "start": 157.42,
+   "end": 157.62,
+   "prob": 0.984
+  },
+  {
+   "word": "to",
+   "start": 157.62,
+   "end": 157.74,
+   "prob": 0.996
+  },
+  {
+   "word": "obtain",
+   "start": 157.74,
+   "end": 157.98,
+   "prob": 0.986
+  },
+  {
+   "word": "the",
+   "start": 157.98,
+   "end": 158.12,
+   "prob": 0.987
+  },
+  {
+   "word": "same",
+   "start": 158.12,
+   "end": 158.4,
+   "prob": 0.994
+  },
+  {
+   "word": "secret",
+   "start": 158.4,
+   "end": 158.76,
+   "prob": 0.806
+  },
+  {
+   "word": "key",
+   "start": 158.76,
+   "end": 159.06,
+   "prob": 0.989
+  },
+  {
+   "word": "securely.",
+   "start": 159.06,
+   "end": 159.58,
+   "prob": 0.89
+  },
+  {
+   "word": "If",
+   "start": 160.44,
+   "end": 160.52,
+   "prob": 0.98
+  },
+  {
+   "word": "the",
+   "start": 160.52,
+   "end": 160.64,
+   "prob": 0.986
+  },
+  {
+   "word": "key",
+   "start": 160.64,
+   "end": 160.78,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 160.78,
+   "end": 160.9,
+   "prob": 0.996
+  },
+  {
+   "word": "sent",
+   "start": 160.9,
+   "end": 161.04,
+   "prob": 0.996
+  },
+  {
+   "word": "through",
+   "start": 161.04,
+   "end": 161.2,
+   "prob": 0.988
+  },
+  {
+   "word": "an",
+   "start": 161.2,
+   "end": 161.32,
+   "prob": 0.983
+  },
+  {
+   "word": "insecure",
+   "start": 161.32,
+   "end": 161.66,
+   "prob": 0.988
+  },
+  {
+   "word": "channel",
+   "start": 161.66,
+   "end": 162.04,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 162.04,
+   "end": 162.3,
+   "prob": 0.984
+  },
+  {
+   "word": "intercepted,",
+   "start": 162.3,
+   "end": 162.72,
+   "prob": 0.977
+  },
+  {
+   "word": "an",
+   "start": 163.12,
+   "end": 163.16,
+   "prob": 0.984
+  },
+  {
+   "word": "attacker",
+   "start": 163.16,
+   "end": 163.46,
+   "prob": 1.0
+  },
+  {
+   "word": "may",
+   "start": 163.46,
+   "end": 163.72,
+   "prob": 0.993
+  },
+  {
+   "word": "be",
+   "start": 163.72,
+   "end": 163.84,
+   "prob": 0.997
+  },
+  {
+   "word": "able",
+   "start": 163.84,
+   "end": 163.98,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 163.98,
+   "end": 164.18,
+   "prob": 0.996
+  },
+  {
+   "word": "decrypt",
+   "start": 164.18,
+   "end": 164.5,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 164.5,
+   "end": 164.76,
+   "prob": 0.988
+  },
+  {
+   "word": "communication.",
+   "start": 164.76,
+   "end": 165.36,
+   "prob": 0.995
+  },
+  {
+   "word": "Asymmetric",
+   "start": 166.98,
+   "end": 167.48,
+   "prob": 0.896
+  },
+  {
+   "word": "encryption,",
+   "start": 167.48,
+   "end": 167.78,
+   "prob": 0.962
+  },
+  {
+   "word": "also",
+   "start": 168.18,
+   "end": 168.34,
+   "prob": 0.995
+  },
+  {
+   "word": "called",
+   "start": 168.34,
+   "end": 168.6,
+   "prob": 0.999
+  },
+  {
+   "word": "public",
+   "start": 168.6,
+   "end": 168.88,
+   "prob": 0.902
+  },
+  {
+   "word": "key",
+   "start": 168.88,
+   "end": 169.06,
+   "prob": 0.835
+  },
+  {
+   "word": "encryption,",
+   "start": 169.06,
+   "end": 169.48,
+   "prob": 0.999
+  },
+  {
+   "word": "uses",
+   "start": 169.68,
+   "end": 170.1,
+   "prob": 0.989
+  },
+  {
+   "word": "a",
+   "start": 170.1,
+   "end": 170.28,
+   "prob": 0.996
+  },
+  {
+   "word": "pair",
+   "start": 170.28,
+   "end": 170.46,
+   "prob": 0.999
+  },
+  {
+   "word": "of",
+   "start": 170.46,
+   "end": 170.68,
+   "prob": 0.999
+  },
+  {
+   "word": "mathematically",
+   "start": 170.68,
+   "end": 171.24,
+   "prob": 0.99
+  },
+  {
+   "word": "related",
+   "start": 171.24,
+   "end": 171.64,
+   "prob": 0.815
+  },
+  {
+   "word": "keys,",
+   "start": 171.64,
+   "end": 172.0,
+   "prob": 0.995
+  },
+  {
+   "word": "a",
+   "start": 172.36,
+   "end": 172.44,
+   "prob": 0.99
+  },
+  {
+   "word": "public",
+   "start": 172.44,
+   "end": 172.7,
+   "prob": 0.995
+  },
+  {
+   "word": "key",
+   "start": 172.7,
+   "end": 172.94,
+   "prob": 0.986
+  },
+  {
+   "word": "and",
+   "start": 172.94,
+   "end": 173.18,
+   "prob": 0.946
+  },
+  {
+   "word": "a",
+   "start": 173.18,
+   "end": 173.28,
+   "prob": 0.983
+  },
+  {
+   "word": "private",
+   "start": 173.28,
+   "end": 173.46,
+   "prob": 0.999
+  },
+  {
+   "word": "key.",
+   "start": 173.46,
+   "end": 173.74,
+   "prob": 0.998
+  },
+  {
+   "word": "The",
+   "start": 174.24,
+   "end": 174.5,
+   "prob": 0.986
+  },
+  {
+   "word": "public",
+   "start": 174.5,
+   "end": 174.72,
+   "prob": 0.997
+  },
+  {
+   "word": "key",
+   "start": 174.72,
+   "end": 174.92,
+   "prob": 0.992
+  },
+  {
+   "word": "can",
+   "start": 174.92,
+   "end": 175.06,
+   "prob": 0.999
+  },
+  {
+   "word": "be",
+   "start": 175.06,
+   "end": 175.18,
+   "prob": 0.998
+  },
+  {
+   "word": "shared",
+   "start": 175.18,
+   "end": 175.38,
+   "prob": 0.998
+  },
+  {
+   "word": "openly.",
+   "start": 175.38,
+   "end": 175.84,
+   "prob": 0.999
+  },
+  {
+   "word": "The",
+   "start": 176.3,
+   "end": 176.42,
+   "prob": 0.955
+  },
+  {
+   "word": "private",
+   "start": 176.42,
+   "end": 176.64,
+   "prob": 0.99
+  },
+  {
+   "word": "key",
+   "start": 176.64,
+   "end": 176.82,
+   "prob": 0.996
+  },
+  {
+   "word": "must",
+   "start": 176.82,
+   "end": 177.0,
+   "prob": 0.999
+  },
+  {
+   "word": "be",
+   "start": 177.0,
+   "end": 177.18,
+   "prob": 0.998
+  },
+  {
+   "word": "kept",
+   "start": 177.18,
+   "end": 177.34,
+   "prob": 1.0
+  },
+  {
+   "word": "secret.",
+   "start": 177.34,
+   "end": 177.68,
+   "prob": 0.984
+  },
+  {
+   "word": "Information",
+   "start": 178.34,
+   "end": 178.7,
+   "prob": 0.99
+  },
+  {
+   "word": "encrypted",
+   "start": 178.7,
+   "end": 179.06,
+   "prob": 0.993
+  },
+  {
+   "word": "with",
+   "start": 179.06,
+   "end": 179.32,
+   "prob": 0.975
+  },
+  {
+   "word": "the",
+   "start": 179.32,
+   "end": 179.44,
+   "prob": 0.963
+  },
+  {
+   "word": "public",
+   "start": 179.44,
+   "end": 179.62,
+   "prob": 0.998
+  },
+  {
+   "word": "key",
+   "start": 179.62,
+   "end": 179.92,
+   "prob": 0.99
+  },
+  {
+   "word": "can",
+   "start": 179.92,
+   "end": 180.2,
+   "prob": 0.985
+  },
+  {
+   "word": "generally",
+   "start": 180.2,
+   "end": 180.54,
+   "prob": 0.991
+  },
+  {
+   "word": "be",
+   "start": 180.54,
+   "end": 180.76,
+   "prob": 0.998
+  },
+  {
+   "word": "decrypted",
+   "start": 180.76,
+   "end": 181.14,
+   "prob": 0.977
+  },
+  {
+   "word": "only",
+   "start": 181.14,
+   "end": 181.46,
+   "prob": 0.989
+  },
+  {
+   "word": "with",
+   "start": 181.46,
+   "end": 181.72,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 181.72,
+   "end": 181.84,
+   "prob": 0.955
+  },
+  {
+   "word": "corresponding",
+   "start": 181.84,
+   "end": 182.28,
+   "prob": 0.998
+  },
+  {
+   "word": "private",
+   "start": 182.28,
+   "end": 182.66,
+   "prob": 0.999
+  },
+  {
+   "word": "key.",
+   "start": 182.66,
+   "end": 182.98,
+   "prob": 0.999
+  },
+  {
+   "word": "For",
+   "start": 183.7,
+   "end": 184.22,
+   "prob": 0.579
+  },
+  {
+   "word": "example,",
+   "start": 184.22,
+   "end": 184.5,
+   "prob": 0.995
+  },
+  {
+   "word": "if",
+   "start": 184.92,
+   "end": 184.98,
+   "prob": 0.973
+  },
+  {
+   "word": "someone",
+   "start": 184.98,
+   "end": 185.2,
+   "prob": 0.986
+  },
+  {
+   "word": "wants",
+   "start": 185.2,
+   "end": 185.38,
+   "prob": 0.991
+  },
+  {
+   "word": "to",
+   "start": 185.38,
+   "end": 185.54,
+   "prob": 0.997
+  },
+  {
+   "word": "send",
+   "start": 185.54,
+   "end": 185.7,
+   "prob": 0.997
+  },
+  {
+   "word": "a",
+   "start": 185.7,
+   "end": 185.9,
+   "prob": 0.986
+  },
+  {
+   "word": "secure",
+   "start": 185.9,
+   "end": 186.2,
+   "prob": 0.973
+  },
+  {
+   "word": "message",
+   "start": 186.2,
+   "end": 186.5,
+   "prob": 0.995
+  },
+  {
+   "word": "to",
+   "start": 186.5,
+   "end": 186.76,
+   "prob": 0.997
+  },
+  {
+   "word": "a",
+   "start": 186.76,
+   "end": 186.86,
+   "prob": 0.974
+  },
+  {
+   "word": "recipient,",
+   "start": 186.86,
+   "end": 187.18,
+   "prob": 0.991
+  },
+  {
+   "word": "they",
+   "start": 187.68,
+   "end": 187.82,
+   "prob": 0.989
+  },
+  {
+   "word": "can",
+   "start": 187.82,
+   "end": 187.96,
+   "prob": 0.996
+  },
+  {
+   "word": "encrypt",
+   "start": 187.96,
+   "end": 188.18,
+   "prob": 0.995
+  },
+  {
+   "word": "the",
+   "start": 188.18,
+   "end": 188.36,
+   "prob": 0.954
+  },
+  {
+   "word": "message",
+   "start": 188.36,
+   "end": 188.62,
+   "prob": 0.994
+  },
+  {
+   "word": "using",
+   "start": 188.62,
+   "end": 189.0,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "start": 189.0,
+   "end": 189.22,
+   "prob": 0.982
+  },
+  {
+   "word": "recipient's",
+   "start": 189.22,
+   "end": 189.8,
+   "prob": 0.978
+  },
+  {
+   "word": "public",
+   "start": 189.8,
+   "end": 189.98,
+   "prob": 0.954
+  },
+  {
+   "word": "key.",
+   "start": 189.98,
+   "end": 190.34,
+   "prob": 0.994
+  },
+  {
+   "word": "Only",
+   "start": 190.9,
+   "end": 191.06,
+   "prob": 0.991
+  },
+  {
+   "word": "the",
+   "start": 191.06,
+   "end": 191.24,
+   "prob": 0.992
+  },
+  {
+   "word": "recipient's",
+   "start": 191.24,
+   "end": 191.78,
+   "prob": 0.996
+  },
+  {
+   "word": "private",
+   "start": 191.78,
+   "end": 191.98,
+   "prob": 0.996
+  },
+  {
+   "word": "key",
+   "start": 191.98,
+   "end": 192.24,
+   "prob": 0.959
+  },
+  {
+   "word": "should",
+   "start": 192.24,
+   "end": 192.44,
+   "prob": 0.997
+  },
+  {
+   "word": "be",
+   "start": 192.44,
+   "end": 192.6,
+   "prob": 0.996
+  },
+  {
+   "word": "able",
+   "start": 192.6,
+   "end": 192.76,
+   "prob": 0.992
+  },
+  {
+   "word": "to",
+   "start": 192.76,
+   "end": 192.94,
+   "prob": 0.998
+  },
+  {
+   "word": "decrypt",
+   "start": 192.94,
+   "end": 193.18,
+   "prob": 0.999
+  },
+  {
+   "word": "it.",
+   "start": 193.18,
+   "end": 193.94,
+   "prob": 0.997
+  },
+  {
+   "word": "Asymmetric",
+   "start": 194.78,
+   "end": 195.18,
+   "prob": 0.807
+  },
+  {
+   "word": "encryption",
+   "start": 195.18,
+   "end": 195.48,
+   "prob": 0.997
+  },
+  {
+   "word": "solves",
+   "start": 195.48,
+   "end": 195.92,
+   "prob": 0.995
+  },
+  {
+   "word": "much",
+   "start": 195.92,
+   "end": 196.16,
+   "prob": 0.989
+  },
+  {
+   "word": "of",
+   "start": 196.16,
+   "end": 196.3,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 196.3,
+   "end": 196.38,
+   "prob": 0.989
+  },
+  {
+   "word": "key",
+   "start": 196.38,
+   "end": 196.52,
+   "prob": 0.996
+  },
+  {
+   "word": "distribution",
+   "start": 196.52,
+   "end": 196.92,
+   "prob": 0.956
+  },
+  {
+   "word": "problem",
+   "start": 196.92,
+   "end": 197.4,
+   "prob": 0.989
+  },
+  {
+   "word": "because",
+   "start": 197.4,
+   "end": 197.76,
+   "prob": 0.89
+  },
+  {
+   "word": "the",
+   "start": 197.76,
+   "end": 197.9,
+   "prob": 0.994
+  },
+  {
+   "word": "public",
+   "start": 197.9,
+   "end": 198.06,
+   "prob": 0.998
+  },
+  {
+   "word": "key",
+   "start": 198.06,
+   "end": 198.32,
+   "prob": 0.998
+  },
+  {
+   "word": "does",
+   "start": 198.32,
+   "end": 198.46,
+   "prob": 0.99
+  },
+  {
+   "word": "not",
+   "start": 198.46,
+   "end": 198.66,
+   "prob": 0.998
+  },
+  {
+   "word": "need",
+   "start": 198.66,
+   "end": 198.9,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 198.9,
+   "end": 199.04,
+   "prob": 0.997
+  },
+  {
+   "word": "be",
+   "start": 199.04,
+   "end": 199.12,
+   "prob": 0.996
+  },
+  {
+   "word": "kept",
+   "start": 199.12,
+   "end": 199.32,
+   "prob": 1.0
+  },
+  {
+   "word": "secret.",
+   "start": 199.32,
+   "end": 199.74,
+   "prob": 0.997
+  },
+  {
+   "word": "However,",
+   "start": 200.26,
+   "end": 200.58,
+   "prob": 0.987
+  },
+  {
+   "word": "it",
+   "start": 200.92,
+   "end": 201.0,
+   "prob": 0.996
+  },
+  {
+   "word": "is",
+   "start": 201.0,
+   "end": 201.14,
+   "prob": 0.993
+  },
+  {
+   "word": "typically",
+   "start": 201.14,
+   "end": 201.4,
+   "prob": 0.993
+  },
+  {
+   "word": "slower",
+   "start": 201.4,
+   "end": 201.78,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 201.78,
+   "end": 202.08,
+   "prob": 0.972
+  },
+  {
+   "word": "more",
+   "start": 202.08,
+   "end": 202.3,
+   "prob": 0.997
+  },
+  {
+   "word": "computationally",
+   "start": 202.3,
+   "end": 202.96,
+   "prob": 0.999
+  },
+  {
+   "word": "expensive",
+   "start": 202.96,
+   "end": 203.4,
+   "prob": 0.993
+  },
+  {
+   "word": "than",
+   "start": 203.4,
+   "end": 203.68,
+   "prob": 0.949
+  },
+  {
+   "word": "symmetric",
+   "start": 203.68,
+   "end": 204.02,
+   "prob": 0.997
+  },
+  {
+   "word": "encryption.",
+   "start": 204.02,
+   "end": 204.46,
+   "prob": 0.999
+  },
+  {
+   "word": "Examples",
+   "start": 205.7,
+   "end": 205.86,
+   "prob": 0.995
+  },
+  {
+   "word": "of",
+   "start": 205.86,
+   "end": 206.18,
+   "prob": 0.998
+  },
+  {
+   "word": "public",
+   "start": 206.18,
+   "end": 206.4,
+   "prob": 0.988
+  },
+  {
+   "word": "key",
+   "start": 206.4,
+   "end": 206.56,
+   "prob": 0.891
+  },
+  {
+   "word": "algorithms",
+   "start": 206.56,
+   "end": 207.0,
+   "prob": 0.998
+  },
+  {
+   "word": "include",
+   "start": 207.0,
+   "end": 207.44,
+   "prob": 0.993
+  },
+  {
+   "word": "RSA,",
+   "start": 207.44,
+   "end": 208.06,
+   "prob": 0.993
+  },
+  {
+   "word": "an",
+   "start": 208.34,
+   "end": 208.4,
+   "prob": 0.902
+  },
+  {
+   "word": "elliptic",
+   "start": 208.4,
+   "end": 208.82,
+   "prob": 0.973
+  },
+  {
+   "word": "curve",
+   "start": 208.82,
+   "end": 209.0,
+   "prob": 0.736
+  },
+  {
+   "word": "cryptography,",
+   "start": 209.0,
+   "end": 209.72,
+   "prob": 0.966
+  },
+  {
+   "word": "often",
+   "start": 210.08,
+   "end": 210.24,
+   "prob": 0.992
+  },
+  {
+   "word": "called",
+   "start": 210.24,
+   "end": 210.56,
+   "prob": 0.997
+  },
+  {
+   "word": "ECC.",
+   "start": 210.56,
+   "end": 211.06,
+   "prob": 0.987
+  },
+  {
+   "word": "ECC",
+   "start": 211.72,
+   "end": 212.28,
+   "prob": 0.591
+  },
+  {
+   "word": "can",
+   "start": 212.28,
+   "end": 212.54,
+   "prob": 0.92
+  },
+  {
+   "word": "provide",
+   "start": 212.54,
+   "end": 212.86,
+   "prob": 0.981
+  },
+  {
+   "word": "strong",
+   "start": 212.86,
+   "end": 213.16,
+   "prob": 0.98
+  },
+  {
+   "word": "security",
+   "start": 213.16,
+   "end": 213.62,
+   "prob": 0.996
+  },
+  {
+   "word": "with",
+   "start": 213.62,
+   "end": 213.86,
+   "prob": 0.99
+  },
+  {
+   "word": "shorter",
+   "start": 213.86,
+   "end": 214.08,
+   "prob": 0.992
+  },
+  {
+   "word": "key",
+   "start": 214.08,
+   "end": 214.3,
+   "prob": 0.94
+  },
+  {
+   "word": "sizes,",
+   "start": 214.3,
+   "end": 214.64,
+   "prob": 0.994
+  },
+  {
+   "word": "which",
+   "start": 215.0,
+   "end": 215.2,
+   "prob": 0.994
+  },
+  {
+   "word": "makes",
+   "start": 215.2,
+   "end": 215.38,
+   "prob": 0.995
+  },
+  {
+   "word": "it",
+   "start": 215.38,
+   "end": 215.54,
+   "prob": 0.99
+  },
+  {
+   "word": "useful",
+   "start": 215.54,
+   "end": 215.74,
+   "prob": 0.992
+  },
+  {
+   "word": "in",
+   "start": 215.74,
+   "end": 215.98,
+   "prob": 0.987
+  },
+  {
+   "word": "mobile",
+   "start": 215.98,
+   "end": 216.18,
+   "prob": 0.992
+  },
+  {
+   "word": "devices,",
+   "start": 216.18,
+   "end": 216.6,
+   "prob": 0.987
+  },
+  {
+   "word": "web",
+   "start": 216.94,
+   "end": 217.06,
+   "prob": 0.99
+  },
+  {
+   "word": "browsers,",
+   "start": 217.06,
+   "end": 217.36,
+   "prob": 0.997
+  },
+  {
+   "word": "and",
+   "start": 217.58,
+   "end": 217.66,
+   "prob": 0.994
+  },
+  {
+   "word": "other",
+   "start": 217.66,
+   "end": 217.9,
+   "prob": 0.995
+  },
+  {
+   "word": "systems",
+   "start": 217.9,
+   "end": 218.24,
+   "prob": 0.991
+  },
+  {
+   "word": "with",
+   "start": 218.24,
+   "end": 218.5,
+   "prob": 0.985
+  },
+  {
+   "word": "limited",
+   "start": 218.5,
+   "end": 218.78,
+   "prob": 0.997
+  },
+  {
+   "word": "resources.",
+   "start": 218.78,
+   "end": 219.24,
+   "prob": 0.994
+  },
+  {
+   "word": "In",
+   "start": 220.02,
+   "end": 220.14,
+   "prob": 0.991
+  },
+  {
+   "word": "practice,",
+   "start": 220.14,
+   "end": 220.46,
+   "prob": 0.999
+  },
+  {
+   "word": "many",
+   "start": 220.76,
+   "end": 220.96,
+   "prob": 0.997
+  },
+  {
+   "word": "modern",
+   "start": 220.96,
+   "end": 221.16,
+   "prob": 0.89
+  },
+  {
+   "word": "systems",
+   "start": 221.16,
+   "end": 221.6,
+   "prob": 0.993
+  },
+  {
+   "word": "use",
+   "start": 221.6,
+   "end": 221.86,
+   "prob": 0.994
+  },
+  {
+   "word": "a",
+   "start": 221.86,
+   "end": 221.98,
+   "prob": 0.995
+  },
+  {
+   "word": "hybrid",
+   "start": 221.98,
+   "end": 222.22,
+   "prob": 0.994
+  },
+  {
+   "word": "approach",
+   "start": 222.22,
+   "end": 222.58,
+   "prob": 0.994
+  },
+  {
+   "word": "that",
+   "start": 222.58,
+   "end": 222.8,
+   "prob": 0.993
+  },
+  {
+   "word": "combines",
+   "start": 222.8,
+   "end": 223.12,
+   "prob": 0.997
+  },
+  {
+   "word": "both",
+   "start": 223.12,
+   "end": 223.42,
+   "prob": 0.992
+  },
+  {
+   "word": "types.",
+   "start": 223.42,
+   "end": 223.88,
+   "prob": 0.997
+  },
+  {
+   "word": "For",
+   "start": 225.04,
+   "end": 225.2,
+   "prob": 0.969
+  },
+  {
+   "word": "example,",
+   "start": 225.2,
+   "end": 225.44,
+   "prob": 0.999
+  },
+  {
+   "word": "when",
+   "start": 225.76,
+   "end": 225.92,
+   "prob": 0.992
+  },
+  {
+   "word": "a",
+   "start": 225.92,
+   "end": 226.04,
+   "prob": 0.985
+  },
+  {
+   "word": "user",
+   "start": 226.04,
+   "end": 226.22,
+   "prob": 0.998
+  },
+  {
+   "word": "visits",
+   "start": 226.22,
+   "end": 226.5,
+   "prob": 0.997
+  },
+  {
+   "word": "a",
+   "start": 226.5,
+   "end": 226.66,
+   "prob": 0.995
+  },
+  {
+   "word": "website",
+   "start": 226.66,
+   "end": 226.96,
+   "prob": 0.978
+  },
+  {
+   "word": "using",
+   "start": 226.96,
+   "end": 227.3,
+   "prob": 0.993
+  },
+  {
+   "word": "HTTPS,",
+   "start": 227.3,
+   "end": 227.92,
+   "prob": 0.964
+  },
+  {
+   "word": "asymmetric",
+   "start": 228.54,
+   "end": 229.0,
+   "prob": 0.944
+  },
+  {
+   "word": "cryptography",
+   "start": 229.0,
+   "end": 229.48,
+   "prob": 0.999
+  },
+  {
+   "word": "can",
+   "start": 229.48,
+   "end": 229.8,
+   "prob": 0.997
+  },
+  {
+   "word": "help",
+   "start": 229.8,
+   "end": 229.96,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 229.96,
+   "end": 230.12,
+   "prob": 0.994
+  },
+  {
+   "word": "browser",
+   "start": 230.12,
+   "end": 230.4,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 230.4,
+   "end": 230.6,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 230.6,
+   "end": 230.7,
+   "prob": 0.912
+  },
+  {
+   "word": "server",
+   "start": 230.7,
+   "end": 230.96,
+   "prob": 0.999
+  },
+  {
+   "word": "authenticate",
+   "start": 230.96,
+   "end": 231.54,
+   "prob": 0.999
+  },
+  {
+   "word": "each",
+   "start": 231.54,
+   "end": 231.72,
+   "prob": 0.995
+  },
+  {
+   "word": "other",
+   "start": 231.72,
+   "end": 231.92,
+   "prob": 0.997
+  },
+  {
+   "word": "and",
+   "start": 231.92,
+   "end": 232.32,
+   "prob": 0.87
+  },
+  {
+   "word": "establish",
+   "start": 232.32,
+   "end": 232.74,
+   "prob": 0.997
+  },
+  {
+   "word": "a",
+   "start": 232.74,
+   "end": 232.98,
+   "prob": 0.997
+  },
+  {
+   "word": "shared",
+   "start": 232.98,
+   "end": 233.26,
+   "prob": 0.979
+  },
+  {
+   "word": "session",
+   "start": 233.26,
+   "end": 233.58,
+   "prob": 0.98
+  },
+  {
+   "word": "key.",
+   "start": 233.58,
+   "end": 233.88,
+   "prob": 0.997
+  },
+  {
+   "word": "After",
+   "start": 234.6,
+   "end": 234.8,
+   "prob": 0.995
+  },
+  {
+   "word": "that,",
+   "start": 234.8,
+   "end": 235.08,
+   "prob": 0.998
+  },
+  {
+   "word": "symmetric",
+   "start": 235.28,
+   "end": 235.7,
+   "prob": 0.99
+  },
+  {
+   "word": "encryption",
+   "start": 235.7,
+   "end": 236.0,
+   "prob": 1.0
+  },
+  {
+   "word": "is",
+   "start": 236.0,
+   "end": 236.3,
+   "prob": 0.999
+  },
+  {
+   "word": "usually",
+   "start": 236.3,
+   "end": 236.6,
+   "prob": 0.981
+  },
+  {
+   "word": "used",
+   "start": 236.6,
+   "end": 236.86,
+   "prob": 0.999
+  },
+  {
+   "word": "to",
+   "start": 236.86,
+   "end": 237.02,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 237.02,
+   "end": 237.22,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 237.22,
+   "end": 237.38,
+   "prob": 0.986
+  },
+  {
+   "word": "actual",
+   "start": 237.38,
+   "end": 237.72,
+   "prob": 0.999
+  },
+  {
+   "word": "data",
+   "start": 237.72,
+   "end": 237.94,
+   "prob": 0.996
+  },
+  {
+   "word": "exchange",
+   "start": 237.94,
+   "end": 238.36,
+   "prob": 0.679
+  },
+  {
+   "word": "during",
+   "start": 238.36,
+   "end": 238.66,
+   "prob": 0.994
+  },
+  {
+   "word": "the",
+   "start": 238.66,
+   "end": 238.82,
+   "prob": 0.965
+  },
+  {
+   "word": "session",
+   "start": 238.82,
+   "end": 239.12,
+   "prob": 0.998
+  },
+  {
+   "word": "because",
+   "start": 239.12,
+   "end": 239.42,
+   "prob": 0.902
+  },
+  {
+   "word": "it",
+   "start": 239.42,
+   "end": 239.58,
+   "prob": 0.99
+  },
+  {
+   "word": "is",
+   "start": 239.58,
+   "end": 239.7,
+   "prob": 0.981
+  },
+  {
+   "word": "faster.",
+   "start": 239.7,
+   "end": 240.0,
+   "prob": 0.993
+  },
+  {
+   "word": "This",
+   "start": 240.0,
+   "end": 241.0,
+   "prob": 0.424
+  },
+  {
+   "word": "combination",
+   "start": 241.0,
+   "end": 241.32,
+   "prob": 0.978
+  },
+  {
+   "word": "provides",
+   "start": 241.32,
+   "end": 241.88,
+   "prob": 0.969
+  },
+  {
+   "word": "both",
+   "start": 241.88,
+   "end": 242.1,
+   "prob": 0.992
+  },
+  {
+   "word": "secure",
+   "start": 242.1,
+   "end": 242.46,
+   "prob": 0.958
+  },
+  {
+   "word": "key",
+   "start": 242.46,
+   "end": 242.66,
+   "prob": 0.98
+  },
+  {
+   "word": "exchange",
+   "start": 242.66,
+   "end": 243.04,
+   "prob": 0.994
+  },
+  {
+   "word": "and",
+   "start": 243.04,
+   "end": 243.46,
+   "prob": 0.978
+  },
+  {
+   "word": "efficient",
+   "start": 243.46,
+   "end": 243.84,
+   "prob": 0.996
+  },
+  {
+   "word": "communication.",
+   "start": 243.84,
+   "end": 244.34,
+   "prob": 0.993
+  },
+  {
+   "word": "It",
+   "start": 245.76,
+   "end": 245.76,
+   "prob": 0.969
+  },
+  {
+   "word": "is",
+   "start": 245.76,
+   "end": 245.88,
+   "prob": 0.985
+  },
+  {
+   "word": "also",
+   "start": 245.88,
+   "end": 246.1,
+   "prob": 0.997
+  },
+  {
+   "word": "important",
+   "start": 246.1,
+   "end": 246.46,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 246.46,
+   "end": 246.66,
+   "prob": 0.999
+  },
+  {
+   "word": "distinguish",
+   "start": 246.66,
+   "end": 246.98,
+   "prob": 0.996
+  },
+  {
+   "word": "encryption",
+   "start": 246.98,
+   "end": 247.48,
+   "prob": 0.972
+  },
+  {
+   "word": "from",
+   "start": 247.48,
+   "end": 247.86,
+   "prob": 0.998
+  },
+  {
+   "word": "hashing.",
+   "start": 247.86,
+   "end": 248.14,
+   "prob": 0.992
+  },
+  {
+   "word": "Hashing",
+   "start": 249.04,
+   "end": 249.04,
+   "prob": 0.939
+  },
+  {
+   "word": "transforms",
+   "start": 249.04,
+   "end": 249.52,
+   "prob": 0.988
+  },
+  {
+   "word": "data",
+   "start": 249.52,
+   "end": 249.88,
+   "prob": 0.996
+  },
+  {
+   "word": "into",
+   "start": 249.88,
+   "end": 250.18,
+   "prob": 0.995
+  },
+  {
+   "word": "a",
+   "start": 250.18,
+   "end": 250.36,
+   "prob": 0.83
+  },
+  {
+   "word": "fixed",
+   "start": 250.36,
+   "end": 250.62,
+   "prob": 0.997
+  },
+  {
+   "word": "-length",
+   "start": 250.62,
+   "end": 250.88,
+   "prob": 0.707
+  },
+  {
+   "word": "value,",
+   "start": 250.88,
+   "end": 251.34,
+   "prob": 0.996
+  },
+  {
+   "word": "called",
+   "start": 251.56,
+   "end": 251.7,
+   "prob": 0.981
+  },
+  {
+   "word": "a",
+   "start": 251.7,
+   "end": 251.84,
+   "prob": 0.873
+  },
+  {
+   "word": "hash,",
+   "start": 251.84,
+   "end": 252.06,
+   "prob": 0.866
+  },
+  {
+   "word": "but",
+   "start": 252.48,
+   "end": 252.9,
+   "prob": 0.991
+  },
+  {
+   "word": "is",
+   "start": 252.9,
+   "end": 253.04,
+   "prob": 0.643
+  },
+  {
+   "word": "not",
+   "start": 253.04,
+   "end": 253.22,
+   "prob": 0.996
+  },
+  {
+   "word": "designed",
+   "start": 253.22,
+   "end": 253.5,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 253.5,
+   "end": 253.66,
+   "prob": 0.999
+  },
+  {
+   "word": "be",
+   "start": 253.66,
+   "end": 253.76,
+   "prob": 0.999
+  },
+  {
+   "word": "reversed.",
+   "start": 253.76,
+   "end": 254.1,
+   "prob": 0.997
+  },
+  {
+   "word": "Hashing",
+   "start": 254.88,
+   "end": 254.98,
+   "prob": 0.983
+  },
+  {
+   "word": "is",
+   "start": 254.98,
+   "end": 255.18,
+   "prob": 0.999
+  },
+  {
+   "word": "commonly",
+   "start": 255.18,
+   "end": 255.44,
+   "prob": 0.995
+  },
+  {
+   "word": "used",
+   "start": 255.44,
+   "end": 255.7,
+   "prob": 0.999
+  },
+  {
+   "word": "to",
+   "start": 255.7,
+   "end": 255.86,
+   "prob": 0.998
+  },
+  {
+   "word": "store",
+   "start": 255.86,
+   "end": 256.02,
+   "prob": 0.979
+  },
+  {
+   "word": "passwords",
+   "start": 256.02,
+   "end": 256.34,
+   "prob": 0.959
+  },
+  {
+   "word": "securely",
+   "start": 256.34,
+   "end": 256.8,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 256.8,
+   "end": 257.28,
+   "prob": 0.76
+  },
+  {
+   "word": "to",
+   "start": 257.28,
+   "end": 257.44,
+   "prob": 0.976
+  },
+  {
+   "word": "verify",
+   "start": 257.44,
+   "end": 257.72,
+   "prob": 0.999
+  },
+  {
+   "word": "whether",
+   "start": 257.72,
+   "end": 258.0,
+   "prob": 0.984
+  },
+  {
+   "word": "data",
+   "start": 258.0,
+   "end": 258.3,
+   "prob": 0.969
+  },
+  {
+   "word": "has",
+   "start": 258.3,
+   "end": 258.54,
+   "prob": 0.991
+  },
+  {
+   "word": "been",
+   "start": 258.54,
+   "end": 258.7,
+   "prob": 0.995
+  },
+  {
+   "word": "changed.",
+   "start": 258.7,
+   "end": 259.16,
+   "prob": 0.999
+  },
+  {
+   "word": "Digital",
+   "start": 260.7,
+   "end": 261.08,
+   "prob": 0.988
+  },
+  {
+   "word": "signatures",
+   "start": 261.08,
+   "end": 261.46,
+   "prob": 0.996
+  },
+  {
+   "word": "are",
+   "start": 261.46,
+   "end": 261.82,
+   "prob": 0.997
+  },
+  {
+   "word": "related",
+   "start": 261.82,
+   "end": 262.04,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 262.04,
+   "end": 262.26,
+   "prob": 0.998
+  },
+  {
+   "word": "public",
+   "start": 262.26,
+   "end": 262.52,
+   "prob": 0.978
+  },
+  {
+   "word": "key",
+   "start": 262.52,
+   "end": 262.72,
+   "prob": 0.9
+  },
+  {
+   "word": "cryptography",
+   "start": 262.72,
+   "end": 263.16,
+   "prob": 0.982
+  },
+  {
+   "word": "as",
+   "start": 263.16,
+   "end": 263.48,
+   "prob": 0.897
+  },
+  {
+   "word": "well,",
+   "start": 263.48,
+   "end": 263.74,
+   "prob": 0.999
+  },
+  {
+   "word": "but",
+   "start": 264.0,
+   "end": 264.08,
+   "prob": 0.989
+  },
+  {
+   "word": "they",
+   "start": 264.08,
+   "end": 264.2,
+   "prob": 0.979
+  },
+  {
+   "word": "serve",
+   "start": 264.2,
+   "end": 264.36,
+   "prob": 0.992
+  },
+  {
+   "word": "a",
+   "start": 264.36,
+   "end": 264.5,
+   "prob": 0.999
+  },
+  {
+   "word": "different",
+   "start": 264.5,
+   "end": 264.7,
+   "prob": 0.999
+  },
+  {
+   "word": "purpose.",
+   "start": 264.7,
+   "end": 265.1,
+   "prob": 1.0
+  },
+  {
+   "word": "Encryption",
+   "start": 265.94,
+   "end": 266.16,
+   "prob": 0.99
+  },
+  {
+   "word": "is",
+   "start": 266.16,
+   "end": 266.34,
+   "prob": 0.998
+  },
+  {
+   "word": "mainly",
+   "start": 266.34,
+   "end": 266.52,
+   "prob": 0.993
+  },
+  {
+   "word": "used",
+   "start": 266.52,
+   "end": 266.8,
+   "prob": 0.997
+  },
+  {
+   "word": "to",
+   "start": 266.8,
+   "end": 266.94,
+   "prob": 0.998
+  },
+  {
+   "word": "protect",
+   "start": 266.94,
+   "end": 267.16,
+   "prob": 0.998
+  },
+  {
+   "word": "confidentiality,",
+   "start": 267.16,
+   "end": 267.88,
+   "prob": 0.981
+  },
+  {
+   "word": "while",
+   "start": 267.88,
+   "end": 268.62,
+   "prob": 0.252
+  },
+  {
+   "word": "digital",
+   "start": 268.62,
+   "end": 268.88,
+   "prob": 0.971
+  },
+  {
+   "word": "signatures",
+   "start": 268.88,
+   "end": 269.42,
+   "prob": 0.995
+  },
+  {
+   "word": "help",
+   "start": 269.42,
+   "end": 269.86,
+   "prob": 0.976
+  },
+  {
+   "word": "verify",
+   "start": 269.86,
+   "end": 270.34,
+   "prob": 0.98
+  },
+  {
+   "word": "the",
+   "start": 270.34,
+   "end": 270.5,
+   "prob": 0.993
+  },
+  {
+   "word": "identity",
+   "start": 270.5,
+   "end": 270.8,
+   "prob": 0.993
+  },
+  {
+   "word": "of",
+   "start": 270.8,
+   "end": 270.98,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "start": 270.98,
+   "end": 271.12,
+   "prob": 0.994
+  },
+  {
+   "word": "sender",
+   "start": 271.12,
+   "end": 271.32,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 271.32,
+   "end": 271.62,
+   "prob": 0.943
+  },
+  {
+   "word": "confirm",
+   "start": 271.62,
+   "end": 271.94,
+   "prob": 0.993
+  },
+  {
+   "word": "that",
+   "start": 271.94,
+   "end": 272.1,
+   "prob": 0.965
+  },
+  {
+   "word": "the",
+   "start": 272.1,
+   "end": 272.24,
+   "prob": 0.985
+  },
+  {
+   "word": "message",
+   "start": 272.24,
+   "end": 272.42,
+   "prob": 0.577
+  },
+  {
+   "word": "has",
+   "start": 272.42,
+   "end": 272.74,
+   "prob": 0.986
+  },
+  {
+   "word": "not",
+   "start": 272.74,
+   "end": 273.0,
+   "prob": 0.994
+  },
+  {
+   "word": "been",
+   "start": 273.0,
+   "end": 273.18,
+   "prob": 0.995
+  },
+  {
+   "word": "modified.",
+   "start": 273.18,
+   "end": 273.64,
+   "prob": 0.993
+  },
+  {
+   "word": "Applications",
+   "start": 275.14,
+   "end": 275.14,
+   "prob": 0.75
+  },
+  {
+   "word": "of",
+   "start": 275.14,
+   "end": 275.42,
+   "prob": 0.993
+  },
+  {
+   "word": "Encryption",
+   "start": 275.42,
+   "end": 275.88,
+   "prob": 0.781
+  },
+  {
+   "word": "Encryption",
+   "start": 275.88,
+   "end": 276.74,
+   "prob": 0.781
+  },
+  {
+   "word": "is",
+   "start": 276.74,
+   "end": 276.9,
+   "prob": 0.995
+  },
+  {
+   "word": "used",
+   "start": 276.9,
+   "end": 277.1,
+   "prob": 0.995
+  },
+  {
+   "word": "throughout",
+   "start": 277.1,
+   "end": 277.4,
+   "prob": 0.72
+  },
+  {
+   "word": "everyday",
+   "start": 277.4,
+   "end": 277.7,
+   "prob": 0.939
+  },
+  {
+   "word": "computing.",
+   "start": 277.7,
+   "end": 278.14,
+   "prob": 0.999
+  },
+  {
+   "word": "One",
+   "start": 278.88,
+   "end": 278.9,
+   "prob": 0.993
+  },
+  {
+   "word": "of",
+   "start": 278.9,
+   "end": 279.02,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "start": 279.02,
+   "end": 279.06,
+   "prob": 0.998
+  },
+  {
+   "word": "most",
+   "start": 279.06,
+   "end": 279.22,
+   "prob": 0.991
+  },
+  {
+   "word": "familiar",
+   "start": 279.22,
+   "end": 279.52,
+   "prob": 0.999
+  },
+  {
+   "word": "examples",
+   "start": 279.52,
+   "end": 279.92,
+   "prob": 0.995
+  },
+  {
+   "word": "is",
+   "start": 279.92,
+   "end": 280.3,
+   "prob": 0.996
+  },
+  {
+   "word": "HTTPS,",
+   "start": 280.3,
+   "end": 280.66,
+   "prob": 0.882
+  },
+  {
+   "word": "which",
+   "start": 281.28,
+   "end": 281.36,
+   "prob": 0.995
+  },
+  {
+   "word": "protects",
+   "start": 281.36,
+   "end": 281.66,
+   "prob": 0.994
+  },
+  {
+   "word": "communication",
+   "start": 281.66,
+   "end": 282.26,
+   "prob": 0.917
+  },
+  {
+   "word": "between",
+   "start": 282.26,
+   "end": 282.66,
+   "prob": 0.999
+  },
+  {
+   "word": "a",
+   "start": 282.66,
+   "end": 282.8,
+   "prob": 0.986
+  },
+  {
+   "word": "web",
+   "start": 282.8,
+   "end": 282.9,
+   "prob": 0.972
+  },
+  {
+   "word": "browser",
+   "start": 282.9,
+   "end": 283.22,
+   "prob": 0.997
+  },
+  {
+   "word": "and",
+   "start": 283.22,
+   "end": 283.5,
+   "prob": 0.996
+  },
+  {
+   "word": "a",
+   "start": 283.5,
+   "end": 283.6,
+   "prob": 0.976
+  },
+  {
+   "word": "website.",
+   "start": 283.6,
+   "end": 283.92,
+   "prob": 0.968
+  },
+  {
+   "word": "When",
+   "start": 284.62,
+   "end": 284.7,
+   "prob": 0.996
+  },
+  {
+   "word": "a",
+   "start": 284.7,
+   "end": 284.8,
+   "prob": 0.976
+  },
+  {
+   "word": "website",
+   "start": 284.8,
+   "end": 285.0,
+   "prob": 0.981
+  },
+  {
+   "word": "uses",
+   "start": 285.0,
+   "end": 285.38,
+   "prob": 0.987
+  },
+  {
+   "word": "HTTPS,",
+   "start": 285.38,
+   "end": 286.04,
+   "prob": 0.996
+  },
+  {
+   "word": "information",
+   "start": 286.86,
+   "end": 286.98,
+   "prob": 0.961
+  },
+  {
+   "word": "such",
+   "start": 286.98,
+   "end": 287.46,
+   "prob": 0.939
+  },
+  {
+   "word": "as",
+   "start": 287.46,
+   "end": 287.66,
+   "prob": 0.995
+  },
+  {
+   "word": "login",
+   "start": 287.66,
+   "end": 287.94,
+   "prob": 0.674
+  },
+  {
+   "word": "credentials,",
+   "start": 287.94,
+   "end": 288.46,
+   "prob": 0.998
+  },
+  {
+   "word": "personal",
+   "start": 288.96,
+   "end": 289.16,
+   "prob": 0.998
+  },
+  {
+   "word": "information,",
+   "start": 289.16,
+   "end": 289.64,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 289.96,
+   "end": 290.04,
+   "prob": 0.997
+  },
+  {
+   "word": "payment",
+   "start": 290.04,
+   "end": 290.28,
+   "prob": 0.998
+  },
+  {
+   "word": "information",
+   "start": 290.28,
+   "end": 290.78,
+   "prob": 0.998
+  },
+  {
+   "word": "is",
+   "start": 290.78,
+   "end": 291.46,
+   "prob": 0.914
+  },
+  {
+   "word": "encrypted",
+   "start": 291.46,
+   "end": 291.78,
+   "prob": 0.997
+  },
+  {
+   "word": "while",
+   "start": 291.78,
+   "end": 292.04,
+   "prob": 0.989
+  },
+  {
+   "word": "traveling",
+   "start": 292.04,
+   "end": 292.38,
+   "prob": 0.848
+  },
+  {
+   "word": "across",
+   "start": 292.38,
+   "end": 292.68,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 292.68,
+   "end": 292.86,
+   "prob": 0.997
+  },
+  {
+   "word": "internet.",
+   "start": 292.86,
+   "end": 293.1,
+   "prob": 0.587
+  },
+  {
+   "word": "Encryption",
+   "start": 294.34,
+   "end": 294.66,
+   "prob": 0.995
+  },
+  {
+   "word": "is",
+   "start": 294.66,
+   "end": 294.86,
+   "prob": 0.996
+  },
+  {
+   "word": "also",
+   "start": 294.86,
+   "end": 295.06,
+   "prob": 0.992
+  },
+  {
+   "word": "used",
+   "start": 295.06,
+   "end": 295.36,
+   "prob": 0.998
+  },
+  {
+   "word": "in",
+   "start": 295.36,
+   "end": 295.56,
+   "prob": 0.997
+  },
+  {
+   "word": "messaging",
+   "start": 295.56,
+   "end": 295.82,
+   "prob": 0.994
+  },
+  {
+   "word": "applications.",
+   "start": 295.82,
+   "end": 296.44,
+   "prob": 0.994
+  },
+  {
+   "word": "End",
+   "start": 296.44,
+   "end": 297.16,
+   "prob": 0.18
+  },
+  {
+   "word": "-to",
+   "start": 297.16,
+   "end": 297.28,
+   "prob": 0.885
+  },
+  {
+   "word": "-end",
+   "start": 297.28,
+   "end": 297.4,
+   "prob": 0.967
+  },
+  {
+   "word": "encryption",
+   "start": 297.4,
+   "end": 297.8,
+   "prob": 0.986
+  },
+  {
+   "word": "is",
+   "start": 297.8,
+   "end": 298.06,
+   "prob": 0.985
+  },
+  {
+   "word": "designed",
+   "start": 298.06,
+   "end": 298.36,
+   "prob": 0.995
+  },
+  {
+   "word": "so",
+   "start": 298.36,
+   "end": 298.58,
+   "prob": 0.947
+  },
+  {
+   "word": "that",
+   "start": 298.58,
+   "end": 298.7,
+   "prob": 0.957
+  },
+  {
+   "word": "a",
+   "start": 298.7,
+   "end": 298.82,
+   "prob": 0.595
+  },
+  {
+   "word": "message",
+   "start": 298.82,
+   "end": 298.94,
+   "prob": 0.974
+  },
+  {
+   "word": "is",
+   "start": 298.94,
+   "end": 299.14,
+   "prob": 0.963
+  },
+  {
+   "word": "encrypted",
+   "start": 299.14,
+   "end": 299.4,
+   "prob": 0.992
+  },
+  {
+   "word": "on",
+   "start": 299.4,
+   "end": 299.68,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 299.68,
+   "end": 299.8,
+   "prob": 0.951
+  },
+  {
+   "word": "sender's",
+   "start": 299.8,
+   "end": 300.1,
+   "prob": 0.99
+  },
+  {
+   "word": "device",
+   "start": 300.1,
+   "end": 300.38,
+   "prob": 0.991
+  },
+  {
+   "word": "and",
+   "start": 300.38,
+   "end": 300.84,
+   "prob": 0.878
+  },
+  {
+   "word": "only",
+   "start": 300.84,
+   "end": 301.1,
+   "prob": 0.967
+  },
+  {
+   "word": "decrypted",
+   "start": 301.1,
+   "end": 301.52,
+   "prob": 0.994
+  },
+  {
+   "word": "on",
+   "start": 301.52,
+   "end": 301.76,
+   "prob": 0.996
+  },
+  {
+   "word": "the",
+   "start": 301.76,
+   "end": 301.9,
+   "prob": 0.993
+  },
+  {
+   "word": "recipient's",
+   "start": 301.9,
+   "end": 302.36,
+   "prob": 0.989
+  },
+  {
+   "word": "device.",
+   "start": 302.36,
+   "end": 302.76,
+   "prob": 0.997
+  },
+  {
+   "word": "Ideally,",
+   "start": 303.48,
+   "end": 303.7,
+   "prob": 0.996
+  },
+  {
+   "word": "even",
+   "start": 303.92,
+   "end": 304.14,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 304.14,
+   "end": 304.3,
+   "prob": 0.995
+  },
+  {
+   "word": "messaging",
+   "start": 304.3,
+   "end": 304.64,
+   "prob": 0.992
+  },
+  {
+   "word": "provider",
+   "start": 304.64,
+   "end": 305.04,
+   "prob": 0.996
+  },
+  {
+   "word": "cannot",
+   "start": 305.04,
+   "end": 305.32,
+   "prob": 0.837
+  },
+  {
+   "word": "read",
+   "start": 305.32,
+   "end": 305.52,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 305.52,
+   "end": 305.7,
+   "prob": 0.995
+  },
+  {
+   "word": "contents",
+   "start": 305.7,
+   "end": 305.96,
+   "prob": 0.992
+  },
+  {
+   "word": "of",
+   "start": 305.96,
+   "end": 306.12,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 306.12,
+   "end": 306.22,
+   "prob": 0.977
+  },
+  {
+   "word": "message",
+   "start": 306.22,
+   "end": 306.5,
+   "prob": 0.992
+  },
+  {
+   "word": "while",
+   "start": 306.5,
+   "end": 306.84,
+   "prob": 0.977
+  },
+  {
+   "word": "it",
+   "start": 306.84,
+   "end": 307.0,
+   "prob": 0.978
+  },
+  {
+   "word": "is",
+   "start": 307.0,
+   "end": 307.1,
+   "prob": 0.984
+  },
+  {
+   "word": "in",
+   "start": 307.1,
+   "end": 307.26,
+   "prob": 0.994
+  },
+  {
+   "word": "transit.",
+   "start": 307.26,
+   "end": 307.54,
+   "prob": 0.492
+  },
+  {
+   "word": "Another",
+   "start": 308.8,
+   "end": 309.0,
+   "prob": 0.991
+  },
+  {
+   "word": "major",
+   "start": 309.0,
+   "end": 309.26,
+   "prob": 1.0
+  },
+  {
+   "word": "application",
+   "start": 309.26,
+   "end": 309.78,
+   "prob": 0.994
+  },
+  {
+   "word": "is",
+   "start": 309.78,
+   "end": 310.1,
+   "prob": 0.998
+  },
+  {
+   "word": "data",
+   "start": 310.1,
+   "end": 310.3,
+   "prob": 0.89
+  },
+  {
+   "word": "storage.",
+   "start": 310.3,
+   "end": 310.62,
+   "prob": 0.997
+  },
+  {
+   "word": "Computers,",
+   "start": 311.06,
+   "end": 311.5,
+   "prob": 0.984
+  },
+  {
+   "word": "smartphones,",
+   "start": 311.78,
+   "end": 312.14,
+   "prob": 0.914
+  },
+  {
+   "word": "USB",
+   "start": 312.56,
+   "end": 312.78,
+   "prob": 0.991
+  },
+  {
+   "word": "drives,",
+   "start": 312.78,
+   "end": 313.12,
+   "prob": 0.983
+  },
+  {
+   "word": "and",
+   "start": 313.28,
+   "end": 313.4,
+   "prob": 0.997
+  },
+  {
+   "word": "cloud",
+   "start": 313.4,
+   "end": 313.56,
+   "prob": 0.958
+  },
+  {
+   "word": "services",
+   "start": 313.56,
+   "end": 313.92,
+   "prob": 0.997
+  },
+  {
+   "word": "can",
+   "start": 313.92,
+   "end": 314.28,
+   "prob": 0.994
+  },
+  {
+   "word": "encrypt",
+   "start": 314.28,
+   "end": 314.52,
+   "prob": 0.998
+  },
+  {
+   "word": "stored",
+   "start": 314.52,
+   "end": 314.78,
+   "prob": 0.969
+  },
+  {
+   "word": "files.",
+   "start": 314.78,
+   "end": 315.24,
+   "prob": 0.999
+  },
+  {
+   "word": "This",
+   "start": 315.82,
+   "end": 315.98,
+   "prob": 0.993
+  },
+  {
+   "word": "is",
+   "start": 315.98,
+   "end": 316.12,
+   "prob": 0.999
+  },
+  {
+   "word": "called",
+   "start": 316.12,
+   "end": 316.42,
+   "prob": 0.997
+  },
+  {
+   "word": "encryption",
+   "start": 316.42,
+   "end": 316.82,
+   "prob": 0.822
+  },
+  {
+   "word": "at",
+   "start": 316.82,
+   "end": 317.04,
+   "prob": 0.714
+  },
+  {
+   "word": "rest.",
+   "start": 317.04,
+   "end": 317.28,
+   "prob": 0.975
+  },
+  {
+   "word": "If",
+   "start": 317.88,
+   "end": 318.0,
+   "prob": 0.996
+  },
+  {
+   "word": "a",
+   "start": 318.0,
+   "end": 318.08,
+   "prob": 0.841
+  },
+  {
+   "word": "device",
+   "start": 318.08,
+   "end": 318.28,
+   "prob": 0.999
+  },
+  {
+   "word": "is",
+   "start": 318.28,
+   "end": 318.5,
+   "prob": 0.992
+  },
+  {
+   "word": "lost",
+   "start": 318.5,
+   "end": 318.76,
+   "prob": 0.996
+  },
+  {
+   "word": "or",
+   "start": 318.76,
+   "end": 319.0,
+   "prob": 0.993
+  },
+  {
+   "word": "stolen,",
+   "start": 319.0,
+   "end": 319.4,
+   "prob": 0.999
+  },
+  {
+   "word": "encryption",
+   "start": 319.72,
+   "end": 319.84,
+   "prob": 0.996
+  },
+  {
+   "word": "can",
+   "start": 319.84,
+   "end": 320.1,
+   "prob": 0.996
+  },
+  {
+   "word": "make",
+   "start": 320.1,
+   "end": 320.26,
+   "prob": 0.998
+  },
+  {
+   "word": "it",
+   "start": 320.26,
+   "end": 320.42,
+   "prob": 0.999
+  },
+  {
+   "word": "much",
+   "start": 320.42,
+   "end": 320.56,
+   "prob": 0.992
+  },
+  {
+   "word": "more",
+   "start": 320.56,
+   "end": 320.76,
+   "prob": 0.998
+  },
+  {
+   "word": "difficult",
+   "start": 320.76,
+   "end": 321.08,
+   "prob": 0.999
+  },
+  {
+   "word": "for",
+   "start": 321.08,
+   "end": 321.32,
+   "prob": 0.997
+  },
+  {
+   "word": "someone",
+   "start": 321.32,
+   "end": 321.56,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 321.56,
+   "end": 321.7,
+   "prob": 0.999
+  },
+  {
+   "word": "access",
+   "start": 321.7,
+   "end": 322.0,
+   "prob": 0.999
+  },
+  {
+   "word": "the",
+   "start": 322.0,
+   "end": 322.18,
+   "prob": 0.99
+  },
+  {
+   "word": "information",
+   "start": 322.18,
+   "end": 322.52,
+   "prob": 0.998
+  },
+  {
+   "word": "stored",
+   "start": 322.52,
+   "end": 322.9,
+   "prob": 1.0
+  },
+  {
+   "word": "on",
+   "start": 322.9,
+   "end": 323.1,
+   "prob": 0.997
+  },
+  {
+   "word": "it.",
+   "start": 323.1,
+   "end": 323.28,
+   "prob": 0.999
+  },
+  {
+   "word": "Encryption",
+   "start": 324.64,
+   "end": 325.28,
+   "prob": 0.968
+  },
+  {
+   "word": "is",
+   "start": 325.28,
+   "end": 325.48,
+   "prob": 0.988
+  },
+  {
+   "word": "also",
+   "start": 325.48,
+   "end": 325.7,
+   "prob": 0.983
+  },
+  {
+   "word": "important",
+   "start": 325.7,
+   "end": 326.08,
+   "prob": 0.996
+  },
+  {
+   "word": "in",
+   "start": 326.08,
+   "end": 326.38,
+   "prob": 0.992
+  },
+  {
+   "word": "online",
+   "start": 326.38,
+   "end": 326.64,
+   "prob": 0.992
+  },
+  {
+   "word": "baking",
+   "start": 326.64,
+   "end": 326.98,
+   "prob": 0.262
+  },
+  {
+   "word": "and",
+   "start": 326.98,
+   "end": 327.24,
+   "prob": 0.986
+  },
+  {
+   "word": "electronic",
+   "start": 327.24,
+   "end": 327.62,
+   "prob": 0.993
+  },
+  {
+   "word": "payments.",
+   "start": 327.62,
+   "end": 328.1,
+   "prob": 0.986
+  },
+  {
+   "word": "Financial",
+   "start": 329.0,
+   "end": 329.06,
+   "prob": 0.977
+  },
+  {
+   "word": "institutions",
+   "start": 329.06,
+   "end": 329.5,
+   "prob": 0.973
+  },
+  {
+   "word": "use",
+   "start": 329.5,
+   "end": 329.92,
+   "prob": 0.993
+  },
+  {
+   "word": "cryptographic",
+   "start": 329.92,
+   "end": 330.36,
+   "prob": 0.977
+  },
+  {
+   "word": "protocols",
+   "start": 330.36,
+   "end": 330.9,
+   "prob": 0.998
+  },
+  {
+   "word": "to",
+   "start": 330.9,
+   "end": 331.26,
+   "prob": 0.995
+  },
+  {
+   "word": "protect",
+   "start": 331.26,
+   "end": 331.62,
+   "prob": 0.985
+  },
+  {
+   "word": "account",
+   "start": 331.62,
+   "end": 331.92,
+   "prob": 0.979
+  },
+  {
+   "word": "information,",
+   "start": 331.92,
+   "end": 332.42,
+   "prob": 0.998
+  },
+  {
+   "word": "verify",
+   "start": 332.78,
+   "end": 332.96,
+   "prob": 0.968
+  },
+  {
+   "word": "transactions,",
+   "start": 332.96,
+   "end": 333.66,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 334.06,
+   "end": 334.1,
+   "prob": 0.998
+  },
+  {
+   "word": "reduce",
+   "start": 334.1,
+   "end": 334.36,
+   "prob": 0.995
+  },
+  {
+   "word": "the",
+   "start": 334.36,
+   "end": 334.54,
+   "prob": 0.99
+  },
+  {
+   "word": "risk",
+   "start": 334.54,
+   "end": 334.72,
+   "prob": 0.995
+  },
+  {
+   "word": "of",
+   "start": 334.72,
+   "end": 334.88,
+   "prob": 0.998
+  },
+  {
+   "word": "unauthorized",
+   "start": 334.88,
+   "end": 335.3,
+   "prob": 0.986
+  },
+  {
+   "word": "access.",
+   "start": 335.3,
+   "end": 336.14,
+   "prob": 1.0
+  },
+  {
+   "word": "Virtual",
+   "start": 337.78,
+   "end": 338.1,
+   "prob": 0.927
+  },
+  {
+   "word": "private",
+   "start": 338.1,
+   "end": 338.36,
+   "prob": 0.722
+  },
+  {
+   "word": "networks,",
+   "start": 338.36,
+   "end": 338.86,
+   "prob": 0.995
+  },
+  {
+   "word": "or",
+   "start": 339.06,
+   "end": 339.1,
+   "prob": 0.998
+  },
+  {
+   "word": "VPNs,",
+   "start": 339.1,
+   "end": 339.76,
+   "prob": 0.95
+  },
+  {
+   "word": "use",
+   "start": 339.76,
+   "end": 340.02,
+   "prob": 0.992
+  },
+  {
+   "word": "encryption",
+   "start": 340.02,
+   "end": 340.36,
+   "prob": 0.967
+  },
+  {
+   "word": "to",
+   "start": 340.36,
+   "end": 340.7,
+   "prob": 0.999
+  },
+  {
+   "word": "protect",
+   "start": 340.7,
+   "end": 340.96,
+   "prob": 0.998
+  },
+  {
+   "word": "data",
+   "start": 340.96,
+   "end": 341.34,
+   "prob": 0.993
+  },
+  {
+   "word": "traveling",
+   "start": 341.34,
+   "end": 341.66,
+   "prob": 0.47
+  },
+  {
+   "word": "between",
+   "start": 341.66,
+   "end": 342.12,
+   "prob": 0.996
+  },
+  {
+   "word": "a",
+   "start": 342.12,
+   "end": 342.32,
+   "prob": 0.987
+  },
+  {
+   "word": "device",
+   "start": 342.32,
+   "end": 342.74,
+   "prob": 0.995
+  },
+  {
+   "word": "and",
+   "start": 342.74,
+   "end": 343.06,
+   "prob": 0.995
+  },
+  {
+   "word": "a",
+   "start": 343.06,
+   "end": 343.2,
+   "prob": 0.951
+  },
+  {
+   "word": "VPN",
+   "start": 343.2,
+   "end": 343.46,
+   "prob": 0.997
+  },
+  {
+   "word": "server.",
+   "start": 343.46,
+   "end": 343.88,
+   "prob": 0.998
+  },
+  {
+   "word": "This",
+   "start": 344.64,
+   "end": 344.86,
+   "prob": 0.996
+  },
+  {
+   "word": "can",
+   "start": 344.86,
+   "end": 345.02,
+   "prob": 0.997
+  },
+  {
+   "word": "help",
+   "start": 345.02,
+   "end": 345.16,
+   "prob": 0.994
+  },
+  {
+   "word": "prevent",
+   "start": 345.16,
+   "end": 345.42,
+   "prob": 0.984
+  },
+  {
+   "word": "people",
+   "start": 345.42,
+   "end": 345.62,
+   "prob": 0.999
+  },
+  {
+   "word": "on",
+   "start": 345.62,
+   "end": 345.78,
+   "prob": 0.929
+  },
+  {
+   "word": "the",
+   "start": 345.78,
+   "end": 345.9,
+   "prob": 0.996
+  },
+  {
+   "word": "same",
+   "start": 345.9,
+   "end": 346.08,
+   "prob": 0.999
+  },
+  {
+   "word": "network",
+   "start": 346.08,
+   "end": 346.46,
+   "prob": 0.998
+  },
+  {
+   "word": "from",
+   "start": 346.46,
+   "end": 346.68,
+   "prob": 0.983
+  },
+  {
+   "word": "easily",
+   "start": 346.68,
+   "end": 347.04,
+   "prob": 0.992
+  },
+  {
+   "word": "viewing",
+   "start": 347.04,
+   "end": 347.44,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 347.44,
+   "end": 347.74,
+   "prob": 0.975
+  },
+  {
+   "word": "user's",
+   "start": 347.74,
+   "end": 348.06,
+   "prob": 0.884
+  },
+  {
+   "word": "traffic.",
+   "start": 348.06,
+   "end": 348.42,
+   "prob": 0.999
+  },
+  {
+   "word": "Businesses",
+   "start": 349.58,
+   "end": 350.18,
+   "prob": 0.524
+  },
+  {
+   "word": "and",
+   "start": 350.18,
+   "end": 350.3,
+   "prob": 0.963
+  },
+  {
+   "word": "governments",
+   "start": 350.3,
+   "end": 350.56,
+   "prob": 0.892
+  },
+  {
+   "word": "use",
+   "start": 350.56,
+   "end": 350.9,
+   "prob": 0.986
+  },
+  {
+   "word": "encryption",
+   "start": 350.9,
+   "end": 351.36,
+   "prob": 0.97
+  },
+  {
+   "word": "to",
+   "start": 351.36,
+   "end": 351.94,
+   "prob": 0.934
+  },
+  {
+   "word": "protect",
+   "start": 351.94,
+   "end": 352.18,
+   "prob": 0.989
+  },
+  {
+   "word": "confidential",
+   "start": 352.18,
+   "end": 352.62,
+   "prob": 0.994
+  },
+  {
+   "word": "records,",
+   "start": 352.62,
+   "end": 353.22,
+   "prob": 0.999
+  },
+  {
+   "word": "intellectual",
+   "start": 353.56,
+   "end": 353.84,
+   "prob": 0.992
+  },
+  {
+   "word": "property,",
+   "start": 353.84,
+   "end": 354.36,
+   "prob": 0.996
+  },
+  {
+   "word": "medical",
+   "start": 354.82,
+   "end": 354.98,
+   "prob": 0.997
+  },
+  {
+   "word": "data,",
+   "start": 354.98,
+   "end": 355.3,
+   "prob": 0.995
+  },
+  {
+   "word": "and",
+   "start": 355.58,
+   "end": 355.66,
+   "prob": 0.996
+  },
+  {
+   "word": "classified",
+   "start": 355.66,
+   "end": 356.04,
+   "prob": 0.998
+  },
+  {
+   "word": "information.",
+   "start": 356.04,
+   "end": 356.64,
+   "prob": 0.995
+  },
+  {
+   "word": "In",
+   "start": 357.24,
+   "end": 357.34,
+   "prob": 0.993
+  },
+  {
+   "word": "these",
+   "start": 357.34,
+   "end": 357.5,
+   "prob": 0.996
+  },
+  {
+   "word": "environments,",
+   "start": 357.5,
+   "end": 358.04,
+   "prob": 0.997
+  },
+  {
+   "word": "encryption",
+   "start": 358.7,
+   "end": 358.82,
+   "prob": 0.982
+  },
+  {
+   "word": "is",
+   "start": 358.82,
+   "end": 359.04,
+   "prob": 0.998
+  },
+  {
+   "word": "often",
+   "start": 359.04,
+   "end": 359.28,
+   "prob": 0.991
+  },
+  {
+   "word": "combined",
+   "start": 359.28,
+   "end": 359.62,
+   "prob": 0.996
+  },
+  {
+   "word": "with",
+   "start": 359.62,
+   "end": 359.82,
+   "prob": 0.991
+  },
+  {
+   "word": "access",
+   "start": 359.82,
+   "end": 360.12,
+   "prob": 0.998
+  },
+  {
+   "word": "controls,",
+   "start": 360.12,
+   "end": 360.58,
+   "prob": 0.975
+  },
+  {
+   "word": "authentication,",
+   "start": 361.06,
+   "end": 361.38,
+   "prob": 0.844
+  },
+  {
+   "word": "monitoring,",
+   "start": 362.0,
+   "end": 362.32,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 362.96,
+   "end": 363.04,
+   "prob": 0.997
+  },
+  {
+   "word": "other",
+   "start": 363.04,
+   "end": 363.26,
+   "prob": 0.994
+  },
+  {
+   "word": "security",
+   "start": 363.26,
+   "end": 363.62,
+   "prob": 0.998
+  },
+  {
+   "word": "measures.",
+   "start": 363.62,
+   "end": 364.1,
+   "prob": 0.998
+  },
+  {
+   "word": "However,",
+   "start": 365.7,
+   "end": 366.02,
+   "prob": 0.939
+  },
+  {
+   "word": "encryption",
+   "start": 366.38,
+   "end": 366.5,
+   "prob": 0.974
+  },
+  {
+   "word": "does",
+   "start": 366.5,
+   "end": 366.76,
+   "prob": 0.996
+  },
+  {
+   "word": "not",
+   "start": 366.76,
+   "end": 366.94,
+   "prob": 0.999
+  },
+  {
+   "word": "solve",
+   "start": 366.94,
+   "end": 367.2,
+   "prob": 0.999
+  },
+  {
+   "word": "every",
+   "start": 367.2,
+   "end": 367.48,
+   "prob": 0.982
+  },
+  {
+   "word": "security",
+   "start": 367.48,
+   "end": 367.8,
+   "prob": 0.999
+  },
+  {
+   "word": "problem.",
+   "start": 367.8,
+   "end": 368.16,
+   "prob": 0.997
+  },
+  {
+   "word": "It",
+   "start": 368.72,
+   "end": 368.78,
+   "prob": 0.99
+  },
+  {
+   "word": "cannot",
+   "start": 368.78,
+   "end": 368.98,
+   "prob": 0.962
+  },
+  {
+   "word": "protect",
+   "start": 368.98,
+   "end": 369.28,
+   "prob": 0.995
+  },
+  {
+   "word": "data",
+   "start": 369.28,
+   "end": 369.6,
+   "prob": 0.995
+  },
+  {
+   "word": "from",
+   "start": 369.6,
+   "end": 369.8,
+   "prob": 0.997
+  },
+  {
+   "word": "a",
+   "start": 369.8,
+   "end": 369.92,
+   "prob": 0.987
+  },
+  {
+   "word": "person",
+   "start": 369.92,
+   "end": 370.1,
+   "prob": 0.999
+  },
+  {
+   "word": "who",
+   "start": 370.1,
+   "end": 370.32,
+   "prob": 0.992
+  },
+  {
+   "word": "already",
+   "start": 370.32,
+   "end": 370.52,
+   "prob": 0.987
+  },
+  {
+   "word": "has",
+   "start": 370.52,
+   "end": 370.72,
+   "prob": 0.998
+  },
+  {
+   "word": "authorized",
+   "start": 370.72,
+   "end": 371.06,
+   "prob": 0.99
+  },
+  {
+   "word": "access,",
+   "start": 371.06,
+   "end": 371.56,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 372.02,
+   "end": 372.08,
+   "prob": 0.996
+  },
+  {
+   "word": "it",
+   "start": 372.08,
+   "end": 372.16,
+   "prob": 0.905
+  },
+  {
+   "word": "cannot",
+   "start": 372.16,
+   "end": 372.34,
+   "prob": 0.971
+  },
+  {
+   "word": "prevent",
+   "start": 372.34,
+   "end": 372.6,
+   "prob": 0.993
+  },
+  {
+   "word": "every",
+   "start": 372.6,
+   "end": 372.88,
+   "prob": 0.991
+  },
+  {
+   "word": "type",
+   "start": 372.88,
+   "end": 373.06,
+   "prob": 0.994
+  },
+  {
+   "word": "of",
+   "start": 373.06,
+   "end": 373.22,
+   "prob": 0.998
+  },
+  {
+   "word": "malware,",
+   "start": 373.22,
+   "end": 373.56,
+   "prob": 0.996
+  },
+  {
+   "word": "phishing",
+   "start": 374.06,
+   "end": 374.24,
+   "prob": 0.988
+  },
+  {
+   "word": "attack,",
+   "start": 374.24,
+   "end": 374.54,
+   "prob": 0.92
+  },
+  {
+   "word": "or",
+   "start": 374.72,
+   "end": 374.82,
+   "prob": 0.994
+  },
+  {
+   "word": "social",
+   "start": 374.82,
+   "end": 374.98,
+   "prob": 0.994
+  },
+  {
+   "word": "engineering",
+   "start": 374.98,
+   "end": 375.36,
+   "prob": 0.995
+  },
+  {
+   "word": "attack.",
+   "start": 375.36,
+   "end": 375.76,
+   "prob": 0.981
+  },
+  {
+   "word": "Encryption",
+   "start": 375.76,
+   "end": 376.68,
+   "prob": 0.865
+  },
+  {
+   "word": "protects",
+   "start": 376.68,
+   "end": 377.0,
+   "prob": 0.988
+  },
+  {
+   "word": "the",
+   "start": 377.0,
+   "end": 377.2,
+   "prob": 0.988
+  },
+  {
+   "word": "information.",
+   "start": 377.2,
+   "end": 377.64,
+   "prob": 0.994
+  },
+  {
+   "word": "The",
+   "start": 378.18,
+   "end": 378.26,
+   "prob": 0.985
+  },
+  {
+   "word": "surrounding",
+   "start": 378.26,
+   "end": 378.54,
+   "prob": 0.995
+  },
+  {
+   "word": "systems",
+   "start": 378.54,
+   "end": 378.98,
+   "prob": 0.986
+  },
+  {
+   "word": "and",
+   "start": 378.98,
+   "end": 379.24,
+   "prob": 0.991
+  },
+  {
+   "word": "users",
+   "start": 379.24,
+   "end": 379.54,
+   "prob": 0.989
+  },
+  {
+   "word": "must",
+   "start": 379.54,
+   "end": 379.84,
+   "prob": 0.994
+  },
+  {
+   "word": "also",
+   "start": 379.84,
+   "end": 380.18,
+   "prob": 0.992
+  },
+  {
+   "word": "be",
+   "start": 380.18,
+   "end": 380.34,
+   "prob": 0.999
+  },
+  {
+   "word": "secure.",
+   "start": 380.34,
+   "end": 380.68,
+   "prob": 0.992
+  },
+  {
+   "word": "Overall,",
+   "start": 382.82,
+   "end": 382.82,
+   "prob": 0.987
+  },
+  {
+   "word": "encryption",
+   "start": 383.1,
+   "end": 383.24,
+   "prob": 0.896
+  },
+  {
+   "word": "supports",
+   "start": 383.24,
+   "end": 383.68,
+   "prob": 0.997
+  },
+  {
+   "word": "three",
+   "start": 383.68,
+   "end": 384.06,
+   "prob": 0.911
+  },
+  {
+   "word": "major",
+   "start": 384.06,
+   "end": 384.38,
+   "prob": 0.997
+  },
+  {
+   "word": "security",
+   "start": 384.38,
+   "end": 384.72,
+   "prob": 0.998
+  },
+  {
+   "word": "goals.",
+   "start": 384.72,
+   "end": 385.14,
+   "prob": 0.996
+  },
+  {
+   "word": "Confidentiality,",
+   "start": 385.76,
+   "end": 386.4,
+   "prob": 0.97
+  },
+  {
+   "word": "Integrity,",
+   "start": 386.64,
+   "end": 386.96,
+   "prob": 0.603
+  },
+  {
+   "word": "and",
+   "start": 387.4,
+   "end": 387.54,
+   "prob": 0.992
+  },
+  {
+   "word": "Authentication.",
+   "start": 387.54,
+   "end": 387.98,
+   "prob": 0.922
+  },
+  {
+   "word": "It",
+   "start": 388.92,
+   "end": 388.92,
+   "prob": 0.879
+  },
+  {
+   "word": "helps",
+   "start": 388.92,
+   "end": 389.12,
+   "prob": 0.994
+  },
+  {
+   "word": "keep",
+   "start": 389.12,
+   "end": 389.3,
+   "prob": 0.972
+  },
+  {
+   "word": "information",
+   "start": 389.3,
+   "end": 389.74,
+   "prob": 0.993
+  },
+  {
+   "word": "private,",
+   "start": 389.74,
+   "end": 390.12,
+   "prob": 0.999
+  },
+  {
+   "word": "helps",
+   "start": 390.44,
+   "end": 390.72,
+   "prob": 0.984
+  },
+  {
+   "word": "detect",
+   "start": 390.72,
+   "end": 391.08,
+   "prob": 0.968
+  },
+  {
+   "word": "unauthorized",
+   "start": 391.08,
+   "end": 391.58,
+   "prob": 0.965
+  },
+  {
+   "word": "charges,",
+   "start": 391.58,
+   "end": 392.06,
+   "prob": 0.996
+  },
+  {
+   "word": "and",
+   "start": 392.3,
+   "end": 392.4,
+   "prob": 0.997
+  },
+  {
+   "word": "can",
+   "start": 392.4,
+   "end": 392.5,
+   "prob": 0.992
+  },
+  {
+   "word": "help",
+   "start": 392.5,
+   "end": 392.66,
+   "prob": 0.996
+  },
+  {
+   "word": "verify",
+   "start": 392.66,
+   "end": 393.1,
+   "prob": 0.988
+  },
+  {
+   "word": "the",
+   "start": 393.1,
+   "end": 393.26,
+   "prob": 0.997
+  },
+  {
+   "word": "identity",
+   "start": 393.26,
+   "end": 393.54,
+   "prob": 0.992
+  },
+  {
+   "word": "of",
+   "start": 393.54,
+   "end": 393.86,
+   "prob": 0.998
+  },
+  {
+   "word": "the",
+   "start": 393.86,
+   "end": 393.98,
+   "prob": 0.991
+  },
+  {
+   "word": "people",
+   "start": 393.98,
+   "end": 394.26,
+   "prob": 0.999
+  },
+  {
+   "word": "or",
+   "start": 394.26,
+   "end": 394.5,
+   "prob": 0.987
+  },
+  {
+   "word": "systems",
+   "start": 394.5,
+   "end": 394.82,
+   "prob": 0.993
+  },
+  {
+   "word": "involved.",
+   "start": 394.82,
+   "end": 395.24,
+   "prob": 0.999
+  },
+  {
+   "word": "As",
+   "start": 396.06,
+   "end": 396.16,
+   "prob": 0.998
+  },
+  {
+   "word": "more",
+   "start": 396.16,
+   "end": 396.4,
+   "prob": 0.998
+  },
+  {
+   "word": "communications,",
+   "start": 396.4,
+   "end": 396.9,
+   "prob": 0.962
+  },
+  {
+   "word": "commerce,",
+   "start": 397.38,
+   "end": 397.68,
+   "prob": 0.998
+  },
+  {
+   "word": "and",
+   "start": 397.96,
+   "end": 398.06,
+   "prob": 0.998
+  },
+  {
+   "word": "personal",
+   "start": 398.06,
+   "end": 398.36,
+   "prob": 0.997
+  },
+  {
+   "word": "activity",
+   "start": 398.36,
+   "end": 398.82,
+   "prob": 0.931
+  },
+  {
+   "word": "move",
+   "start": 398.82,
+   "end": 399.14,
+   "prob": 0.99
+  },
+  {
+   "word": "online,",
+   "start": 399.14,
+   "end": 399.62,
+   "prob": 0.996
+  },
+  {
+   "word": "encryption",
+   "start": 400.14,
+   "end": 400.28,
+   "prob": 0.933
+  },
+  {
+   "word": "has",
+   "start": 400.28,
+   "end": 400.54,
+   "prob": 0.997
+  },
+  {
+   "word": "become",
+   "start": 400.54,
+   "end": 400.84,
+   "prob": 0.998
+  },
+  {
+   "word": "a",
+   "start": 400.84,
+   "end": 401.02,
+   "prob": 0.996
+  },
+  {
+   "word": "fundamental",
+   "start": 401.02,
+   "end": 401.4,
+   "prob": 0.997
+  },
+  {
+   "word": "part",
+   "start": 401.4,
+   "end": 401.9,
+   "prob": 0.999
+  },
+  {
+   "word": "of",
+   "start": 401.9,
+   "end": 402.16,
+   "prob": 0.999
+  },
+  {
+   "word": "modern",
+   "start": 402.16,
+   "end": 402.4,
+   "prob": 0.994
+  },
+  {
+   "word": "computer",
+   "start": 402.4,
+   "end": 402.7,
+   "prob": 0.994
+  },
+  {
+   "word": "science",
+   "start": 402.7,
+   "end": 403.1,
+   "prob": 0.999
+  },
+  {
+   "word": "and",
+   "start": 403.1,
+   "end": 403.4,
+   "prob": 0.993
+  },
+  {
+   "word": "cybersecurity.",
+   "start": 403.4,
+   "end": 403.78,
+   "prob": 0.793
+  }
+ ],
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.5,
+   "text": "Now that we looked at the history of encryption, we can now examine how encryption works, the"
+  },
+  {
+   "start": 5.5,
+   "end": 9.14,
+   "text": "major types of encryption, and how encryption is used in modern technology."
+  },
+  {
+   "start": 10.58,
+   "end": 11.46,
+   "text": "How encryption works"
+  },
+  {
+   "start": 11.46,
+   "end": 16.38,
+   "text": "At its most basic level, encryption is the process of transforming readable information"
+  },
+  {
+   "start": 16.38,
+   "end": 20.88,
+   "text": "into an unreadable format so that unauthorized people cannot understand it."
+  },
+  {
+   "start": 21.86,
+   "end": 26.42,
+   "text": "The original readable information is called plaintext. Encryption uses a mathematical"
+  },
+  {
+   "start": 26.42,
+   "end": 29.96,
+   "text": "algorithm and a key to transform the plaintext into ciphertext."
+  },
+  {
+   "start": 30.86,
+   "end": 34.22,
+   "text": "Ciphertext may look like a random sequence of letters, numbers, or symbols."
+  },
+  {
+   "start": 35.28,
+   "end": 37.78,
+   "text": "Although the ciphertext still contains the original information,"
+  },
+  {
+   "start": 38.44,
+   "end": 41.34,
+   "text": "it is designed to be meaningless to anyone who does not have the correct key."
+  },
+  {
+   "start": 42.7,
+   "end": 47.46,
+   "text": "The intended recipient can then use a key and a decryption algorithm to turn the ciphertext"
+  },
+  {
+   "start": 47.46,
+   "end": 50.68,
+   "text": "back into plaintext. This process is called decryption."
+  },
+  {
+   "start": 51.76,
+   "end": 54.0,
+   "text": "A simple analogy is a locked box."
+  },
+  {
+   "start": 54.74,
+   "end": 57.26,
+   "text": "Plain text is the message placed inside the box."
+  },
+  {
+   "start": 57.98,
+   "end": 63.28,
+   "text": "The encryption algorithm is the locking mechanism, and the key is what allows the box to be opened."
+  },
+  {
+   "start": 64.04,
+   "end": 68.22,
+   "text": "Anyone can see the locked box, but only someone with the correct key should be able to access"
+  },
+  {
+   "start": 68.22,
+   "end": 68.76,
+   "text": "the message."
+  },
+  {
+   "start": 70.18,
+   "end": 73.12,
+   "text": "Modern encryption is based on mathematics rather than hiding information."
+  },
+  {
+   "start": 74.06,
+   "end": 77.64,
+   "text": "Algorithms are designed so that encryption is easy when the correct key is available,"
+  },
+  {
+   "start": 77.64,
+   "end": 81.58,
+   "text": "but reversing a process without the key is computationally impractical."
+  },
+  {
+   "start": 82.6,
+   "end": 85.96,
+   "text": "Modern encryption is based on mathematics rather than simply hiding information."
+  },
+  {
+   "start": 86.7,
+   "end": 90.12,
+   "text": "Algorithms are designed so that encrypting information is easy when the correct key is"
+  },
+  {
+   "start": 90.12,
+   "end": 93.82,
+   "text": "available, but reversing the process without the key is computationally impractical."
+  },
+  {
+   "start": 94.6,
+   "end": 96.74,
+   "text": "The strength of encryption depends on several factors."
+  },
+  {
+   "start": 97.28,
+   "end": 101.36,
+   "text": "These include the quality of the algorithm, the length and randomness of the key, and"
+  },
+  {
+   "start": 101.36,
+   "end": 102.74,
+   "text": "how securely the key is stored."
+  },
+  {
+   "start": 102.74,
+   "end": 108.44,
+   "text": "Even a strong algorithm can be compromised if a key is stolen, guessed, or accidentally exposed."
+  },
+  {
+   "start": 109.66,
+   "end": 115.48,
+   "text": "For example, if an attacker obtains a password used to protect the encrypted file, the encryption itself may not be broken."
+  },
+  {
+   "start": 116.06,
+   "end": 119.3,
+   "text": "Instead, the attackers obtain the key needed to unlock the information."
+  },
+  {
+   "start": 119.82,
+   "end": 122.76,
+   "text": "This is why key management is one of the most important parts of cybersecurity."
+  },
+  {
+   "start": 124.6,
+   "end": 125.36,
+   "text": "Types of Encryption"
+  },
+  {
+   "start": 125.36,
+   "end": 127.54,
+   "text": "There are two main categories of encryption."
+  },
+  {
+   "start": 128.0,
+   "end": 130.48,
+   "text": "Symmetric Encryption and Asymmetric Encryption."
+  },
+  {
+   "start": 130.48,
+   "end": 134.6,
+   "text": "The metric encryption uses the same key for both encryption and decryption."
+  },
+  {
+   "start": 135.1,
+   "end": 139.64,
+   "text": "The sender uses the key to encrypt the message, and the recipient uses that same key to decrypt"
+  },
+  {
+   "start": 139.64,
+   "end": 140.28,
+   "text": "it."
+  },
+  {
+   "start": 141.2,
+   "end": 145.58,
+   "text": "Symmetric encryption is generally fast and efficient, which makes it useful for encrypting"
+  },
+  {
+   "start": 145.58,
+   "end": 146.44,
+   "text": "large amounts of data."
+  },
+  {
+   "start": 147.14,
+   "end": 151.26,
+   "text": "Common symmetric encryption algorithms include the Advanced Encryption Standard, or AES,"
+  },
+  {
+   "start": 151.66,
+   "end": 152.5,
+   "text": "and the Tasha 20."
+  },
+  {
+   "start": 153.62,
+   "end": 156.38,
+   "text": "However, symmetric encryption creates an important challenge."
+  },
+  {
+   "start": 156.38,
+   "end": 159.58,
+   "text": "Both parties need to obtain the same secret key securely."
+  },
+  {
+   "start": 160.44,
+   "end": 165.36,
+   "text": "If the key is sent through an insecure channel and intercepted, an attacker may be able to decrypt the communication."
+  },
+  {
+   "start": 166.98,
+   "end": 173.74,
+   "text": "Asymmetric encryption, also called public key encryption, uses a pair of mathematically related keys, a public key and a private key."
+  },
+  {
+   "start": 174.24,
+   "end": 177.68,
+   "text": "The public key can be shared openly. The private key must be kept secret."
+  },
+  {
+   "start": 178.34,
+   "end": 182.98,
+   "text": "Information encrypted with the public key can generally be decrypted only with the corresponding private key."
+  },
+  {
+   "start": 183.7,
+   "end": 188.36,
+   "text": "For example, if someone wants to send a secure message to a recipient, they can encrypt the"
+  },
+  {
+   "start": 188.36,
+   "end": 190.34,
+   "text": "message using the recipient's public key."
+  },
+  {
+   "start": 190.9,
+   "end": 193.94,
+   "text": "Only the recipient's private key should be able to decrypt it."
+  },
+  {
+   "start": 194.78,
+   "end": 198.32,
+   "text": "Asymmetric encryption solves much of the key distribution problem because the public key"
+  },
+  {
+   "start": 198.32,
+   "end": 199.74,
+   "text": "does not need to be kept secret."
+  },
+  {
+   "start": 200.26,
+   "end": 204.46,
+   "text": "However, it is typically slower and more computationally expensive than symmetric encryption."
+  },
+  {
+   "start": 205.7,
+   "end": 210.24,
+   "text": "Examples of public key algorithms include RSA, an elliptic curve cryptography, often"
+  },
+  {
+   "start": 210.24,
+   "end": 211.06,
+   "text": "called ECC."
+  },
+  {
+   "start": 211.72,
+   "end": 216.18,
+   "text": "ECC can provide strong security with shorter key sizes, which makes it useful in mobile"
+  },
+  {
+   "start": 216.18,
+   "end": 219.24,
+   "text": "devices, web browsers, and other systems with limited resources."
+  },
+  {
+   "start": 220.02,
+   "end": 223.88,
+   "text": "In practice, many modern systems use a hybrid approach that combines both types."
+  },
+  {
+   "start": 225.04,
+   "end": 229.96,
+   "text": "For example, when a user visits a website using HTTPS, asymmetric cryptography can help"
+  },
+  {
+   "start": 229.96,
+   "end": 233.88,
+   "text": "the browser and the server authenticate each other and establish a shared session key."
+  },
+  {
+   "start": 234.6,
+   "end": 238.66,
+   "text": "After that, symmetric encryption is usually used to protect the actual data exchange during"
+  },
+  {
+   "start": 238.66,
+   "end": 240.0,
+   "text": "the session because it is faster."
+  },
+  {
+   "start": 240.0,
+   "end": 244.34,
+   "text": "This combination provides both secure key exchange and efficient communication."
+  },
+  {
+   "start": 245.76,
+   "end": 248.14,
+   "text": "It is also important to distinguish encryption from hashing."
+  },
+  {
+   "start": 249.04,
+   "end": 252.06,
+   "text": "Hashing transforms data into a fixed-length value, called a hash,"
+  },
+  {
+   "start": 252.48,
+   "end": 254.1,
+   "text": "but is not designed to be reversed."
+  },
+  {
+   "start": 254.88,
+   "end": 259.16,
+   "text": "Hashing is commonly used to store passwords securely and to verify whether data has been changed."
+  },
+  {
+   "start": 260.7,
+   "end": 265.1,
+   "text": "Digital signatures are related to public key cryptography as well, but they serve a different purpose."
+  },
+  {
+   "start": 265.94,
+   "end": 267.88,
+   "text": "Encryption is mainly used to protect confidentiality,"
+  },
+  {
+   "start": 267.88,
+   "end": 273.64,
+   "text": "while digital signatures help verify the identity of the sender and confirm that the message has not been modified."
+  },
+  {
+   "start": 275.14,
+   "end": 275.88,
+   "text": "Applications of Encryption"
+  },
+  {
+   "start": 275.88,
+   "end": 278.14,
+   "text": "Encryption is used throughout everyday computing."
+  },
+  {
+   "start": 278.88,
+   "end": 283.92,
+   "text": "One of the most familiar examples is HTTPS, which protects communication between a web browser and a website."
+  },
+  {
+   "start": 284.62,
+   "end": 293.1,
+   "text": "When a website uses HTTPS, information such as login credentials, personal information, and payment information is encrypted while traveling across the internet."
+  },
+  {
+   "start": 294.34,
+   "end": 296.44,
+   "text": "Encryption is also used in messaging applications."
+  },
+  {
+   "start": 296.44,
+   "end": 300.38,
+   "text": "End-to-end encryption is designed so that a message is encrypted on the sender's device"
+  },
+  {
+   "start": 300.38,
+   "end": 302.76,
+   "text": "and only decrypted on the recipient's device."
+  },
+  {
+   "start": 303.48,
+   "end": 307.0,
+   "text": "Ideally, even the messaging provider cannot read the contents of the message while it"
+  },
+  {
+   "start": 307.0,
+   "end": 307.54,
+   "text": "is in transit."
+  },
+  {
+   "start": 308.8,
+   "end": 310.62,
+   "text": "Another major application is data storage."
+  },
+  {
+   "start": 311.06,
+   "end": 315.24,
+   "text": "Computers, smartphones, USB drives, and cloud services can encrypt stored files."
+  },
+  {
+   "start": 315.82,
+   "end": 317.28,
+   "text": "This is called encryption at rest."
+  },
+  {
+   "start": 317.88,
+   "end": 321.56,
+   "text": "If a device is lost or stolen, encryption can make it much more difficult for someone"
+  },
+  {
+   "start": 321.56,
+   "end": 323.28,
+   "text": "to access the information stored on it."
+  },
+  {
+   "start": 324.64,
+   "end": 328.1,
+   "text": "Encryption is also important in online baking and electronic payments."
+  },
+  {
+   "start": 329.0,
+   "end": 336.14,
+   "text": "Financial institutions use cryptographic protocols to protect account information, verify transactions, and reduce the risk of unauthorized access."
+  },
+  {
+   "start": 337.78,
+   "end": 343.88,
+   "text": "Virtual private networks, or VPNs, use encryption to protect data traveling between a device and a VPN server."
+  },
+  {
+   "start": 344.64,
+   "end": 348.42,
+   "text": "This can help prevent people on the same network from easily viewing the user's traffic."
+  },
+  {
+   "start": 349.58,
+   "end": 353.84,
+   "text": "Businesses and governments use encryption to protect confidential records, intellectual"
+  },
+  {
+   "start": 353.84,
+   "end": 356.64,
+   "text": "property, medical data, and classified information."
+  },
+  {
+   "start": 357.24,
+   "end": 361.38,
+   "text": "In these environments, encryption is often combined with access controls, authentication,"
+  },
+  {
+   "start": 362.0,
+   "end": 364.1,
+   "text": "monitoring, and other security measures."
+  },
+  {
+   "start": 365.7,
+   "end": 368.16,
+   "text": "However, encryption does not solve every security problem."
+  },
+  {
+   "start": 368.72,
+   "end": 372.6,
+   "text": "It cannot protect data from a person who already has authorized access, and it cannot prevent"
+  },
+  {
+   "start": 372.6,
+   "end": 375.76,
+   "text": "every type of malware, phishing attack, or social engineering attack."
+  },
+  {
+   "start": 375.76,
+   "end": 380.68,
+   "text": "Encryption protects the information. The surrounding systems and users must also be secure."
+  },
+  {
+   "start": 382.82,
+   "end": 385.14,
+   "text": "Overall, encryption supports three major security goals."
+  },
+  {
+   "start": 385.76,
+   "end": 387.98,
+   "text": "Confidentiality, Integrity, and Authentication."
+  },
+  {
+   "start": 388.92,
+   "end": 392.06,
+   "text": "It helps keep information private, helps detect unauthorized charges,"
+  },
+  {
+   "start": 392.3,
+   "end": 395.24,
+   "text": "and can help verify the identity of the people or systems involved."
+  },
+  {
+   "start": 396.06,
+   "end": 399.62,
+   "text": "As more communications, commerce, and personal activity move online,"
+  },
+  {
+   "start": 400.14,
+   "end": 403.78,
+   "text": "encryption has become a fundamental part of modern computer science and cybersecurity."
+  }
+ ]
+}
